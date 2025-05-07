@@ -1,0 +1,5 @@
+Title,Text,Choices,Correctness
+Question 1,Welke van de volgende stellingen is juist (er kunnen meerdere juiste antwoorden zijn).,"Strings zijn altijd hashable.~~Tuples zijn altijd hashable.~~Sets zijn altijd hashable.~~Strings zijn soms hashable, maar niet altijd.~~Tuples zijn soms hashable, maar niet altijd.~~Sets zijn soms hashable, maar niet altijd.",True~~False~~False~~False~~True~~False
+Question 2,"De variabele ""mylist"" is een list met minimaal twee items.
+
+Hoe maak je, met list slices, een nieuwe ""mylist2"", die alleen het laatste item van ""mylist"" bevat?",Correct Answer,mylist2 = mylist[-1:]
