@@ -1,0 +1,77 @@
+Title,Text,Choices,Correctness
+Question 1,Een while-loop wordt één keer of vaker doorlopen.,Waar~~Onwaar,False~~True
+Question 2,Een if-statement moet een else of een elif-deel bevatten.,Waar~~Onwaar,False~~True
+Question 3,"Herschrijf de volgende code:
+
+
+if year <= 2022:
+    pass
+else:
+    year = 2022",Correct Answer,"De code bevat een onnodige pass. De code kan namelijk duidelijker en korter:
+
+if year > 2022
+    year = 2022"
+Question 4,"Herschrijf de volgende code:
+
+for i in range(len(lst)):
+    if lst[i] > 0:
+        print(lst[i])",Correct Answer,"for (i, n) in enumerate(lst):
+    if n > 0:
+        print(n)"
+Question 5,"Gegeven is:
+
+lst = [('a', 'b'), ('c', 'd'), ('e', 'f')]
+
+Gebruik tuple unpacking om onder elkaar af te drukken:
+
+a and b
+c and d
+e and f
+
+
+",Correct Answer,"for x, y in lst:
+    print(x + ' and ' + y)"
+Question 6,"Gegeven is de volgende code:
+
+lst1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+lst2 = [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+lst3 = zip(lst1, lst2)
+
+Hoe print je, met behulp van lst3, de tafel van twee?",Correct Answer,"for x, y in lst3:
+    print(str(x) + ' maal 2 is: ' + str(y))"
+Question 7,"Gegeven is:
+
+lst1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+Creëer met list comprehension een&nbsp; nieuwe list, waarin de items 17 maal de items van lst1 zijn.",Correct Answer,lst2 = [17 * x for x in lst1]
+Question 8,"Gegeven is de volgende list:
+
+lst1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+Creëer met dictionary comprehension een dictionary die als keys de items van deze list heeft, en als values 17 maal deze items.",Correct Answer,dic2 = {i: i * 17 for i in lst1}
+Question 9,"Gegeven is de volgende list:
+
+lst1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+Creëer een generator-expressie waarmee je de veelvouden van 17 kunt afdrukken, op basis van deze lst.
+
+Laat ook zien hoe je die veelvouden afdrukt.",Correct Answer,"table_of_17 = (i * 17 for i in lst1)
+for i in table_of_17:
+    print(i)"
+Question 10,"Op het moment dat je de onderstaande code draait is de variabele a nog niet gedefinieerd.
+
+if a:
+    print(""a bestaat"")
+else:
+    print(""a bestaat niet"")
+
+De console zal melden: ""a bestaat niet"".",Waar~~Onwaar,False~~True
+Question 11,"Gegeven de volgende code:
+
+a = ''
+if a:
+    print(""a bestaat"")
+else:
+    print(""a bestaat niet"")
+
+Wat wordt er in de console afgedrukt?",a bestaat~~a bestaat niet,False~~True
