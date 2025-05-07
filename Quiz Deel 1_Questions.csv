@@ -1,0 +1,24 @@
+Title,Text,Choices,Correctness
+Question 1,Noem een voordeel en een nadeel van het feit dat Python dynamisch getypeerd is.,Correct Answer,"Een voordeel is: type casting is niet nodig.
+
+Een nadeel is: fouten met betrekking tot typen worden er niet door een compiler uitgehaald; je komt ze pas tegen tijdens het draaien van een programma."
+Question 2,"Bij elke waarde hoort één type.
+
+Welke van de uitspraken over deze stelling is juist?",De uitspraak geldt alleen voor dynamische typering.~~De uitspraak geldt alleen voor statische typering.~~De uitspraak geldt voor zowel statische als dynamische typering.~~De uitspraak heeft tot gevolg dat elke variabele een vast type heeft.~~De uitspraak heeft niet tot gevolg dat elke variabele een vast type heeft.,False~~False~~True~~False~~False
+Question 3,"Gegeven is de volgende code:&nbsp;
+
+n = 10
+r = 1
+while n > 0:
+	r = r * n
+n = n - 1
+
+Geef aan of de volgende uitspraak waar of onwaar is:
+
+De while-loop zal nooit eindigen.",Waar~~Onwaar,True~~False
+Question 4,"Wat is de waarde van de volgende expressie?
+
+>> 3 or 4",True~~False~~3~~4,False~~False~~True~~False
+Question 5,"Wat is de waarde van de volgende expressie?
+
+>> 11 // 4",3~~2~~True~~False,False~~True~~False~~False
