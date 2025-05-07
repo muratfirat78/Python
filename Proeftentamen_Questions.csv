@@ -1,0 +1,438 @@
+Title,Text,Choices,Correctness
+Question 1,Een while-loop wordt één keer of vaker doorlopen.,Waar~~Onwaar,False~~True
+Question 2,Een if-statement moet een else of een elif-deel bevatten.,Waar~~Onwaar,False~~True
+Question 3,"Herschrijf de volgende code:
+
+
+if year <= 2022:
+    pass
+else:
+    year = 2022",Correct Answer,"De code bevat een onnodige pass. De code kan namelijk duidelijker en korter:
+
+if year > 2022
+    year = 2022"
+Question 4,"Herschrijf de volgende code:
+
+for i in range(len(lst)):
+    if lst[i] > 0:
+        print(lst[i])",Correct Answer,"for (i, n) in enumerate(lst):
+    if n > 0:
+        print(n)"
+Question 5,"Gegeven is:
+
+lst = [('a', 'b'), ('c', 'd'), ('e', 'f')]
+
+Gebruik tuple unpacking om onder elkaar af te drukken:
+
+a and b
+c and d
+e and f
+
+
+",Correct Answer,"for x, y in lst:
+    print(x + ' and ' + y)"
+Question 6,"Gegeven is de volgende code:
+
+lst1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+lst2 = [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+lst3 = zip(lst1, lst2)
+
+Hoe print je, met behulp van lst3, de tafel van twee?",Correct Answer,"for x, y in lst3:
+    print(str(x) + ' maal 2 is: ' + str(y))"
+Question 7,"Gegeven is:
+
+lst1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+Creëer met list comprehension een&nbsp; nieuwe list, waarin de items 17 maal de items van lst1 zijn.",Correct Answer,lst2 = [17 * x for x in lst1]
+Question 8,"Gegeven is de volgende list:
+
+lst1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+Creëer met dictionary comprehension een dictionary die als keys de items van deze list heeft, en als values 17 maal deze items.",Correct Answer,dic2 = {i: i * 17 for i in lst1}
+Question 9,"Gegeven is de volgende list:
+
+lst1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+Creëer een generator-expressie waarmee je de veelvouden van 17 kunt afdrukken, op basis van deze lst.
+
+Laat ook zien hoe je die veelvouden afdrukt.",Correct Answer,"table_of_17 = (i * 17 for i in lst1)
+for i in table_of_17:
+    print(i)"
+Question 10,"Op het moment dat je de onderstaande code draait is de variabele a nog niet gedefinieerd.
+
+if a:
+    print(""a bestaat"")
+else:
+    print(""a bestaat niet"")
+
+De console zal melden: ""a bestaat niet"".",Waar~~Onwaar,False~~True
+Question 11,"Gegeven de volgende code:
+
+a = ''
+if a:
+    print(""a bestaat"")
+else:
+    print(""a bestaat niet"")
+
+Wat wordt er in de console afgedrukt?",a bestaat~~a bestaat niet,False~~True
+Question 1,"Voer je de volgende code in:
+
+>> print('3 maal 5 is: ' + 3*5)
+
+Wanneer je de code draait krijg je de volgende foutmelding:
+
+TypeError: can only concatenate str (not ""int"") to str
+
+Welke conclusie kun je op basis daarvan trekken?","Python is redelijk sterk getypeerd, en dynamisch getypeerd.~~Python is redelijk sterk getypeerd, en statisch getypeerd.~~Python is redelijk sterk getypeerd. Over statisch of dynamisch kun je niets afleiden.~~Je kunt op basis hiervan geen van de andere drie conclusies trekken.",False~~False~~True~~False
+Question 2,"Hoe geef je in Pythn aan:
+
+2 tot de macht 5.",2**5~~2^5~~2^^5~~Geen van deze mogelijkheden.,True~~False~~False~~False
+Question 3,"Nul of meer antwoorden kunnen juist zijn. Kruis dus alles aan dat juist is (of niets, als er geen juist antwoord tussen zit).",Het type van een lege lijst is None.~~Er bestaat slechts één object None.~~Het type van 5/3 is int.~~Het type van 5%3 is int.,False~~True~~False~~True
+Question 4,"Welke van de volgende uitspraken is juist?
+
+Er kunnen meerdere juiste antwoorden zijn.Het kan ook zo zijn dat geen enkel antwoord juist is.","Als een datatype immutable is, zijn alle waarden van dat type hashable.~~Als een datatype hashable is, zijn alle waarden van dat type immutabe.~~Als een datatype mutable is, is geen enkele waarde van dat type hashable.~~Als een type hashable is, is geen enkele waarde van dat type mutable.",False~~True~~True~~True
+Question 5,"Gegeven is:
+
+mylist = [1, 2, 3, 4, 5, 6]
+
+Welke van de onderstaande expressies geven als resultaat 4?
+
+Let op. Meerdere antwoorden kunnen juist zijn (of geen enkel antwoord).",mylist[3:4]~~mylist[3:][0]~~mylist[-3:4]~~mylist[-3:][0],True~~True~~False~~True
+Question 6,"Wat staat er in de console na het uitvoeren van de volgende code?
+
+
+list1 = [1,2,3,4,5,6] 
+list2 = list1 
+list3 = list1[:] 
+
+list2.append(7) 
+list3.append(8) 
+
+print(list1) 
+","[8]~~[1, 2, 3, 4, 5, 6]~~[1, 2, 3, 4, 5, 6, 7]~~[1, 2, 3, 4, 5, 6, 7, 8]~~[7]~~[]",False~~False~~True~~False~~False~~False
+Question 7,"Is de volgende uitspraak waar of onwaar?
+
+Als een waarde immutable is, is die waarde ook hashable.",Waar~~Onwaar,False~~True
+Question 8,"We hebben een lijst met elementen die ook weer een lijst zijn, met integers, en met verschillende lengte.
+
+Schrijf een code om de lijst te sorteren op basis van de som van de elementen van de lijsten, oplopend.
+
+Bij de onderstaande invoerlijst:
+
+>> [[1,2],[10],[0,0,0],[1,1]]  
+
+Is het resultaat dan:
+
+>> [[0, 0, 0], [1, 1], [1, 2], [10]] 
+",Correct Answer,x.sort(key=sum)
+Question 9,"Wat wordt er in de console geprint?
+
+print('{a}, {0}, {abc}'.format('Dit tentamen ', a='is ', abc='gemakkelijk '))","Dit tentamen , is , gemakkelijk&nbsp;~~Dit tentamen , gemakkelijk , is~~is , Dit tentamen , gemakkelijk~~is , gemakkelijk , Dit tentamen&nbsp;~~gemakkelijk , Dit tentamen , is~~gemakkelijk , is , Dit tentamen ",False~~False~~True~~False~~False~~False
+Question 10,"Gegeven is de volgende code.
+
+number = 5
+index = 1
+while index < 10:
+    print(index, ' maal ', number, ' is: ', number * index)
+    index += 1
+
+Wat wordt geprint?","De tafel van 5, beginnend bij 1 en eindigend bij 10.~~De tafel van 5, beginnend bij 1 en eindigend bij 9.~~De tafel van 5, beginnend bij 0 en eindigend bij 10.~~De tafel van 5, beginnend bij 0 en eindigend bij 9.",False~~True~~False~~False
+Question 11,"Gegeven is de volgende code.
+
+sentence = ""Dit Python tentamen is gemakkelijk""
+for w in sentence:
+    print(w)
+
+Wat wordt geprint?","De individuele letters, inclusief de spaties, onder elkaar.~~De vijf woorden onder elkaar.~~Dit Python tentamen is gemakkelijk~~DitPythontentamenisgemakkelijk~~D i t P y t h o n t e n t a m e n i s g e m a k k e l i j k",True~~False~~False~~False~~False
+Question 12,"Gegeven is de volgende code.
+
+digits = [1, 5, 2, 10]
+new_lst = []
+
+for x, y in enumerate(digits):
+    if x + 1 > y:
+        new_lst.append(y)
+
+print(new_lst)
+
+Wat wordt geprint?","[1]~~[1,2]~~[2]~~[]",False~~False~~True~~False
+Question 13,"Wat wordt geprint bij het draaien van de volgende code?
+
+for number, value in enumerate(['een', 'twee', 'drie']):
+    if number:
+        print(value)",Correct Answer,"Het juiste antwoord is:
+
+twee
+
+drie
+
+De uitleg: De waarde van number bij het eerste element is 0. Dat telt in een if-statement als False. De eerste waarde wordt dus niet geprint; de andere twee waarden wel, onder elkaar."
+Question 14,"Wat wordt er geprint wanneer je de volgende code runt?
+
+try:
+    print(1)
+finally:
+    print(2)",1~~2~~1 en 2 in twee volgende lijnen~~Een foutmelding,False~~False~~True~~False
+Question 15,"De code is:
+
+def test(a, b=5):
+    print(a > b)
+
+test(3, 1)
+
+Er wordt False geprint.",Waar~~Onwaar,False~~True
+Question 16,"Wat wordt er geprint bij het runnen van de volgende code:
+
+def add_to_my_list(el, lst=[]):
+    lst.append(el)
+    return lst
+
+my_first_lst = add_to_my_list(3)
+my_second_lst = add_to_my_list(2)
+my_third_lst = add_to_my_list(1)
+print(my_third_lst)",Correct Answer,"[3, 2, 1]
+
+Een default-variabele wordt in Python slechts eenmaal geëvalueerd: wanneer de functie wordt gedefinieerd. Daarna blijft die waarde in gebruik.
+
+In dit geval is het een list, en die waarde wordt elke keer bij het dorlopen van de functie gemuteerd."
+Question 17,"De documentatie van een functie get_min_value is als volgt:
+
+""""""
+    Select the min value of an iterable with numbers
+    :param lst: iterable with at least one number
+    :return: lowest number in the iterable
+    :raises: ValueError, TypeError
+
+    Happy path
+    pre: iterable has one or more floats or ints
+    post: returns max of these numbers
+
+    1: > 1 different numbers
+    2: > 1 numbers, some the same
+    3: 1 number
+
+    Pre broken path
+    1: iterable is empty, 
+       raises: ValueError: Argument must be an iterable with numbers
+    2: iterable's items not all numbers
+       raises: TypeError: Argument must be an iterable with numbers
+    3: not iterable
+       raises: TypeError: Argument must be an iterable with numbers
+    """"""
+
+Implementeer de functie. Daarbin kun je er van uitgaan dat Python de Errors bij Pre Broken Path 3 opgooit. Dat geldt niet voor Pre Broken Path 1 en 2.",Correct Answer,"De code is:
+
+def get_min_value(lst):
+    for item in lst:
+        if not isinstance(item, (int, list)):
+            raise TypeError(""Argument must be an iterable with numbers"")
+    if len(lst) == 0:
+        raise ValueError(""Argument must be an iterable with numbers"")
+    min = lst[0]
+    for item in lst:
+        if item < min:
+            min = item
+    return min"
+Question 18,"Gegeven is:
+
+numbers = [-1, 5, 2, -30, 2.5, 100]
+
+Schrijf een print-opdracht waarmee alle getallen groter dan 10 van numbers worden afgedrukt. Maak daarbij gebruik van filter en een lambda expressie.",Correct Answer,"print(list(filter(lambda x: x > 0, numbers)))"
+Question 19,"Gegeven is de volgende functie:
+
+def hello(name):
+    print('Hallo ', name)
+
+
+- Schrijf een decorator do_twice die een functie tweemaal uitvoert.
+- Laat zien hoe je die decorator toe kunt passen op de functie hello.
+
+
+",Correct Answer,"def do_twice(func):
+    def wrapper(*args, **kwargs):
+        func(*args, **kwargs)
+        func(*args, **kwargs)
+    return wrapper
+
+@do_twice
+def hello(name):
+    print('Hallo ', name)"
+Question 20,"Gegeven is de volgende functie:
+
+def hello(name):
+    print('Hallo ', name)
+
+
+Schrijf de documentatie voor een functie equilateral die teruggeeft of de drie meegegeven getallen zijden vormen van een gelijkzijdige driehoek (dat wil zeggen dat alle zijden gelijk zijn).
+
+Neem in de documentatie op:
+
+Een beschrijving van wat de functie doet
+Een beschrijving van het Happy path, met pre- en postconditie
+Een beschrijving van één Pre broken path met pre- en postconditie, namelijk dat de drie getallen geen zijden van een driehoek vormen.
+
+Een driehoek voldoet aan de voorwaarde dat voor elk paar van de zijden geldt dat ze opgetelt grter zijn of gelijk aan de derde zijde.
+",Correct Answer,"def equilateral(a, b, c):
+    """"""Check if a, b and c form the sides of an equilateral triangle
+
+        Happy path
+        pre: a + b >= c and b + c >= a and c + a >= b
+        post: True a == b == c; otherwise False
+
+        Pre broken path:
+        1: a + b < c or b + c < a or c + a < b
+           raises: ValueError: a, b, and c do not for a triangle
+        """""""
+Question 21,"Deze vraag gaat over deelfde functiie als de vorige vraag:
+
+Een functie equilateral die teruggeeft of de drie meegegeven getallen zijden vormen van een gelijkzijdige driehoek (dat wil zeggen dat alle zijden gelijk zijn).
+
+Geef doctests voor:
+
+Drie Happy path cases
+één Pre broken path case, namelijk dat de drie getallen geen zijden van een driehoek vormen.
+
+Een driehoek voldoet aan de voorwaarde dat voor elk paar van de zijden geldt dat ze opgetelt grter zijn of gelijk aan de derde zijde.",Correct Answer,"def equilateral(a, b, c):
+    """"""Check if a, b and c form the sides of an equilateral triangle
+
+        Happy path
+        pre: a + b >= c and b + c >= a and c + a >= b
+        post: True a == b == c; otherwise False
+
+        1: a == b == c
+        >>> equilateral(2, 2, 2)
+        True
+
+        2: a == b; c != a
+        >>> equilateral(2, 2, 1)
+        False
+
+        3: a != b; c != a
+        >>> equilateral(1, 2, 3)
+        False
+
+        Pre broken path:
+        1: a + b < c or b + c < a or c + a < b
+           raises: ValueError: a, b, and c do not for a triangle
+        >>> equilateral(1, 2, 7)
+        Traceback (most recent call last):
+        ...
+        ValueError: a, b, and c do not for a triangle
+        """""""
+Question 22,"Geef een beschrijving van wat de volgende functie doet. Contracten beschrijven is niet nodig.
+
+def right_angled(a, b, c):
+    return a*a + b*b == c*c or a*a + c*c == b*b or b*b + c*c == a*a",Correct Answer,"""""""Check if a, b and c form the sides of a right-angled triangle"""""""
+Question 23,"Gegeven is de volgende klasse:
+
+class Triangle:
+    def __init__(self, a, b, c):
+        self.side_1 = a
+        self.side_2 = b
+        self.side_3 = c
+
+Welk van de volgende uitspraken over een methode right_angle om te bepalen of het meegegeven aantal graden een rechte hoek vormt, is waar?","Je kunt hier het beste een static methode van maken, omdat je geen gebruik maakt van de attributen van Triangle.~~Je kunt hier het beste een klassemethode van maken, omdat je geen gebruik maakt van de attributen van Triangle.~~Je kunt hier het beste een losse functie van maken, omdat je geen gebruik maakt van de attributen van Triangle.~~Je kunt hier het beste een methode van Triangle van maken, omdat de functie logisch gezien hoort bij Triangle.",False~~False~~True~~False
+Question 24,"Gegeven is een klasse Circle:
+
+class Circle:
+    def __init__ (self, radius):
+        self.radius = radius
+
+
+Schrijf code om van radius een property te maken, zodat er een ValueError wordt opgegooid wanneer je probeert om een negatieve radius (straal) meee te geven.",Correct Answer,"class Circle:
+    def __init__ (self, radius):
+        self.radius = radius
+
+    @property
+    def radius(self):
+        return self.__radius
+
+    @radius.setter
+    def radius(self, val):
+        if val < 0:
+            raise ValueError('radius should not be negative')
+        self.__radius = val"
+Question 25,"Gegeven is een klasse Triangle:
+
+class Triangle:
+    def __init__(self, a, b, c):
+        self.side_1 = a
+        self.side_2 = b
+        self.side_3 = c
+
+- Verander de klasse zo dat er een ValueError wordt gegeven wanneer de klasse niet voldoet aan de regel voor driehoeken (de som van geen paar zijden is kleiner dan de derde zijde)
+- Schrijf een subklasse EquilateralTriangle voor een gelijkzijdige driehoek (alledrie de zijden gelijk). Denk aan een eventuele ValueError.",Correct Answer,"class Triangle:
+    def __init__(self, a, b, c):
+        if a + b < c or b + c < a or c + a < b:
+            raise ValueError('a, b, and c do not form a triangle')
+        self.side_1 = a
+        self.side_2 = b
+        self.side_3 = c
+
+class EquilateralTriangle(Triangle):
+    def __init__(self, a, b, c):
+        super().__init__(a, b, c)
+        if a != b or b!= c or a!= c:
+            raise ValueError('a, b, and c do not form an equilateral triangle')
+        self.side_1 = a
+        self.side_2 = b
+        self.side_3 = c"
+Question 26,"Gegeven is de volgende code:
+
+class Triangle:
+    def __init__(self, a, b, c):
+        self.side_1 = a
+        self.side_2 = b
+        self.side_3 = c
+
+Een programmeur maakt van de eerste zijde een property, als volgt:
+
+ @property
+    def side_1(self):
+        return self.__side_1
+
+    @side_1.setter
+    def side_1(self, side):
+        if side + self.side_2 < self.side_3 or self.side_2 + self.side_3 < side or self.side_3 + self.side_2 < side:
+            raise ValueError(
+                'The sum of the lengths of any two sides of a triangle must be greater than or equal to the length of the third side.')
+        else:
+            self.__side_1 = side
+
+Welke uitspraak is juist?
+",Dit lukt niet omdat je ook properties moet maken van de andere zijden.~~Dit lukt niet omdat de andere zijden nog geen waarden hoeven te hebben.~~Dit lukt niet omdat je in een property alleen mag refereren aan het attribuut waar de property betrekking op heeft.~~Dit is de juiste manier om een property te maken van side_1.,False~~True~~False~~False
+Question 27,Welke van de volgende uitspraken is waar?,In Python is een object een instantie van een klasse. Een klasse is geen object.~~In Python is een object een klasse.~~In Python zijn de begrippen type en klasse synoniem.~~In Python zijn de begrippen instantie en subklasse synoniem.,False~~True~~False~~False
+Question 28,"Wat wordt er in de console geprint wanneer je deze code draait?
+
+import re 
+
+result = re.sub(r'[^abc]','$', 'a9.B/2hb01Av.c') 
+
+print (result) ",$9.B/2h$01Av.$~~$9.$/2h$01$v.$~~a$$$$$$b$$$$$c~~a$$B$$$b$$A$$c,False~~False~~True~~False
+Question 29,"Schrijf met behulp van reguliere expressies code om een lijst van alle getallen met 2 of 3 cijfers uit een invoerstring te identificeren en af te drukken.
+
+Bij invoer
+
+ 'a12 !3 b 6783 b450-9 #b3.4.g Tc17 !567 67 b1' 
+
+geeft de code als uitvoer:
+
+ ['12', '678', '450', '17', '567', '67'] 
+
+",Correct Answer,"import re 
+
+input = 'a12 !3 b 6783 b450-9 #b3.4.g Tc17 !567  67 b1' 
+
+re.findall (r'[\d]{2,3}', input) 
+
+Alleen de derde regel si in dit geval voldoende!"
+Question 30,"Schrijf, met behulp van list comprehension en reguliere expressies, code om namen (d.w.z. alfabetische woorden met een lengte van 2 of meer letters) in een lijst te anonimiseren door ze te vervangen door 'XXX'.
+
+Bij de volgende input:",Correct Answer,"
+import re 
+
+input = ['Jan123', '#456ty', 'abb 12 rt', '12', 'Wim po', 'Richards','a23fgh'] 
+
+s=[re.sub(r'[a-zA-Z]{2,}', ""XXX"", i) for i in input]  
+
+print (s) "
