@@ -453,5 +453,16 @@ l=[1, 0, 2, 0, 'hello', '', []]
 print(list(filter(bool, l)))
 
 ","[1, 0, 2, 'hello','', []]~~Error~~[1, 2, 'hello']~~[1, 0, 2, 0, 'hello','', []]",False~~False~~True~~False
+Extra Question 3,"Which of the following is the use of id() function in python?","Every object doesn’t have a unique id~~Id returns the identity of the object~~All of the mentioned~~None of the mentioned",False~~True~~False~~False
+Extra Question 4,"Which of the following is not a core data type in Python programming?","Tuples~~Lists~~Class~~Dictionary",False~~False~~True~~False
+Extra Question 5,"What will be the output of the following Python program? 
+z=set('abc')
+z.add('san')
+z.update(set(['p', 'q']))
+print(z)","{'a', 'c', 'c', 'p', 'q', 's', 'a', 'n'}
+b) {'abc', 'p', 'q', 'san'}
+c) {'a', 'b', 'c', 'p', 'q', 'san'}
+d) {'a', 'b', 'c', ['p', 'q'], 'san'},False~~False~~True~~False
+
 
 
