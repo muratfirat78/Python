@@ -446,5 +446,12 @@ while True:
  
     i += 1
 
-",a) 1 2 3~~b) SyntaxError~~c) 1 2~~d) none of the mentioned,False~~False~~True~~False
+",1 2 3~~SyntaxError~~1 2~~none of the mentioned,False~~False~~True~~False
+Extra Question 2,"What will be the output of the following Python code?
+
+l=[1, 0, 2, 0, 'hello', '', []]
+print(list(filter(bool, l)))
+
+","[1, 0, 2, 'hello','', []]~~Error~~[1, 2, 'hello']~~[1, 0, 2, 0, 'hello','', []]",False~~False~~True~~False
+
 
