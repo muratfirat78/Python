@@ -467,4 +467,4 @@ Extra Question 8,"What is the output of print 0.1 + 0.2 == 0.3?","True~~False~~M
 Extra Question 9,"What will be the output of the following Python code snippet? 
 X = ""san-foundry""
 print(""%56s"" % X)
-","45 blank spaces before san-foundry~~56 blank spaces before san and foundry~~56 blank spaces after san-foundry~~no change",True~~False~~False~~False,""
+","45 blank spaces before san-foundry~~56 blank spaces before san and foundry~~56 blank spaces after san-foundry~~no change",True~~False~~False~~False,"Explanation: The formatting option %56s aligns the string to the right within a field of width 56. If the string ""san-foundry"" is 11 characters long, it will be preceded by (56 – 11 = 45) blank spaces."
