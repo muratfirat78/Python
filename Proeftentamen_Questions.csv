@@ -29,7 +29,7 @@ c and d
 e and f
 
 
-",Correct Answer,"for x, y in lst:
+","Correct Answer","for x, y in lst:
     print(x + ' and ' + y)",""
 Question 6,"Gegeven is de volgende code:
 
@@ -37,25 +37,25 @@ lst1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 lst2 = [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 lst3 = zip(lst1, lst2)
 
-Hoe print je, met behulp van lst3, de tafel van twee?",Correct Answer,"for x, y in lst3:
+Hoe print je, met behulp van lst3, de tafel van twee?","Correct Answer","for x, y in lst3:
     print(str(x) + ' maal 2 is: ' + str(y))",""
 Question 7,"Gegeven is:
 
 lst1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-Creëer met list comprehension een&nbsp; nieuwe list, waarin de items 17 maal de items van lst1 zijn.",Correct Answer,lst2 = [17 * x for x in lst1],""
+Creëer met list comprehension een&nbsp; nieuwe list, waarin de items 17 maal de items van lst1 zijn.","Correct Answer",lst2 = [17 * x for x in lst1],""
 Question 8,"Gegeven is de volgende list:
 
 lst1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-Creëer met dictionary comprehension een dictionary die als keys de items van deze list heeft, en als values 17 maal deze items.",Correct Answer,dic2 = {i: i * 17 for i in lst1},""
+Creëer met dictionary comprehension een dictionary die als keys de items van deze list heeft, en als values 17 maal deze items.","Correct Answer",dic2 = {i: i * 17 for i in lst1},""
 Question 9,"Gegeven is de volgende list:
 
 lst1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 Creëer een generator-expressie waarmee je de veelvouden van 17 kunt afdrukken, op basis van deze lst.
 
-Laat ook zien hoe je die veelvouden afdrukt.",Correct Answer,"table_of_17 = (i * 17 for i in lst1)
+Laat ook zien hoe je die veelvouden afdrukt.","Correct Answer","table_of_17 = (i * 17 for i in lst1)
 for i in table_of_17:
     print(i)",""
 Question 10,"Op het moment dat je de onderstaande code draait is de variabele a nog niet gedefinieerd.
@@ -124,7 +124,7 @@ Bij de onderstaande invoerlijst:
 Is het resultaat dan:
 
 >> [[0, 0, 0], [1, 1], [1, 2], [10]] 
-",Correct Answer,x.sort(key=sum),
+","Correct Answer",x.sort(key=sum),
 Question 19,"Wat wordt er in de console geprint?
 
 print('{a}, {0}, {abc}'.format('Dit tentamen ', a='is ', abc='gemakkelijk '))","Dit tentamen , is , gemakkelijk&nbsp;~~Dit tentamen , gemakkelijk , is~~is , Dit tentamen , gemakkelijk~~is , gemakkelijk , Dit tentamen&nbsp;~~gemakkelijk , Dit tentamen , is~~gemakkelijk , is , Dit tentamen ",False~~False~~True~~False~~False~~False,
@@ -160,7 +160,7 @@ Question 23,"Wat wordt geprint bij het draaien van de volgende code?
 
 for number, value in enumerate(['een', 'twee', 'drie']):
     if number:
-        print(value)",Correct Answer,"Het juiste antwoord is:
+        print(value)","Correct Answer","Het juiste antwoord is:
 
 twee
 
@@ -190,7 +190,7 @@ def add_to_my_list(el, lst=[]):
 my_first_lst = add_to_my_list(3)
 my_second_lst = add_to_my_list(2)
 my_third_lst = add_to_my_list(1)
-print(my_third_lst)",Correct Answer,"[3, 2, 1]
+print(my_third_lst)","Correct Answer","[3, 2, 1]
 
 Een default-variabele wordt in Python slechts eenmaal geëvalueerd: wanneer de functie wordt gedefinieerd. Daarna blijft die waarde in gebruik.
 
@@ -220,7 +220,7 @@ Question 27,"De documentatie van een functie get_min_value is als volgt:
        raises: TypeError: Argument must be an iterable with numbers
     """"""
 
-Implementeer de functie. Daarbin kun je er van uitgaan dat Python de Errors bij Pre Broken Path 3 opgooit. Dat geldt niet voor Pre Broken Path 1 en 2.",Correct Answer,"De code is:
+Implementeer de functie. Daarbin kun je er van uitgaan dat Python de Errors bij Pre Broken Path 3 opgooit. Dat geldt niet voor Pre Broken Path 1 en 2.","Correct Answer","De code is:
 
 def get_min_value(lst):
     for item in lst:
@@ -237,7 +237,7 @@ Question 28,"Gegeven is:
 
 numbers = [-1, 5, 2, -30, 2.5, 100]
 
-Schrijf een print-opdracht waarmee alle getallen groter dan 10 van numbers worden afgedrukt. Maak daarbij gebruik van filter en een lambda expressie.",Correct Answer,"print(list(filter(lambda x: x > 0, numbers)))",
+Schrijf een print-opdracht waarmee alle getallen groter dan 10 van numbers worden afgedrukt. Maak daarbij gebruik van filter en een lambda expressie.","Correct Answer","print(list(filter(lambda x: x > 0, numbers)))",
 Question 29,"Gegeven is de volgende functie:
 
 def hello(name):
@@ -248,7 +248,7 @@ def hello(name):
 - Laat zien hoe je die decorator toe kunt passen op de functie hello.
 
 
-",Correct Answer,"def do_twice(func):
+","Correct Answer","def do_twice(func):
     def wrapper(*args, **kwargs):
         func(*args, **kwargs)
         func(*args, **kwargs)
@@ -272,7 +272,7 @@ Een beschrijving van het Happy path, met pre- en postconditie
 Een beschrijving van één Pre broken path met pre- en postconditie, namelijk dat de drie getallen geen zijden van een driehoek vormen.
 
 Een driehoek voldoet aan de voorwaarde dat voor elk paar van de zijden geldt dat ze opgetelt grter zijn of gelijk aan de derde zijde.
-",Correct Answer,"def equilateral(a, b, c):
+","Correct Answer","def equilateral(a, b, c):
     """"""Check if a, b and c form the sides of an equilateral triangle
 
         Happy path
@@ -292,7 +292,7 @@ Geef doctests voor:
 Drie Happy path cases
 één Pre broken path case, namelijk dat de drie getallen geen zijden van een driehoek vormen.
 
-Een driehoek voldoet aan de voorwaarde dat voor elk paar van de zijden geldt dat ze opgetelt grter zijn of gelijk aan de derde zijde.",Correct Answer,"def equilateral(a, b, c):
+Een driehoek voldoet aan de voorwaarde dat voor elk paar van de zijden geldt dat ze opgetelt grter zijn of gelijk aan de derde zijde.","Correct Answer","def equilateral(a, b, c):
     """"""Check if a, b and c form the sides of an equilateral triangle
 
         Happy path
@@ -322,7 +322,7 @@ Een driehoek voldoet aan de voorwaarde dat voor elk paar van de zijden geldt dat
 Question 32,"Geef een beschrijving van wat de volgende functie doet. Contracten beschrijven is niet nodig.
 
 def right_angled(a, b, c):
-    return a*a + b*b == c*c or a*a + c*c == b*b or b*b + c*c == a*a",Correct Answer,"""""""Check if a, b and c form the sides of a right-angled triangle""""""",
+    return a*a + b*b == c*c or a*a + c*c == b*b or b*b + c*c == a*a","Correct Answer","""""""Check if a, b and c form the sides of a right-angled triangle""""""",
 Question 33,"Gegeven is de volgende klasse:
 
 class Triangle:
@@ -339,7 +339,7 @@ class Circle:
         self.radius = radius
 
 
-Schrijf code om van radius een property te maken, zodat er een ValueError wordt opgegooid wanneer je probeert om een negatieve radius (straal) meee te geven.",Correct Answer,"class Circle:
+Schrijf code om van radius een property te maken, zodat er een ValueError wordt opgegooid wanneer je probeert om een negatieve radius (straal) meee te geven.","Correct Answer","class Circle:
     def __init__ (self, radius):
         self.radius = radius
 
@@ -361,7 +361,7 @@ class Triangle:
         self.side_3 = c
 
 - Verander de klasse zo dat er een ValueError wordt gegeven wanneer de klasse niet voldoet aan de regel voor driehoeken (de som van geen paar zijden is kleiner dan de derde zijde)
-- Schrijf een subklasse EquilateralTriangle voor een gelijkzijdige driehoek (alledrie de zijden gelijk). Denk aan een eventuele ValueError.",Correct Answer,"class Triangle:
+- Schrijf een subklasse EquilateralTriangle voor een gelijkzijdige driehoek (alledrie de zijden gelijk). Denk aan een eventuele ValueError.","Correct Answer","class Triangle:
     def __init__(self, a, b, c):
         if a + b < c or b + c < a or c + a < b:
             raise ValueError('a, b, and c do not form a triangle')
@@ -419,7 +419,7 @@ geeft de code als uitvoer:
 
  ['12', '678', '450', '17', '567', '67'] 
 
-",Correct Answer,"import re 
+","Correct Answer","import re 
 
 input = 'a12 !3 b 6783 b450-9 #b3.4.g Tc17 !567  67 b1' 
 
@@ -428,7 +428,7 @@ re.findall (r'[\d]{2,3}', input)
 Alleen de derde regel si in dit geval voldoende!",
 Question 40,"Schrijf, met behulp van list comprehension en reguliere expressies, code om namen (d.w.z. alfabetische woorden met een lengte van 2 of meer letters) in een lijst te anonimiseren door ze te vervangen door 'XXX'.
 
-Bij de volgende input:",Correct Answer,"
+Bij de volgende input:","Correct Answer","
 import re 
 
 input = ['Jan123', '#456ty', 'abb 12 rt', '12', 'Wim po', 'Richards','a23fgh'] 
