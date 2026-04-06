@@ -436,4 +436,36 @@ input = ['Jan123', '#456ty', 'abb 12 rt', '12', 'Wim po', 'Richards','a23fgh']
 s=[re.sub(r'[a-zA-Z]{2,}', ""XXX"", i) for i in input]  
 
 print (s) ",
+xtra Question 1,"What will be the output of the following Python code?
+
+i = 1
+while True:
+    if i%3 == 0:
+        break
+    print(i)
+ 
+    i += 1
+
+",1 2 3~~SyntaxError~~1 2~~none of the mentioned,False~~False~~True~~False,
+Extra Question 2,"What will be the output of the following Python code?
+
+l=[1, 0, 2, 0, 'hello', '', []]
+print(list(filter(bool, l)))
+
+","[1, 0, 2, 'hello','', []]~~Error~~[1, 2, 'hello']~~[1, 0, 2, 0, 'hello','', []]",False~~False~~True~~False,
+Extra Question 3,"Which of the following is the use of id() function in python?","Every object doesn’t have a unique id~~Id returns the identity of the object~~All of the mentioned~~None of the mentioned",False~~True~~False~~False,
+Extra Question 4,"Which of the following is not a core data type in Python programming?","Tuples~~Lists~~Class~~Dictionary",False~~False~~True~~False,
+Extra Question 5,"What will be the output of the following Python program? 
+z=set('abc')
+z.add('san')
+z.update(set(['p', 'q']))
+print(z)","{'a', 'c', 'c', 'p', 'q', 's', 'a', 'n'}~~{'abc', 'p', 'q', 'san'}~~{'a', 'b', 'c', 'p', 'q', 'san'}~~{'a', 'b', 'c', ['p', 'q'], 'san'}",False~~False~~True~~False,
+Extra Question 6,"To add a new element to a list we use which Python command?","list1.addEnd(5)~~list1.addLast(5)~~list1.append(5)~~list1.add(5)",False~~False~~True~~False
+Extra Question 7,"What will be the output of the following Python code? 
+print("Hello {0[0]} and {0[1]}".format(('foo', 'bin')))","Hello ('foo', 'bin') and ('foo', 'bin')~~Error~~Hello foo and bin~~None of the mentioned",False~~False~~True~~False,
+Extra Question 8,"What is the output of print 0.1 + 0.2 == 0.3?","True~~False~~Machine dependent~~Error",False~~True~~False~~False,
+Extra Question 9,"What will be the output of the following Python code snippet? 
+X = ""san-foundry""
+print("%56s" % X)
+","45 blank spaces before san-foundry~~56 blank spaces before san and foundry~~56 blank spaces after san-foundry~~no change",True~~False~~False~~False,
 
