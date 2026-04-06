@@ -436,3 +436,15 @@ input = ['Jan123', '#456ty', 'abb 12 rt', '12', 'Wim po', 'Richards','a23fgh']
 s=[re.sub(r'[a-zA-Z]{2,}', ""XXX"", i) for i in input]  
 
 print (s) "
+Extra Question 1,"What will be the output of the following Python code?
+
+i = 1
+while True:
+    if i%3 == 0:
+        break
+    print(i)
+ 
+    i += 1
+
+",a) 1 2 3~~b) SyntaxError~~c) 1 2~~d) none of the mentioned,False~~False~~True~~False
+
