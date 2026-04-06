@@ -7,14 +7,14 @@ Question 3,"Herschrijf de volgende code:
 if year <= 2022:
     pass
 else:
-    year = 2022",Correct Answer,"De code bevat een onnodige pass. De code kan namelijk duidelijker en korter:
+    year = 2022","Correct Answer","De code bevat een onnodige pass. De code kan namelijk duidelijker en korter:
 
 if year > 2022
-    year = 2022",
+    year = 2022",""
 Question 4,"Herschrijf de volgende code:
 
 for i in range(len(lst)):
     if lst[i] > 0:
         print(lst[i])",Correct Answer,"for (i, n) in enumerate(lst):
     if n > 0:
-        print(n)",
+        print(n)",""
