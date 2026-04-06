@@ -483,4 +483,4 @@ from mod2 import change
 #main
 s=[1,2,3]
 change(s)
-","[2,4,6]~~[1,4,9]~~[2,4,6]\n[1,4,9]~~There is a name clash",False~~False~~False~~True,"Explanation: In the given code, both mod1 and mod2 define a function named change(). When from mod1 import change is followed by from mod2 import change, the second import overrides the first due to the same function name. This causes a name clash, as only one version of change() will be available in the current namespace, leading to confusion or unintended behavior."
+","[2,4,6]~~[1,4,9]~~'[2,4,6]\n[1,4,9]'~~There is a name clash",False~~False~~False~~True,"Explanation: In the given code, both mod1 and mod2 define a function named change(). When from mod1 import change is followed by from mod2 import change, the second import overrides the first due to the same function name. This causes a name clash, as only one version of change() will be available in the current namespace, leading to confusion or unintended behavior."
