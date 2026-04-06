@@ -463,5 +463,5 @@ print(z)","{'a', 'c', 'c', 'p', 'q', 's', 'a', 'n'}~~{'abc', 'p', 'q', 'san'}~~{
 Extra Question 6,"To add a new element to a list we use which Python command?","list1.addEnd(5)~~list1.addLast(5)~~list1.append(5)~~list1.add(5)",False~~False~~True~~False
 Extra Question 7,"What will be the output of the following Python code? 
 print("Hello {0[0]} and {0[1]}".format(('foo', 'bin')))","Hello ('foo', 'bin') and ('foo', 'bin')~~Error~~Hello foo and bin~~None of the mentioned",False~~False~~True~~False
-Extra Question 8,""Which of the following will cause a SyntaxError in Python? 
-print("Hello {0[0]} and {0[1]}".format(('foo', 'bin')))"",""'"Once upon a time…", she said'~~"He said, 'Yes!'"~~'3\'~"'That’s okay'""",False~~False~~True~~False
+Extra Question 8,"Which of the following will cause a SyntaxError in Python? 
+print(""Hello {0[0]} and {0[1]}"".format(('foo', 'bin')))","'""Once upon a time…"", she said'~~""He said, 'Yes!'""~~'3\'~""'That’s okay'""",False~~False~~True~~False
