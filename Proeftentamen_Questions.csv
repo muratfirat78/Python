@@ -466,6 +466,5 @@ print("Hello {0[0]} and {0[1]}".format(('foo', 'bin')))","Hello ('foo', 'bin') a
 Extra Question 8,"What is the output of print 0.1 + 0.2 == 0.3?","True~~False~~Machine dependent~~Error",False~~True~~False~~False,
 Extra Question 9,"What will be the output of the following Python code snippet? 
 X = ""san-foundry""
-print("%56s" % X)
-","45 blank spaces before san-foundry~~56 blank spaces before san and foundry~~56 blank spaces after san-foundry~~no change",True~~False~~False~~False,
-
+print(""%56s"" % X)
+","45 blank spaces before san-foundry~~56 blank spaces before san and foundry~~56 blank spaces after san-foundry~~no change",True~~False~~False~~False,""
