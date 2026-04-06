@@ -459,10 +459,4 @@ Extra Question 5,"What will be the output of the following Python program?
 z=set('abc')
 z.add('san')
 z.update(set(['p', 'q']))
-print(z)","{'a', 'c', 'c', 'p', 'q', 's', 'a', 'n'}
-b) {'abc', 'p', 'q', 'san'}
-c) {'a', 'b', 'c', 'p', 'q', 'san'}
-d) {'a', 'b', 'c', ['p', 'q'], 'san'},False~~False~~True~~False
-
-
-
+print(z)","{'a', 'c', 'c', 'p', 'q', 's', 'a', 'n'}~~{'abc', 'p', 'q', 'san'}~~{'a', 'b', 'c', 'p', 'q', 'san'}~~{'a', 'b', 'c', ['p', 'q'], 'san'}",False~~False~~True~~False
