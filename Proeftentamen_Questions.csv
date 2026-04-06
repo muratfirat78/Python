@@ -468,3 +468,20 @@ Extra Question 9,"What will be the output of the following Python code snippet?
 X = ""san-foundry""
 print(""%56s"" % X)
 ","45 blank spaces before san-foundry~~56 blank spaces before san and foundry~~56 blank spaces after san-foundry~~no change",True~~False~~False~~False,"Explanation: The formatting option %56s aligns the string to the right within a field of width 56. If the string ""san-foundry"" is 11 characters long, it will be preceded by (56 – 11 = 45) blank spaces."
+Extra Question (Modules),"What will be the output of the following Python code?
+
+#mod1
+def change(a):
+    b=[x*2 for x in a]
+    print(b)
+#mod2
+def change(a):
+    b=[x*x for x in a]
+    print(b)
+from mod1 import change
+from mod2 import change
+#main
+s=[1,2,3]
+change(s)
+","[2,4,6]~~[1,4,9]~~[2,4,6]
+[1,4,9]~~There is a name clash",False~~False~~False~~True,"Explanation: In the given code, both mod1 and mod2 define a function named change(). When from mod1 import change is followed by from mod2 import change, the second import overrides the first due to the same function name. This causes a name clash, as only one version of change() will be available in the current namespace, leading to confusion or unintended behavior."
