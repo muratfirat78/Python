@@ -461,14 +461,14 @@ z.add('san')
 z.update(set(['p', 'q']))
 print(z)","{'a', 'c', 'c', 'p', 'q', 's', 'a', 'n'}~~{'abc', 'p', 'q', 'san'}~~{'a', 'b', 'c', 'p', 'q', 'san'}~~{'a', 'b', 'c', ['p', 'q'], 'san'}",False~~False~~True~~False,""
 Extra Question 6,"To add a new element to a list we use which Python command?","list1.addEnd(5)~~list1.addLast(5)~~list1.append(5)~~list1.add(5)",False~~False~~True~~False,""
-Extra Question 7,"What will be the output of the following Python code? 
+Question (Formatting),"What will be the output of the following Python code? 
 print(""Hello {0[0]} and {0[1]}"".format(('foo', 'bin')))","Hello ('foo', 'bin') and ('foo', 'bin')~~Error~~Hello foo and bin~~None of the mentioned",False~~False~~True~~False,""
-Extra Question 8,"What is the output of print 0.1 + 0.2 == 0.3?","True~~False~~Machine dependent~~Error",False~~True~~False~~False,""
-Extra Question 9,"What will be the output of the following Python code snippet? 
+Question2 (Numerical precision),"What is the output of print 0.1 + 0.2 == 0.3?","True~~False~~Machine dependent~~Error",False~~True~~False~~False,""
+Question2 (Formatting),"What will be the output of the following Python code snippet? 
 X = ""san-foundry""
 print(""%56s"" % X)
 ","45 blank spaces before san-foundry~~56 blank spaces before san and foundry~~56 blank spaces after san-foundry~~no change",True~~False~~False~~False,"Explanation: The formatting option %56s aligns the string to the right within a field of width 56. If the string ""san-foundry"" is 11 characters long, it will be preceded by (56 – 11 = 45) blank spaces."
-Extra Question (Modules),"What will be the output of the following Python code?
+Question (Modules),"What will be the output of the following Python code?
 
 #mod1
 def change(a):
