@@ -497,3 +497,10 @@ Question2 (Shallow/deep copy),"What will be the output of the following Python c
 l1=[1, 2, 3, [4]]
 l2=list(l1)
 print(id(l1)==id(l2))","True~~False~~Error~~Address of l1",False~~True~~False~~False,"Explanation: In the code, l2 = list(l1) creates a shallow copy of the list l1. This means l2 is a new list object with the same elements as l1, so id(l1) == id(l2) evaluates to False. Although the outer lists are different objects, they still share the same inner list [4] due to shallow copying."
+Question (Recursion),"What will be the output of the following Python code?
+
+def check(n):
+    if n < 2:
+        return n % 2 == 0
+    return check(n - 2)
+print(check(11))","False~~True~~1~~An exception is thrown",True~~False~~False~~False,"Explanation: The function check(n) recursively subtracts 2 until n < 2. Then it returns n % 2 == 0. For n = 11, the recursion reaches n = 1, and 1 % 2 == 0 is False. So, the output is False."
