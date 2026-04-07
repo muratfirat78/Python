@@ -436,7 +436,7 @@ input = ['Jan123', '#456ty', 'abb 12 rt', '12', 'Wim po', 'Richards','a23fgh']
 s=[re.sub(r'[a-zA-Z]{2,}', ""XXX"", i) for i in input]  
 
 print (s) ",""
-Extra Question 1,"What will be the output of the following Python code?
+Question (Functional Programming),"What will be the output of the following Python code?
 
 i = 1
 while True:
@@ -447,20 +447,20 @@ while True:
     i += 1
 
 ",1 2 3~~SyntaxError~~1 2~~none of the mentioned,False~~False~~True~~False,""
-Extra Question 2,"What will be the output of the following Python code?
+Question (Boolean),"What will be the output of the following Python code?
 
 l=[1, 0, 2, 0, 'hello', '', []]
 print(list(filter(bool, l)))
 
 ","[1, 0, 2, 'hello','', []]~~Error~~[1, 2, 'hello']~~[1, 0, 2, 0, 'hello','', []]",False~~False~~True~~False,""
-Extra Question 3,"Which of the following is the use of id() function in python?","Every object doesn’t have a unique id~~Id returns the identity of the object~~All of the mentioned~~None of the mentioned",False~~True~~False~~False,""
-Extra Question 4,"Which of the following is not a core data type in Python programming?","Tuples~~Lists~~Class~~Dictionary",False~~False~~True~~False,""
-Extra Question 5,"What will be the output of the following Python program? 
+Question (Built-in Functions),"Which of the following is the use of id() function in python?","Every object doesn’t have a unique id~~Id returns the identity of the object~~All of the mentioned~~None of the mentioned",False~~True~~False~~False,""
+Question (Data Types),"Which of the following is not a core data type in Python programming?","Tuples~~Lists~~Class~~Dictionary",False~~False~~True~~False,""
+Question2 (Data Types),"What will be the output of the following Python program? 
 z=set('abc')
 z.add('san')
 z.update(set(['p', 'q']))
 print(z)","{'a', 'c', 'c', 'p', 'q', 's', 'a', 'n'}~~{'abc', 'p', 'q', 'san'}~~{'a', 'b', 'c', 'p', 'q', 'san'}~~{'a', 'b', 'c', ['p', 'q'], 'san'}",False~~False~~True~~False,""
-Extra Question 6,"To add a new element to a list we use which Python command?","list1.addEnd(5)~~list1.addLast(5)~~list1.append(5)~~list1.add(5)",False~~False~~True~~False,""
+Question3 (Data Types),"To add a new element to a list we use which Python command?","list1.addEnd(5)~~list1.addLast(5)~~list1.append(5)~~list1.add(5)",False~~False~~True~~False,""
 Question (Formatting),"What will be the output of the following Python code? 
 print(""Hello {0[0]} and {0[1]}"".format(('foo', 'bin')))","Hello ('foo', 'bin') and ('foo', 'bin')~~Error~~Hello foo and bin~~None of the mentioned",False~~False~~True~~False,""
 Question2 (Numerical precision),"What is the output of print 0.1 + 0.2 == 0.3?","True~~False~~Machine dependent~~Error",False~~True~~False~~False,""
@@ -509,7 +509,7 @@ Question (Lambda Recursion),"What will be the output of the following Python cod
 a = [1, 2, 3, 4, 5]
 b = lambda x: (b (x[1:]) + x[:1] if x else []) 
 print(b (a))","1 2 3 4 5~~[5, 4, 3, 2, 1]~~[]~~Error, lambda functions cannot be called recursively",False~~True~~False~~False,"Explanation: The lambda function b is recursively called on the sliced list x[1:] until the list is empty (x == []). It builds the reversed list by appending the first element (x[:1]) at the end during each return. This effectively reverses the list. So, for a = [1, 2, 3, 4, 5], it returns [5, 4, 3, 2, 1]."
-Question (Functional Programming),"What will be the output of the following Python code?
+Question2 (Functional Programming),"What will be the output of the following Python code?
 
 odd=lambda x: bool(x%2)
 numbers=[n for n in range(10)]
