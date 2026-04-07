@@ -484,7 +484,7 @@ from mod2 import change
 s=[1,2,3]
 change(s)
 ","[2,4,6]~~[1,4,9]~~'[2,4,6]\n[1,4,9]'~~There is a name clash",False~~False~~False~~True,"Explanation: In the given code, both mod1 and mod2 define a function named change(). When from mod1 import change is followed by from mod2 import change, the second import overrides the first due to the same function name. This causes a name clash, as only one version of change() will be available in the current namespace, leading to confusion or unintended behavior."
-Extra Question (Shallow/deep copy),"What will be the output of the following Python code?
+Question (Shallow/deep copy),"What will be the output of the following Python code?
 
 l1=[10, 20, 30]
 l2=l1
@@ -492,7 +492,7 @@ print(id(l1)==id(l2))
  
 l2=l1.copy()
 print(id(l1)==id(l2))","False, False~~False, True~~True, True~~True, False",False~~False~~False~~True,"Explanation: In the given code, l2 = l1 assigns l2 to reference the same list object as l1, so id(l1) == id(l2) returns True. However, when l2 = l1.copy() is used, it creates a new list with the same elements, resulting in a different object in memory. Therefore, id(l1) == id(l2) now returns False. This demonstrates the difference between assigning a reference and creating a shallow copy of a list."
-Extra Question (Shallow/deep copy),"What will be the output of the following Python code?
+Question2 (Shallow/deep copy),"What will be the output of the following Python code?
 
 l1=[1, 2, 3, [4]]
 l2=list(l1)
