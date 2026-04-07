@@ -36,15 +36,19 @@ def read_quizes():
 
 
 class Question():
-    def __init__(self, title, text,mchoice):
+    def __init__(self, title, text,mchoice,exp):
         self.title = title
         self.text = text
         self.type = mchoice
         self.choices = []
         self.correctchoice = None
+        self.explanation = exp
 
     def getTitle(self):
         return self.title
+
+    def getExplanation(self):
+        return self.explanation
 
     def getText(self):
         return self.text
@@ -90,6 +94,7 @@ class VisualManager():
         self.Qname= widgets.Label(value="Questions")
         self.Qqsts= widgets.Select(description="")
         self.Qqsts.layout.width ='95%'
+        self.Qqsts.layout.height ='250px'
         self.Qqsts.observe(self.open_question)
         self.description_out = widgets.Output()
         self.feedback_out = widgets.Output()
@@ -105,7 +110,7 @@ class VisualManager():
         self.check = widgets.Button(description="Submit")
         self.check.on_click(self.check_selection)
 
-        hboxleft = VBox(children=[self.Qname,self.Qqsts],layout=Layout(width = '15%'))
+        hboxleft = VBox(children=[self.Qname,self.Qqsts],layout=Layout(width = '25%'))
         qvbox = VBox(children=[self.description_out,self.qans_lbl,self.writtenresp,self.choices])
 
         hboxmiddle = VBox(children=[qvbox,HBox(children=[self.check],layout=Layout(align_items='stretch')),self.feedback_out],layout=Layout(width = '75%'))
@@ -125,6 +130,9 @@ class VisualManager():
     def open_question(self,b):
 
         global currentQuiz,BOLD,RESET
+
+        self.writtenresp.disabled = False
+        self.writtenresp.value = ''
 
         for qstn in currentQuiz.getQuestions():
             if qstn.getTitle() == self.Qqsts.value:
@@ -200,13 +208,19 @@ class VisualManager():
                     
         if currentQuiz.getCurrentQuestion().IsMChoice():
             a = str(self.choices.value)
+          
             if a in correct_answers:
                 s = '\x1b[6;30;42m' + "Correct." + '\x1b[0m' +"\n" #green color
             else:
-                s = '\x1b[5;30;41m' + "Incorrect. " + '\x1b[0m' +"\n" #red color
+                s = '\x1b[5;30;41m' + "Incorrect. " + '\x1b[0m' +"\n" #red color 
+                if not pd.isna(currentQuiz.getCurrentQuestion().getExplanation()):
+                    s+= currentQuiz.getCurrentQuestion().getExplanation()
+               
         else:
             s = correct_answers[0]
             self.writtenresp.disabled = True
+
+        
             
         with self.feedback_out:
             clear_output() 
@@ -224,9 +238,12 @@ def open_quiz(VisManager,DeelNo,tab_set):
     global currentQuiz
 
     qtslist = []
-
     quizstr = "Quiz Deel "+str(DeelNo)+"_Questions"
     qname = quizstr[:quizstr.find("_Questions")]
+
+    if DeelNo == 9999:
+        quizstr = "Proeftentamen "+str(DeelNo)+"_Questions"
+        qname = "Proeftentamen"
 
     tab_set.set_title(0,qname)
 
@@ -240,13 +257,18 @@ def open_quiz(VisManager,DeelNo,tab_set):
         url = "https://github.com/muratfirat78/Python/raw/main/Quiz Deel 1_Questions.csv" 
     if qname == "Quiz Deel 2":
         url = "https://github.com/muratfirat78/Python/raw/main/Quiz Deel 2_Questions.csv" 
+    if qname == "Quiz Deel 3":
+        url = "https://github.com/muratfirat78/Python/raw/main/Quiz Deel 3_Questions.csv" 
+
+    if qname == "Proeftentamen":
+        url = "https://github.com/muratfirat78/Python/raw/main/Proeftentamen_Questions.csv" 
 
     url = url.replace(" ", "%20")
     Questions_df = pd.read_csv(url, sep=',') 
  
    
     for i,r in Questions_df.iterrows():
-        newquestion = Question(r['Title'],r['Text'],r['Correctness'].find('~~')>-1)
+        newquestion = Question(r['Title'],r['Text'],r['Correctness'].find('~~')>-1,r['Explanation'])
         choices = r['Choices']
         correctness = r['Correctness']
 
