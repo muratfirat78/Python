@@ -401,15 +401,15 @@ Een programmeur maakt van de eerste zijde een property, als volgt:
 
 Welke uitspraak is juist?
 ",Dit lukt niet omdat je ook properties moet maken van de andere zijden.~~Dit lukt niet omdat de andere zijden nog geen waarden hoeven te hebben.~~Dit lukt niet omdat je in een property alleen mag refereren aan het attribuut waar de property betrekking op heeft.~~Dit is de juiste manier om een property te maken van side_1.,False~~True~~False~~False,
-Question 37,Welke van de volgende uitspraken is waar?,In Python is een object een instantie van een klasse. Een klasse is geen object.~~In Python is een object een klasse.~~In Python zijn de begrippen type en klasse synoniem.~~In Python zijn de begrippen instantie en subklasse synoniem.,False~~True~~False~~False,
-Question 38,"Wat wordt er in de console geprint wanneer je deze code draait?
+Question (OOP),Welke van de volgende uitspraken is waar?,In Python is een object een instantie van een klasse. Een klasse is geen object.~~In Python is een object een klasse.~~In Python zijn de begrippen type en klasse synoniem.~~In Python zijn de begrippen instantie en subklasse synoniem.,False~~True~~False~~False,
+Question (Regular Expressions),"Wat wordt er in de console geprint wanneer je deze code draait?
 
 import re 
 
 result = re.sub(r'[^abc]','$', 'a9.B/2hb01Av.c') 
 
 print (result) ",$9.B/2h$01Av.$~~$9.$/2h$01$v.$~~a$$$$$$b$$$$$c~~a$$B$$$b$$A$$c,False~~False~~True~~False,
-Question 39,"Schrijf met behulp van reguliere expressies code om een lijst van alle getallen met 2 of 3 cijfers uit een invoerstring te identificeren en af te drukken.
+Question2 (Regular Expressions),"Schrijf met behulp van reguliere expressies code om een lijst van alle getallen met 2 of 3 cijfers uit een invoerstring te identificeren en af te drukken.
 
 Bij invoer
 
@@ -426,7 +426,7 @@ input = 'a12 !3 b 6783 b450-9 #b3.4.g Tc17 !567  67 b1'
 re.findall (r'[\d]{2,3}', input) 
 
 Alleen de derde regel si in dit geval voldoende!",
-Question 40,"Schrijf, met behulp van list comprehension en reguliere expressies, code om namen (d.w.z. alfabetische woorden met een lengte van 2 of meer letters) in een lijst te anonimiseren door ze te vervangen door 'XXX'.
+Question3 (Regular Expressions),"Schrijf, met behulp van list comprehension en reguliere expressies, code om namen (d.w.z. alfabetische woorden met een lengte van 2 of meer letters) in een lijst te anonimiseren door ze te vervangen door 'XXX'.
 
 Bij de volgende input:","Correct Answer","
 import re 
