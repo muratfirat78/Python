@@ -509,14 +509,3 @@ Question (Lambda Recursion),"What will be the output of the following Python cod
 a = [1, 2, 3, 4, 5]
 b = lambda x: (b (x[1:]) + x[:1] if x else []) 
 print(b (a))","1 2 3 4 5~~[5, 4, 3, 2, 1]~~[]~~Error, lambda functions cannot be called recursively",False~~True~~False~~False,"Explanation: The lambda function b is recursively called on the sliced list x[1:] until the list is empty (x == []). It builds the reversed list by appending the first element (x[:1]) at the end during each return. This effectively reverses the list. So, for a = [1, 2, 3, 4, 5], it returns [5, 4, 3, 2, 1]."
-Question (Functional Programming),""What will be the output of the following Python code?
-
-odd=lambda x: bool(x%2)
-numbers=[n for n in range(10)]
-print(numbers)
-n=list()
-for i in numbers:
-    if odd(i):
-        continue
-    else:
-        break"","[0, 2, 4, 6, 8, 10]~~[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]~~[1, 3, 5, 7, 9]~~Error",False~~True~~False~~False,"Explanation: The list numbers is created using range(10), which gives [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], and it is printed directly. The for loop that follows checks each number, and since the first number 0 is even, the else block triggers break, exiting the loop immediately without modifying or printing anything. Hence, the printed output is just the original list."
