@@ -508,4 +508,4 @@ Question (Lambda Recursion),"What will be the output of the following Python cod
 
 a = [1, 2, 3, 4, 5]
 b = lambda x: (b (x[1:]) + x[:1] if x else []) 
-print(b (a))","1 2 3 4 5~~[5, 4, 3, 2, 1]~~[]~~Error, lambda functions can’t be called recursively",False~~True~~False~~False,"Explanation: The lambda function b is recursively called on the sliced list x[1:] until the list is empty (x == []). It builds the reversed list by appending the first element (x[:1]) at the end during each return. This effectively reverses the list. So, for a = [1, 2, 3, 4, 5], it returns [5, 4, 3, 2, 1]."
+print(b (a))","1 2 3 4 5~~[5, 4, 3, 2, 1]~~[]~~Error, lambda functions cannot be called recursively",False~~True~~False~~False,"Explanation: The lambda function b is recursively called on the sliced list x[1:] until the list is empty (x == []). It builds the reversed list by appending the first element (x[:1]) at the end during each return. This effectively reverses the list. So, for a = [1, 2, 3, 4, 5], it returns [5, 4, 3, 2, 1]."
