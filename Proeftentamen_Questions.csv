@@ -492,3 +492,8 @@ print(id(l1)==id(l2))
  
 l2=l1.copy()
 print(id(l1)==id(l2))","False, False~~False, True~~True, True~~True, False",False~~False~~False~~True,"Explanation: In the given code, l2 = l1 assigns l2 to reference the same list object as l1, so id(l1) == id(l2) returns True. However, when l2 = l1.copy() is used, it creates a new list with the same elements, resulting in a different object in memory. Therefore, id(l1) == id(l2) now returns False. This demonstrates the difference between assigning a reference and creating a shallow copy of a list."
+Extra Question (Shallow/deep copy),"What will be the output of the following Python code?
+
+l1=[1, 2, 3, [4]]
+l2=list(l1)
+print(id(l1)==id(l2))","True~~False~~Error~~Address of l1",False~~True~~False~~False,"Explanation: In the code, l2 = list(l1) creates a shallow copy of the list l1. This means l2 is a new list object with the same elements as l1, so id(l1) == id(l2) evaluates to False. Although the outer lists are different objects, they still share the same inner list [4] due to shallow copying."
