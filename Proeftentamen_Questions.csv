@@ -525,4 +525,8 @@ Question3 (Functional Programming),"What will be the output of the following Pyt
 l=[-2, 4]
 m=map(lambda x:x*2, l)
 print(m)","[-4, 16]~~Address of m~~Error~~-4 \n 16",False~~True~~False~~False,"Explanation: The map() function returns a map object, which is an iterator. When printed directly without converting it to a list or iterating over it, it displays its memory address (e.g., <map object at 0x…>). To see the values, you’d need to do print(list(m))."
+Question4 (Functional Programming),"What will be the output of the following Python code?
 
+l=[1, 2, 3, 4, 5]
+m=map(lambda x:2**x, l)
+print(list(m))","[1, 4, 9, 16, 25 ]~~[2, 4, 8, 16, 32 ]~~[1, 0, 1, 0, 1]~~Error",False~~True~~False~~False,"Explanation: The map function applies lambda x: 2**x to each element in list l. So, it calculates powers of 2 for each element: 21, 22, 23, 24, 25, resulting in [2, 4, 8, 16, 32]."
