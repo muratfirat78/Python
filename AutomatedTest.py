@@ -18,12 +18,13 @@ test_passes = dict()
 gitfolder = 'https://raw.githubusercontent.com/muratfirat78/Python/refs/heads/main/'
 folderid = '1N0-wGAv9SBTmQ0FdVC0wyqrJ_NcXgJR1'
 
+auth.authenticate_user()  
+drive_service = build('drive', 'v3')
+    
+
 def CheckPass(student_name,student_no):
 
-    # Authenticate user before building drive_service
-    auth.authenticate_user()
-    
-    drive_service = build('drive', 'v3')
+    global drive_service 
     
     query = f"'{folderid}' in parents and trashed=false"
     results = drive_service.files().list(q=query, fields="files(id, name)").execute()
