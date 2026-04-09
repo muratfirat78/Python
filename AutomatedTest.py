@@ -42,7 +42,7 @@ def to_json(trg_dir,dictionary, filename):
   with open(trg_dir+"/"+filename,'w') as fp:
       json.dump(dictionary, fp,sort_keys=True, indent=4,ensure_ascii=False)
 
-def checkTest(curr_dict,testno):
+def checkTest(student_name,student_no,curr_dict,testno):
 
     global test_passes,source_directory,uploaded_files
    
@@ -65,7 +65,7 @@ def checkTest(curr_dict,testno):
        
             if len(test_passes) == 4:  # if all tests passed:
                 print("All test passed, congrats!")
-                finalize()
+                finalize(student_name,student_no)
                 return 
         else:
             test_passes[testno] = False
@@ -78,10 +78,10 @@ def checkTest(curr_dict,testno):
         test_passes[testno] = False
         return
         
-def finalize():
+def finalize(student_name,student_no):
 
     global folderid,drive_service
-    global student_name,student_no
+
 
     for filename in os.listdir(source_directory):
         if filename in uploaded_files:
