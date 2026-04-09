@@ -30,7 +30,7 @@ def CheckPass():
     files = results.get('files', [])
 
     for file in files:
-        print(file['name'])
+        print(file['name'],student_name,student_no)
         if (student_name in file['name']) and (str(student_no) in file['name']):
             return True
 
