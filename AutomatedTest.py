@@ -6,6 +6,7 @@ import os, json
 import gdown
 import warnings
 
+
 student_name = None
 student_no = None
 
@@ -17,9 +18,8 @@ test_passes = dict()
 gitfolder = 'https://raw.githubusercontent.com/muratfirat78/Python/refs/heads/main/'
 folderid = '1N0-wGAv9SBTmQ0FdVC0wyqrJ_NcXgJR1'
 
-def CheckPass():
+def CheckPass(student_name,student_no):
 
-    global student_name,student_no
     # Authenticate user before building drive_service
     auth.authenticate_user()
     
