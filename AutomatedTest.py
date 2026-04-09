@@ -81,7 +81,7 @@ def checkTest(student_name,student_no,curr_dict,testno):
         
 def finalize(student_name,student_no):
 
-    global folderid,drive_service
+    global folderid,drive_service,source_directory
 
 
     for filename in os.listdir(source_directory):
