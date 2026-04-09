@@ -34,16 +34,6 @@ def CheckPass():
 
     return False
 
-def GetInputFiles():
-    for filename in input_files:
-        if not filename in os.listdir(source_directory):
-            !wget "{gitfolder}{filename}"
-    for f in range(4):
-        current_key = 'key_case_'+str(f)+'.json'
-        if not current_key in os.listdir(source_directory):
-            !wget "{gitfolder}{current_key}"
-    return 
-
 
 def to_json(trg_dir,dictionary, filename):
 
