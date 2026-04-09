@@ -19,6 +19,7 @@ folderid = '1N0-wGAv9SBTmQ0FdVC0wyqrJ_NcXgJR1'
 
 def CheckPass():
 
+    global student_name,student_no
     # Authenticate user before building drive_service
     auth.authenticate_user()
     
