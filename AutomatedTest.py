@@ -66,7 +66,7 @@ def checkTest(student_name,student_no,curr_dict,testno):
        
             if len(test_passes) == 4:  # if all tests passed:
                 print("All test passed, congrats!")
-                finalize(student_name,student_no)
+                finalize(student_name,student_no,uploaded_files)
                 return 
         else:
             test_passes[testno] = False
@@ -79,7 +79,7 @@ def checkTest(student_name,student_no,curr_dict,testno):
         test_passes[testno] = False
         return
         
-def finalize(student_name,student_no):
+def finalize(student_name,student_no,uploaded_files):
 
     global folderid,drive_service,source_directory
 
