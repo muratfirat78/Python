@@ -5,7 +5,7 @@ from IPython.utils.process import shutil
 import os, json
 import gdown
 import warnings
-
+import google.auth
 
 student_name = None
 student_no = None
@@ -83,8 +83,34 @@ def finalize(student_name,student_no,uploaded_files):
     global folderid,source_directory
     
     auth.authenticate_user()  
-   
-    drive_service = build('drive', 'v3')
+
+  
+    SCOPES = ['https://www.googleapis.com/auth/drive.metadata', 'https://www.googleapis.com/auth/drive']
+
+    credentials, project_id = google.auth.default(scopes=SCOPES)
+
+    drive_service = build('drive', 'v3', credentials=credentials)
+
+    myfolder = 'Passed Students'
+    page_token = None
+
+    while True:
+        query = "mimeType = 'application/vnd.google-apps.folder' and name = '%s'" % myfolder
+        response = drive_service.files().list(q=query,
+                                              spaces='drive',
+                                              fields='nextPageToken, files(id, name)',
+                                              includeItemsFromAllDrives=True,
+                                              supportsAllDrives=True,
+                                              pageToken=page_token).execute()
+                                              #NB includeItemsFromAllDrives and supportsAllDrives needed for shared drives
+        for folder in response.get('files', []):
+            print('Found folder: %s (%s)' % (folder.get('name'), folder.get('id')))
+        
+
+
+        page_token = response.get('nextPageToken', None)
+        if page_token is None:
+            break
 
 
 
@@ -94,6 +120,11 @@ def finalize(student_name,student_no,uploaded_files):
         if filename in uploaded_files:
 
             file_metadata = {'name': student_name+"_"+str(student_no)+"_"+filename,'mimeType': 'text/x-python','parents': [folderid]}
+
+            file_metadata = {
+                'parents':[folder.get('id')],
+                'name': filename
+            }
             
             media = MediaFileUpload(source_directory+'/'+filename,mimetype='text/x-python')
             
