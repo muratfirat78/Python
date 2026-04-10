@@ -7,6 +7,10 @@ import gdown
 import warnings
 import google.auth
 
+import httplib2
+from google.auth import default as get_default_credentials
+from google_auth_httplib2 import AuthorizedHttp
+
 student_name = None
 student_no = None
 
@@ -85,11 +89,19 @@ def finalize(student_name,student_no,uploaded_files):
     auth.authenticate_user()  
 
   
-    SCOPES = ['https://www.googleapis.com/auth/drive.metadata', 'https://www.googleapis.com/auth/drive']
+    #SCOPES = ['https://www.googleapis.com/auth/drive.metadata', 'https://www.googleapis.com/auth/drive']
 
-    credentials, project_id = google.auth.default(scopes=SCOPES)
+    #credentials, project_id = google.auth.default(scopes=SCOPES)
 
-    drive_service = build('drive', 'v3', credentials=credentials)
+   
+
+    # http timeout and credential
+    credentials, _ = get_default_credentials()
+    http_with_timeout = httplib2.Http(timeout=3600)
+    authed_http = AuthorizedHttp(credentials, http=http_with_timeout)
+
+    drive_service = build('drive', 'v3', credentials=credentials,http=authed_http)
+
 
     myfolder = 'IB3502'
     page_token = None
