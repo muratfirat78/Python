@@ -121,11 +121,6 @@ def finalize(student_name,student_no,uploaded_files):
 
             file_metadata = {'name': student_name+"_"+str(student_no)+"_"+filename,'mimeType': 'text/x-python','parents': [folderid]}
 
-            file_metadata = {
-                'parents':[folder.get('id')],
-                'name': filename
-            }
-            
             media = MediaFileUpload(source_directory+'/'+filename,mimetype='text/x-python')
             
             created = drive_service.files().create(body=file_metadata,media_body=media,fields='id').execute()
