@@ -100,32 +100,19 @@ def finalize(student_name,student_no,uploaded_files):
     http_with_timeout = httplib2.Http(timeout=3600)
     authed_http = AuthorizedHttp(credentials, http=http_with_timeout)
 
-    drive_service = build('drive', 'v3', http=authed_http)
+    drive_service = build('drive', 'v3')
 
+    fid = '1IU1biWrDLZ7J7hWaZRJrQDCaFQPvlc1r'
+    
+    query = f"'{fid}' in parents and trashed=false"
+    results = drive_service.files().list(q=query, fields="files(id, name)").execute()
+    files = results.get('files', [])
 
-    myfolder = 'IB3502'
-    page_token = None
+    
+    for file in files:
+        print(file['id'], file['name'])
 
-    while True:
-        query = "mimeType = 'application/vnd.google-apps.folder' and name = '%s'" % myfolder
-        response = drive_service.files().list(q=query,
-                                              spaces='drive',
-                                              fields='nextPageToken, files(id, name)',
-                                              includeItemsFromAllDrives=True,
-                                              supportsAllDrives=True,
-                                              pageToken=page_token).execute()
-                                              #NB includeItemsFromAllDrives and supportsAllDrives needed for shared drives
-        for folder in response.get('files', []):
-            print('Found folder: %s (%s)' % (folder.get('name'), folder.get('id')))
-        
-
-
-        page_token = response.get('nextPageToken', None)
-        if page_token is None:
-            break
-
-
-
+    
     for filename in os.listdir(source_directory):
 
         
