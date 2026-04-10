@@ -91,7 +91,7 @@ def finalize(student_name,student_no,uploaded_files):
 
     drive_service = build('drive', 'v3', credentials=credentials)
 
-    myfolder = 'Passed Students'
+    myfolder = 'IB3502'
     page_token = None
 
     while True:
