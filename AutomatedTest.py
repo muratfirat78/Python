@@ -43,9 +43,9 @@ def to_json(trg_dir,dictionary, filename):
   with open(trg_dir+"/"+filename,'w') as fp:
       json.dump(dictionary, fp,sort_keys=True, indent=4,ensure_ascii=False)
 
-def checkTest(student_name,student_no,curr_dict,testno):
+def checkTest(student_name,student_no,curr_dict,testno,uploaded_files):
 
-    global test_passes,source_directory,uploaded_files
+    global test_passes,source_directory
    
 
     current_key = 'key_case_'+str(testno)+'.json'
