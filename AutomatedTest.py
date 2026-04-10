@@ -81,7 +81,9 @@ def checkTest(student_name,student_no,curr_dict,testno,uploaded_files):
         
 def finalize(student_name,student_no,uploaded_files):
 
-    global folderid,drive_service,source_directory
+    global folderid,source_directory
+
+    drive_service = build('drive', 'v3')
 
 
     for filename in os.listdir(source_directory):
