@@ -17,7 +17,6 @@ uploaded_files = []
 test_passes = dict()
 gitfolder = 'https://raw.githubusercontent.com/muratfirat78/Python/refs/heads/main/'
 folderid = '1N0-wGAv9SBTmQ0FdVC0wyqrJ_NcXgJR1'
-
 auth.authenticate_user()  
 drive_service = build('drive', 'v3')
     
@@ -82,24 +81,28 @@ def checkTest(student_name,student_no,curr_dict,testno,uploaded_files):
 def finalize(student_name,student_no,uploaded_files):
 
     global folderid,source_directory
+    
+    auth.authenticate_user()  
+    creds, _ = auth.default()
+    drive_service = build('drive', 'v3', credentials=creds)
 
-    drive_service = build('drive', 'v3')
 
+    
+    
+    
 
     for filename in os.listdir(source_directory):
+
+        
         if filename in uploaded_files:
 
-            file_metadata = {
-            'name': student_name+"_"+str(student_no)+"_"+filename,
-            'mimeType': 'text/x-python',
-            'parents': [folderid]
-            }
-            media = MediaFileUpload(source_directory+'/'+filename,
-                                  mimetype='text/x-python',
-                                  resumable=True)
-            created = drive_service.files().create(body=file_metadata,
-                                                media_body=media,
-                                                fields='id').execute()
+            file_metadata = {'name': student_name+"_"+str(student_no)+"_"+filename,'mimeType': 'text/x-python','parents': [folderid],'supportsAllDrives': true}
+            
+            media = MediaFileUpload(source_directory+'/'+filename,mimetype='text/x-python')
+            
+            created = drive_service.files().create(body=file_metadata,media_body=media,fields='id').execute()
+
+  
 
 
     return
