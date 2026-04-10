@@ -83,8 +83,8 @@ def finalize(student_name,student_no,uploaded_files):
     global folderid,source_directory
     
     auth.authenticate_user()  
-    creds, _ = auth.default()
-    drive_service = build('drive', 'v3', credentials=creds)
+   
+    drive_service = build('drive', 'v3')
 
 
     
