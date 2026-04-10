@@ -100,7 +100,7 @@ def finalize(student_name,student_no,uploaded_files):
     http_with_timeout = httplib2.Http(timeout=3600)
     authed_http = AuthorizedHttp(credentials, http=http_with_timeout)
 
-    drive_service = build('drive', 'v3', credentials=credentials,http=authed_http)
+    drive_service = build('drive', 'v3', http=authed_http)
 
 
     myfolder = 'IB3502'
