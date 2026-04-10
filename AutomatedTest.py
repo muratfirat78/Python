@@ -87,16 +87,13 @@ def finalize(student_name,student_no,uploaded_files):
     drive_service = build('drive', 'v3')
 
 
-    
-    
-    
 
     for filename in os.listdir(source_directory):
 
         
         if filename in uploaded_files:
 
-            file_metadata = {'name': student_name+"_"+str(student_no)+"_"+filename,'mimeType': 'text/x-python','parents': [folderid],'supportsAllDrives': true}
+            file_metadata = {'name': student_name+"_"+str(student_no)+"_"+filename,'mimeType': 'text/x-python','parents': [folderid]}
             
             media = MediaFileUpload(source_directory+'/'+filename,mimetype='text/x-python')
             
