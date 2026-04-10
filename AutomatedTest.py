@@ -88,29 +88,7 @@ def finalize(student_name,student_no,uploaded_files):
     
     auth.authenticate_user()  
 
-  
-    #SCOPES = ['https://www.googleapis.com/auth/drive.metadata', 'https://www.googleapis.com/auth/drive']
-
-    #credentials, project_id = google.auth.default(scopes=SCOPES)
-
-   
-
-    # http timeout and credential
-    credentials, _ = get_default_credentials()
-    http_with_timeout = httplib2.Http(timeout=3600)
-    authed_http = AuthorizedHttp(credentials, http=http_with_timeout)
-
-    drive_service = build('drive', 'v3',http=authed_http)
-
-    fid = '1IU1biWrDLZ7J7hWaZRJrQDCaFQPvlc1r'
-    
-    query = f"'{fid}' in parents and trashed=false"
-    results = drive_service.files().list(q=query, fields="files(id, name)").execute()
-    files = results.get('files', [])
-
-    
-    for file in files:
-        print(file['id'], file['name'])
+    drive_service = build('drive', 'v3')
 
     
     for filename in os.listdir(source_directory):

@@ -223,8 +223,10 @@ Question 27,"De documentatie van een functie get_min_value is als volgt:
 Implementeer de functie. Daarbin kun je er van uitgaan dat Python de Errors bij Pre Broken Path 3 opgooit. Dat geldt niet voor Pre Broken Path 1 en 2.","Correct Answer","De code is:
 
 def get_min_value(lst):
+    if not isinstance(lst,list):
+    	raise TypeError(""Argument must be an iterable with numbers"")
     for item in lst:
-        if not isinstance(item, (int, list)):
+        if not isinstance(item,int):
             raise TypeError(""Argument must be an iterable with numbers"")
     if len(lst) == 0:
         raise ValueError(""Argument must be an iterable with numbers"")
