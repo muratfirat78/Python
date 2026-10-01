@@ -69,28 +69,27 @@ class ExamManager():
                         qbanksdetected+=1
                         filename = myname
 
-            questions_df= None
+            questions_df = pd.DataFrame()
             if not self.isOnline(): 
                 questions_df = pd.read_csv(abs_file_path+'/'+filename)
-                
-                        
+        
             else:
                     #print("filename: "+filename)
                 questions_df = pd.read_csv(source_directory+'/'+filename)
+                progress.value+="Info: questions  "+str(len(questions_df))+"\n"
 
-            if questions_df != None:
-                for i,r in questions_df.iterrows():
-                    myquest = Question(None,None,True,None)
-                    myquest.setTitle(r['Title']); myquest.setText(r['Text']); myquest.setMainTopic(r['Main_Topic'])
-                    myquest.setExplanation(r['Explanation']); myquest.setTeacher(r['Teacher']); myquest.setDate(r['Date'])
-                    choices = r['Choices'].split("~~")
-                    correctness = r['Correctness'].split("~~")
+            for i,r in questions_df.iterrows():
+                myquest = Question(None,None,True,None)
+                myquest.setTitle(r['Title']); myquest.setText(r['Text']); myquest.setMainTopic(r['Main_Topic'])
+                myquest.setExplanation(r['Explanation']); myquest.setTeacher(r['Teacher']); myquest.setDate(r['Date'])
+                choices = r['Choices'].split("~~")
+                correctness = r['Correctness'].split("~~")
     
-                    for choiceid in range(len(choices)):
-                        ch_correctness = True if correctness[choiceid] == "True" else False
-                        myquest.getChoices().append((choices[choiceid],ch_correctness))
+                for choiceid in range(len(choices)):
+                    ch_correctness = True if correctness[choiceid] == "True" else False
+                    myquest.getChoices().append((choices[choiceid],ch_correctness))
                             
-                    self.QuestionBank.getQuestions().append(myquest)
+                self.QuestionBank.getQuestions().append(myquest)
                 
             
         except Exception as e:
