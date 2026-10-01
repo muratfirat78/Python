@@ -1,0 +1,16 @@
+Title,Text,Main_Topic,Explanation,Teacher,Choices,Correctness,Date
+Question (Functional Programming),"What will be the output of the following Python code?
+
+i = 1
+while True:
+    if i%3 == 0:
+        break
+    print(i)
+ 
+    i += 1
+
+",De basis,Explanation here,Murat Firat,1 2 3~~SyntaxError~~1 2~~none of them,False~~False~~True~~False,2026-10-01
+Question (Data Types),Which of the following is not a core data type in Python programming?,Data Typen,exp,Murat Firat,Tuples~~Lists~~Class~~Dictionary,False~~False~~True~~False,2026-10-01
+Question test today,qUESTO PALHGKL;GAGK;AG;KJG;KLAK;LJ,De basis,KJJKLLKLKJHJ,Select,JLJKJL~~KLKJKL~~XXXXXX,False~~True~~False,2026-10-01
+Question test today,qUESTO PALHGKL;GAGK;AG;KJG;KLAK;LJ,De basis,KJJKLLKLKJHJ,Select,JLJKJL~~KLKJKL~~XXXXXX,False~~True~~False,2026-10-01
+GJKHKJKG,GJGJJ,De basis,GJKHGHJGJH,Select,JGJHGJ~~JKGJHGJH,False~~True,2026-10-01
