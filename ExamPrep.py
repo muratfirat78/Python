@@ -142,7 +142,8 @@ class QuestionBank():
         question_df = pd.DataFrame(columns=["Title","Text","Main_Topic","Explanation","Teacher","Choices","Correctness","Date"])
 
 
-        teacher = None
+      
+        source_directory = '/content/'
      
         
         for question in self.getQuestions():
@@ -153,10 +154,12 @@ class QuestionBank():
             questrow = {"Title":question.getTitle(),"Text":question.getText(),"Main_Topic":question.getMainTopic(),
                         "Explanation":question.getExplanation(),"Teacher":question.getTeacher() if question.getTeacher()!=None else self.ExamManager.getCurrentTeacher() ,"Choices":choices,"Correctness":correctness,"Date":question.getDate()}
             question_df.loc[len(question_df)] = questrow
-            teacher = question.getTeacher()
+          
 
         if not self.ExamManager.isOnline():
             question_df.to_csv(os.path.join("questions",self.ExamManager.getCourseCode()+"_QBank_"+str(self.ExamManager.getCurrentTeacher())+".csv"),index = False)
+        else:
+            question_df.to_csv(source_directory+'/'+self.ExamManager.getCourseCode()+"_QBank_"+str(self.ExamManager.getCurrentTeacher())+".csv")
         return 
 
 
