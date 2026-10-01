@@ -75,6 +75,7 @@ class ExamManager():
         
             else:
                     #print("filename: "+filename)
+                progress.value+="Info: questions to check "+"\n"
                 questions_df = pd.read_csv(source_directory+'/'+filename)
                 progress.value+="Info: questions  "+str(len(questions_df))+"\n"
 
