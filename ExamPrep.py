@@ -352,7 +352,7 @@ class VisualManager():
         self.NewQExpTtl.value = f'<span style="color:{color};"><b>{mytext}</b></span>'
         
         self.NewQExp= widgets.Textarea(value='')
-        self.NewQTopics = widgets.Dropdown(options = ["De basis","Data Typen","Control Flow","Functise en modules","OOP","Regulair expressies"],description = 'Topic: ')
+        self.NewQTopics = widgets.Dropdown(options = ["De basis","Data Typen","Control Flow","Functies en modules","Objectgeorienteerd Programmeren ","Regulair expressies"],description = 'Topic: ')
         self.NewQType = widgets.Dropdown(options = ["Two-choice","Three-choice","Four-choice"],description = 'Type: ')
         self.NewQType.observe(self.applyqtype)
 
