@@ -80,15 +80,23 @@ class ExamManager():
                 progress.value+="Info: questions  "+str(len(questions_df))+"\n"
 
             for i,r in questions_df.iterrows():
-                myquest = Question(None,None,True,None)
+                progress.value+="Info: question title "+str(r['Title'])+"\n"
+
+                progress.value+="Info: "+str(r['Title'])+" -- "+str(i)+" -- "+str(r['Date'])+"\n"
+
+                qstid = r['Title']+"_"+str(i)+"_"+str(r['Date'])
+           
+                myquest = Question(qstid,None,None,True,None)
                 myquest.setTitle(r['Title']); myquest.setText(r['Text']); myquest.setMainTopic(r['Main_Topic'])
                 myquest.setExplanation(r['Explanation']); myquest.setTeacher(r['Teacher']); myquest.setDate(r['Date'])
-                choices = r['Choices'].split("~~")
-                correctness = r['Correctness'].split("~~")
-    
-                for choiceid in range(len(choices)):
-                    ch_correctness = True if correctness[choiceid] == "True" else False
-                    myquest.getChoices().append((choices[choiceid],ch_correctness))
+                str_choices = str(r['Choices']); str_correctness = str(r['Correctness'])
+                if str_choices.find("~~") > -1:
+                    choices = str_choices.split("~~")
+                    correctness = str_correctness.split("~~")
+        
+                    for choiceid in range(len(choices)):
+                        ch_correctness = True if correctness[choiceid] == "True" else False
+                        myquest.getChoices().append((choices[choiceid],ch_correctness))
                             
                 self.QuestionBank.getQuestions().append(myquest)
                 
@@ -137,32 +145,32 @@ class QuestionBank():
     def getQuestions(self):
         return self.Questions
 
-    def save_Questions(self):
+    def save_Questions(self,progress):
 
-        question_df = pd.DataFrame(columns=["Title","Text","Main_Topic","Explanation","Teacher","Choices","Correctness","Date"])
-
-
+        question_df = pd.DataFrame(columns=["ID","Title","Text","Main_Topic","Explanation","Teacher","Choices","Correctness","Date"])
       
         source_directory = '/content/'
 
 
+        try: 
         
-        
-        for question in self.getQuestions():
-            choices = "";correctness = ""
-            for choice in question.getChoices():
-                choices+=("~~" if choices!= "" else "")+choice[0]
-                correctness+=("~~" if correctness!= "" else "")+str(choice[1])
-            questrow = {"Title":question.getTitle(),"Text":question.getText(),"Main_Topic":question.getMainTopic(),
-                        "Explanation":question.getExplanation(),"Teacher":question.getTeacher() if question.getTeacher()!=None else self.ExamManager.getCurrentTeacher() ,"Choices":choices,"Correctness":correctness,"Date":question.getDate()}
-            question_df.loc[len(question_df)] = questrow
-          
-
-        if not self.ExamManager.isOnline():
-            question_df.to_csv(os.path.join("questions",self.ExamManager.getCourseCode()+"_QBank_"+str(self.ExamManager.getCurrentTeacher())+".csv"),index = False)
-        else:
-            question_df.to_csv(source_directory+'/'+self.ExamManager.getCourseCode()+"_QBank_"+str(self.ExamManager.getCurrentTeacher())+".csv")
-        return 
+            for question in self.getQuestions():
+                choices = "";correctness = ""
+                for choice in question.getChoices():
+                    choices+=("~~" if choices!= "" else "")+choice[0]
+                    correctness+=("~~" if correctness!= "" else "")+str(choice[1])
+                questrow = {"ID":question.getID(),"Title":question.getTitle(),"Text":question.getText(),"Main_Topic":question.getMainTopic(),
+                            "Explanation":question.getExplanation(),"Teacher":question.getTeacher() if question.getTeacher()!=None else self.ExamManager.getCurrentTeacher() ,"Choices":choices,"Correctness":correctness,"Date":question.getDate()}
+                question_df.loc[len(question_df)] = questrow
+              
+    
+            if not self.ExamManager.isOnline():
+                question_df.to_csv(os.path.join("questions",self.ExamManager.getCourseCode()+"_QBank_"+str(self.ExamManager.getCurrentTeacher())+".csv"),index = False)
+            else:
+                question_df.to_csv(source_directory+'/'+self.ExamManager.getCourseCode()+"_QBank_"+str(self.ExamManager.getCurrentTeacher())+".csv")
+            return 
+        except Exception as e:
+            progress.value+="ERROR: in saving question banks "+str(e)+"\n"
 
 
 
@@ -174,7 +182,7 @@ class QuestionBank():
     
 
 class Question():
-    def __init__(self, title, text,mchoice,exp):
+    def __init__(self,myid, title, text,mchoice,exp):
         self.title = title
         self.text = text
         self.type = mchoice
@@ -187,7 +195,13 @@ class Question():
         self.date = None
         self.teacher = None
         self.date = None
+        self.id = myid
 
+    def getID(self):
+        return self.id
+    def setID(self,idtxt):
+        self.id = idtxt
+        return
 
     def setTeacher(self,tch):
         self.teacher = tch
@@ -448,12 +462,18 @@ class VisualManager():
         try: 
             qstbank = self.getExamManager().getQuestionBank()
 
+            
+
             qstbank.getQuestionInPrep().setTitle(self.getNewQTitle().value)
             qstbank.getQuestionInPrep().setMainTopic(self.getNewQTopicsMenu().value)
             qstbank.getQuestionInPrep().setText(self.getNewQText().value)
             qstbank.getQuestionInPrep().setTeacher(self.getExamManager().getCurrentTeacher())
             qstbank.getQuestionInPrep().setDate(datetime.now().date())
             qstbank.getQuestionInPrep().setExplanation(self.getNewQExp().value)
+
+            qstid = qstbank.getQuestionInPrep().getTitle()+"_"+str(len(qstbank.getQuestions()))+"_"+str((datetime.now().date()))
+
+            qstbank.getQuestionInPrep().setID(qstid)
 
             qstbank.getQuestionInPrep().getChoices().clear()
             for choice in VisualMngr.getChoiceList():
@@ -466,8 +486,9 @@ class VisualManager():
             #if currentQuiz.getCurrentQuestion() != self.getExamManager().getQuestionBank().getQuestionInPrep():
             if not self.getExamManager().getQuestionBank().getQuestionInPrep() in currentQuiz.getQuestions():
                 currentQuiz.getQuestions().append(self.getExamManager().getQuestionBank().getQuestionInPrep())
-            self.getExamManager().getQuestionBank().getQuestions().append(self.getExamManager().getQuestionBank().getQuestionInPrep())
-            self.getExamManager().getQuestionBank().save_Questions()
+            if not self.getExamManager().getQuestionBank().getQuestionInPrep() in self.getExamManager().getQuestionBank().getQuestions():
+                self.getExamManager().getQuestionBank().getQuestions().append(self.getExamManager().getQuestionBank().getQuestionInPrep())
+            self.getExamManager().getQuestionBank().save_Questions(self.Progress)
     
             self.getQsts().options = [x.getTitle() for x in currentQuiz.getQuestions()]   
                
@@ -501,7 +522,7 @@ class VisualManager():
             if currentQuiz.getCurrentQuestion() in currentQuiz.getQuestions():
                 currentQuiz.getQuestions().remove(currentQuiz.getCurrentQuestion())
                 
-            self.getExamManager().getQuestionBank().save_Questions()
+            self.getExamManager().getQuestionBank().save_Questions(self.Progress)
             self.getQsts().options = [x.getTitle() for x in currentQuiz.getQuestions()]   
 
         except Exception as e:             
@@ -595,14 +616,20 @@ class VisualManager():
 #############################################################################################################################
     def startNewQeustion(self,b):
 
+        global ExamMngr
+
     
         self.Progress.value +="In new question function"+"\n"
         try: 
              # arguments: title, text, exp
-            newQuestion = Question(None,None,True,None)
+
+
+            qstid = "NewQuestion"+"_"+str(len(ExamMngr.getQuestionBank().getQuestions()))+"_"+str((datetime.now().date()))
+            
+            newQuestion = Question(qstid,None,None,True,None)
             newQuestion.setTitle(self.getNewQTitle().value)
             newQuestion.setText(self.getNewQText().value)
-            self.getExamManager().getQuestionBank().setQuestionInPrep(newQuestion)
+            ExamMngr.getQuestionBank().setQuestionInPrep(newQuestion)
         except Exception as e:             
             print('ERROR: New question .. '+str(e))
        
