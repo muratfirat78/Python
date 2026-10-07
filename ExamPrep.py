@@ -9,7 +9,9 @@ import math
 
 
 currentQuiz= None
+QuestionTopics = dict() # key: topicname, val: [Questions]
 txtprogrs = None
+allQuestions = [] 
 
 ExamMngr = None
 VisualMngr = None
@@ -87,7 +89,12 @@ class ExamManager():
                 qstid = r['Title']+"_"+str(i)+"_"+str(r['Date'])
            
                 myquest = Question(qstid,None,None,True,None)
-                myquest.setTitle(r['Title']); myquest.setText(r['Text']); myquest.setMainTopic(r['Main_Topic'])
+                myquest.setTitle(r['Title']); myquest.setText(r['Text']);
+
+                if pd.isna(r['Main_Topic']):
+                    myquest.setMainTopic('De basis')
+                else:
+                    myquest.setMainTopic(r['Main_Topic'])
                 if not pd.isna(r['Points']):
                     myquest.setPoints(r['Points'])
                 myquest.setExplanation(r['Explanation']); myquest.setTeacher(r['Teacher']); myquest.setDate(r['Date'])
@@ -101,6 +108,7 @@ class ExamManager():
                         myquest.getChoices().append((choices[choiceid],ch_correctness))
                             
                 self.QuestionBank.getQuestions().append(myquest)
+                
                 
             
         except Exception as e:
@@ -394,11 +402,22 @@ class VisualManager():
         self.choicebox2 =  VBox(children=[HBox(children=[self.Choice2,self.Cbox2])])
         self.choicebox3 =  VBox(children=[HBox(children=[self.Choice3,self.Cbox3])])
         self.choicebox4 =  VBox(children=[HBox(children=[self.Choice4,self.Cbox4])])
+
+
+        self.Tname= widgets.Label(value="Topics")
+        self.Topics= widgets.Select(description="")
+
+        self.Topics.layout.width ='95%'
+        self.Topics.layout.height ='100px'
+
+        self.Topics.observe(self.findTopicQuestions)
         
       
         self.choicebxlist = [self.choicebox1,self.choicebox2,self.choicebox3,self.choicebox4]
         self.choicelist = [(self.Choice1,self.Cbox1),(self.Choice2,self.Cbox2),(self.Choice3,self.Cbox3),(self.Choice4,self.Cbox4)]
 
+    def getTopics(self):
+        return self.Topics
     def getEditQuestionButton(self):
         return self.EditQuest
 
@@ -410,7 +429,7 @@ class VisualManager():
 
     def assignCurrentTeacher(self):
 
-        global currentQuiz
+        global currentQuiz,QuestionTopics
 
         teacher = str(self.teachers.value)
          
@@ -421,14 +440,23 @@ class VisualManager():
 
         self.Progress.value +='INFO: assigning teacher .. '+str(self.getExamManager().getCurrentTeacher())+"\n"
 
+        
+
         try: 
             self.Progress.value+="INFO: before qbank check.. "+"\n"
             self.getExamManager().checkQBanks(self.Progress)
             self.Progress.value+="INFO: after qbank check.. "+str(len(self.getExamManager().getQuestionBank().getQuestions()))+"\n"
             if len(self.getExamManager().getQuestionBank().getQuestions()) > 0: 
                 for question in self.getExamManager().getQuestionBank().getQuestions():
+                    if not question.getMainTopic() in QuestionTopics:
+                        QuestionTopics[question.getMainTopic()] = []
+                    QuestionTopics[question.getMainTopic()].append(question)
+                    
                     currentQuiz.getQuestions().append(question)
                 self.getQsts().options = [x.getTitle() for x in currentQuiz.getQuestions()]  
+
+                topcopts = ["All"]
+                self.getTopics().options = topcopts+[x for x in QuestionTopics.keys()]  
                 
         except Exception as e:             
             self.Progress.value +='ERROR: In assigning teacher .. '+str(e)+"\n"
@@ -502,6 +530,9 @@ class VisualManager():
             if not self.getExamManager().getQuestionBank().getQuestionInPrep() in self.getExamManager().getQuestionBank().getQuestions():
                 self.getExamManager().getQuestionBank().getQuestions().append(self.getExamManager().getQuestionBank().getQuestionInPrep())
             self.getExamManager().getQuestionBank().save_Questions(self.Progress)
+
+
+           
     
             self.getQsts().options = [x.getTitle() for x in currentQuiz.getQuestions()]   
                
@@ -586,7 +617,8 @@ class VisualManager():
         self.NewQuestSave.layout.visibility = 'hidden'
         self.NewQuestSave.layout.display = 'none'
 
-        hboxleft = VBox(children=[self.Qname,self.Qqsts,self.RemoveQuest,self.EditQuest,self.NewQuest,self.NewQuestSave],layout=Layout(width = '25%'))
+
+        hboxleft = VBox(children=[self.Tname,self.Topics,self.Qname,self.Qqsts,self.RemoveQuest,self.EditQuest,self.NewQuest,self.NewQuestSave],layout=Layout(width = '25%'))
         qvbox = VBox(children=[self.description_out,self.qans_lbl,self.writtenresp,self.choices])
 
        
@@ -798,6 +830,28 @@ class VisualManager():
 
     def getQuizTab(self):
         return self.QuizTab
+
+    def findTopicQuestions(self,b):
+
+        global currentQuiz,BOLD,RESET,QuestionTopics
+
+        selected_topic = self.getTopics().value
+
+        currentQuiz.getQuestions().clear()
+
+        if selected_topic == "All":
+            for myquest in self.getExamManager().getQuestionBank().getQuestions():
+                currentQuiz.getQuestions().append(myquest)
+        else:
+
+            for myquest in self.getExamManager().getQuestionBank().getQuestions():
+                if myquest.getMainTopic() == selected_topic:
+                    currentQuiz.getQuestions().append(myquest)
+        
+
+        self.getQsts().options = [x.getTitle() for x in currentQuiz.getQuestions()]  
+
+        
 
     ############################################################################################################################################
     def open_question(self,b):
