@@ -540,12 +540,20 @@ class VisualManager():
         self.QNewExam.layout.visibility = 'hidden' 
         self.QNewExam.layout.display = 'none'
 
+        self.AddQuest.layout.display = 'block'
+        self.AddQuest.layout.visibility = 'visible' 
+
+        
+
         self.NewExam.description = "New Exam"
 
 
         return 
 
     def addQuestionExam(self,b):
+
+        if self.getExamManager().getCurrentExam() == None:
+            return
 
         try: 
 
@@ -586,6 +594,9 @@ class VisualManager():
 
             self.QNewExam.layout.display = 'block'
             self.QNewExam.layout.visibility = 'visible' 
+
+            self.AddQuest.layout.visibility = 'hidden' 
+            self.AddQuest.layout.display = 'none'
             
             
 
@@ -616,6 +627,11 @@ class VisualManager():
 
                 self.QNewExam.layout.visibility = 'hidden' 
                 self.QNewExam.layout.display = 'none'
+
+                self.AddQuest.layout.display = 'block'
+                self.AddQuest.layout.visibility = 'visible' 
+               
+            
                 
 
                 
