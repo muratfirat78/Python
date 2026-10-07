@@ -29,6 +29,10 @@ class ExamManager():
         self.Online = online
         self.CourseCode = coursecode
         self.CurrentTeacher = None
+        self.Exams = []
+
+    def getExams(self):
+        return self.Exams
 
     def setCurrentTeacher(self,tch):
         self.CurrentTeacher = tch
@@ -188,7 +192,47 @@ class QuestionBank():
 
 
         return 
-        
+
+
+
+class Exam():
+    def __init__(self):
+        self.Name = None
+        self.Date = None
+        self.TopicsDict = dict()
+        self.Questions = []
+        self.TotalPoints = None
+
+    def getTopicsDict(self):
+        return self.TopicsDict
+
+
+    def setName(self,tr):
+        self.Name =tr
+        return
+
+    def getName(self):
+        return self.Name
+
+
+    def setDate(self,tr):
+        self.Date =tr
+        return
+
+    def getDate(self):
+        return self.Date
+
+    def getQuestions(self):
+        return self.Questions
+
+    def getTotalPoints(self):
+        return self.TotalPoints
+
+    def setTotalPoints(self,pts):
+        self.TotalPoints = pts
+        return 
+            
+            
     
 
 class Question():
@@ -379,6 +423,12 @@ class VisualManager():
         self.Teacher_lbl= widgets.Label(value="Teacher: ")
         self.Points_lbl= widgets.Label(value="Points: ")
 
+
+        self.exam_date= widgets.Label(value="Exam date: ")
+
+        self.ExamName = widgets.Text(value='',description = 'Name: ')
+        self.ExamDate = widgets.DatePicker(description='Exam Date',disabled=False)
+         
       
    
         color = "olive"; mytext ="Explanation"
@@ -407,6 +457,22 @@ class VisualManager():
         self.Tname= widgets.Label(value="Topics")
         self.Topics= widgets.Select(description="")
 
+        self.Ename= widgets.Label(value="Exams")
+        self.Examlist= widgets.Select(description="")
+        
+        self.Etopics= widgets.Label(value="Exam Topics")
+        self.Examtopics= widgets.Select(description="")
+
+        self.NewExam= widgets.Button(description="New Exam")
+        self.NewExam.on_click(self.newExam)
+        
+        self.Exname= widgets.Label(value="Exam Questions")
+        self.ExQqsts= widgets.Select(description="")
+
+        self.ExamPoints = widgets.Dropdown(options = [200],description = 'Total Points: ')
+
+        self.AddQuest= widgets.Button(description=">> Add Question >>")
+
         self.Topics.layout.width ='95%'
         self.Topics.layout.height ='100px'
 
@@ -426,6 +492,48 @@ class VisualManager():
         self.assignCurrentTeacher()
    
         return 
+
+
+    def newExam(self,b):
+
+        global ExamMngr 
+
+        if  self.NewExam.description == "New Exam":
+
+            self.NewExam.description = "Save Exam"
+            self.ExamInfobox.layout.visibility = 'hidden' 
+            self.ExamInfobox.layout.display = 'none'
+            self.ExamInfobox2.layout.visibility = 'hidden' 
+            self.ExamInfobox2.layout.display = 'none'
+            
+            self.NewExamBox.layout.display = 'block'
+            self.NewExamBox.layout.visibility = 'visible' 
+            
+
+        else:
+
+            newExam = Exam()
+            newExam.setName(self.ExamName.value)
+            newExam.setDate(self.ExamDate.value)
+            newExam.setTotalPoints(self.ExamPoints.value)
+
+            ExamMngr.getExams().append(newExam)
+
+            self.Examlist.options = [ e.getName() for e in ExamMngr.getExams()]
+        
+            
+            self.NewExam.description = "New Exam"
+
+            self.NewExamBox.layout.visibility = 'hidden' 
+            self.NewExamBox.layout.display = 'none'
+
+            self.ExamInfobox.layout.display = 'block'
+            self.ExamInfobox.layout.visibility = 'visible' 
+            
+            self.ExamInfobox2.layout.display = 'block'
+            self.ExamInfobox2.layout.visibility = 'visible' 
+
+        return
 
     def assignCurrentTeacher(self):
 
@@ -628,7 +736,37 @@ class VisualManager():
 
         self.QuizTab = VBox(children=[self.titlebox,HBox(children=[hboxleft,self.showquestionbox,self.newquestionbox]),self.Progress])
 
+        self.Examlist.layout.width = '220px'
+        self.NewExam.layout.width = self.Examlist.layout.width
+        self.AddQuest.layout.width = self.Examlist.layout.width
 
+        
+        self.Examtopics.layout.width = self.Examlist.layout.width
+        self.ExQqsts.layout.width = self.Examlist.layout.width
+        self.ExQqsts.layout.height = '230px'
+
+        exambox = VBox(children=[self.Ename,self.Examlist,self.NewExam,self.AddQuest])
+
+        examqsts = VBox(children=[self.Etopics,self.Examtopics,self.Exname,self.ExQqsts])
+        examdetails = VBox(children=[self.exam_date])
+        
+        self.ExamInfobox = HBox(children=[examqsts])
+        self.ExamInfobox2 = HBox(children=[examdetails])
+
+       
+
+    
+        self.NewExamBox = VBox(children=[self.ExamName,self.ExamDate,self.ExamPoints])
+
+        self.exmtitlebox = HBox(children=[self.CourseLbl])
+
+        self.NewExamBox.layout.visibility = 'hidden' 
+        self.NewExamBox.layout.display = 'none'
+
+        
+        
+        leftmenu = VBox(children=[self.Tname,self.Topics,self.Qname,self.Qqsts],layout=Layout(width = '25%'))
+        self.ExamTab = VBox(children=[self.exmtitlebox,HBox(children=[leftmenu,exambox,self.ExamInfobox,self.ExamInfobox2,self.NewExamBox])])
       
         self.newquestionbox.layout.visibility = 'hidden'
         self.showquestionbox.layout.visibility = 'hidden'
@@ -831,6 +969,10 @@ class VisualManager():
     def getQuizTab(self):
         return self.QuizTab
 
+    def getExamTab(self):
+        return self.ExamTab
+
+
     def findTopicQuestions(self,b):
 
         global currentQuiz,BOLD,RESET,QuestionTopics
@@ -983,10 +1125,10 @@ def open_quiz(VisManager,online,DeelNo,tab_set):
         
     qtslist = []
     quizstr = "Quiz Deel "+str(DeelNo)+"_Questions"
-    qname = "Exam Preparation"
+    qname = "Questionbank"
         
 
-    tab_set.set_title(0,qname)
+    tab_set.set_title(0,qname); tab_set.set_title(1,"Exam Preparation")
     currentQuiz = Quiz(qname)
 
     VisualMngr.assignCurrentTeacher()
