@@ -472,7 +472,12 @@ class VisualManager():
         self.Examtopics= widgets.Select(description="")
 
         self.NewExam= widgets.Button(description="New Exam")
+        self.QNewExam= widgets.Button(description="Quit")
+        self.QNewExam.on_click(self.quitExam)
         self.NewExam.on_click(self.newExam)
+
+
+        
         
         self.Exname= widgets.Label(value="Exam Questions")
         self.ExQqsts= widgets.Select(description="")
@@ -480,6 +485,7 @@ class VisualManager():
         self.ExamPoints = widgets.Dropdown(options = [200],description = 'Total Points: ')
 
         self.AddQuest= widgets.Button(description=">> Add Question >>")
+        self.AddQuest.on_click(self.addQuestionExam)
 
         self.Topics.layout.width ='95%'
         self.Topics.layout.height ='100px'
@@ -520,6 +526,48 @@ class VisualManager():
 
         return 
 
+    def quitExam(self,b):
+
+        self.NewExamBox.layout.visibility = 'hidden' 
+        self.NewExamBox.layout.display = 'none'
+    
+        self.ExamInfobox.layout.display = 'block'
+        self.ExamInfobox.layout.visibility = 'visible' 
+                
+        self.ExamInfobox2.layout.display = 'block'
+        self.ExamInfobox2.layout.visibility = 'visible' 
+
+        self.QNewExam.layout.visibility = 'hidden' 
+        self.QNewExam.layout.display = 'none'
+
+        self.NewExam.description = "New Exam"
+
+
+        return 
+
+    def addQuestionExam(self,b):
+
+        try: 
+
+            sel_questionname = self.Qqsts.value
+    
+            for question in self.getExamManager().getQuestionBank().getQuestions():
+                if question.getTitle() == sel_questionname:
+                    if not question in self.getExamManager().getCurrentExam().getQuestions():
+                        self.getExamManager().getCurrentExam().getQuestions().append(question)
+                    break
+                    
+    
+            self.ExQqsts.options = [q.getTitle() for q in self.getExamManager().getCurrentExam().getQuestions()]
+
+
+        except Exception as e:             
+            self.Progress.value +='ERROR: In adding question t exam .. '+str(e)+"\n"
+                
+
+        
+        return
+
 
     def newExam(self,b):
 
@@ -534,7 +582,11 @@ class VisualManager():
             self.ExamInfobox2.layout.display = 'none'
             
             self.NewExamBox.layout.display = 'block'
-            self.NewExamBox.layout.visibility = 'visible' 
+            self.NewExamBox.layout.visibility = 'visible'
+
+            self.QNewExam.layout.display = 'block'
+            self.QNewExam.layout.visibility = 'visible' 
+            
             
 
         else:
@@ -546,6 +598,7 @@ class VisualManager():
                 newExam.setTotalPoints(self.ExamPoints.value)
     
                 ExamMngr.getExams().append(newExam)
+                
     
                 self.Examlist.options = [e.getName() for e in ExamMngr.getExams()]
             
@@ -560,6 +613,10 @@ class VisualManager():
                 
                 self.ExamInfobox2.layout.display = 'block'
                 self.ExamInfobox2.layout.visibility = 'visible' 
+
+                self.QNewExam.layout.visibility = 'hidden' 
+                self.QNewExam.layout.display = 'none'
+                
 
                 
             except Exception as e:             
@@ -770,15 +827,24 @@ class VisualManager():
         self.QuizTab = VBox(children=[self.titlebox,HBox(children=[hboxleft,self.showquestionbox,self.newquestionbox]),self.Progress])
 
         self.Examlist.layout.width = '220px'
+        self.NewExam.layout.height = '27px'
+        self.AddQuest.layout.height = '27px'
+        self.QNewExam.layout.height = '27px'
         self.NewExam.layout.width = self.Examlist.layout.width
         self.AddQuest.layout.width = self.Examlist.layout.width
+        self.QNewExam.layout.width = self.Examlist.layout.width
+       
 
         
         self.Examtopics.layout.width = self.Examlist.layout.width
         self.ExQqsts.layout.width = self.Examlist.layout.width
         self.ExQqsts.layout.height = '230px'
 
-        exambox = VBox(children=[self.Ename,self.Examlist,self.NewExam,self.AddQuest])
+
+        self.QNewExam.layout.visibility = 'hidden' 
+        self.QNewExam.layout.display = 'none'
+
+        exambox = VBox(children=[self.Ename,self.Examlist,self.NewExam,self.QNewExam,self.AddQuest])
 
         examqsts = VBox(children=[self.Etopics,self.Examtopics,self.Exname,self.ExQqsts])
         examdetails = VBox(children=[self.exam_date])
