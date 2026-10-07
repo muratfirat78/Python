@@ -88,6 +88,8 @@ class ExamManager():
            
                 myquest = Question(qstid,None,None,True,None)
                 myquest.setTitle(r['Title']); myquest.setText(r['Text']); myquest.setMainTopic(r['Main_Topic'])
+                if not pd.isna(r['Points']):
+                    myquest.setPoints(r['Points'])
                 myquest.setExplanation(r['Explanation']); myquest.setTeacher(r['Teacher']); myquest.setDate(r['Date'])
                 str_choices = str(r['Choices']); str_correctness = str(r['Correctness'])
                 if str_choices.find("~~") > -1:
@@ -147,7 +149,7 @@ class QuestionBank():
 
     def save_Questions(self,progress):
 
-        question_df = pd.DataFrame(columns=["ID","Title","Text","Main_Topic","Explanation","Teacher","Choices","Correctness","Date"])
+        question_df = pd.DataFrame(columns=["ID","Title","Text","Main_Topic","Points","Explanation","Teacher","Choices","Correctness","Date"])
       
         source_directory = '/content/'
 
@@ -160,7 +162,7 @@ class QuestionBank():
                     choices+=("~~" if choices!= "" else "")+choice[0]
                     correctness+=("~~" if correctness!= "" else "")+str(choice[1])
                 questrow = {"ID":question.getID(),"Title":question.getTitle(),"Text":question.getText(),"Main_Topic":question.getMainTopic(),
-                            "Explanation":question.getExplanation(),"Teacher":question.getTeacher() if question.getTeacher()!=None else self.ExamManager.getCurrentTeacher() ,"Choices":choices,"Correctness":correctness,"Date":question.getDate()}
+                            "Points":question.getPoints(),"Explanation":question.getExplanation(),"Teacher":question.getTeacher() if question.getTeacher()!=None else self.ExamManager.getCurrentTeacher() ,"Choices":choices,"Correctness":correctness,"Date":question.getDate()}
                 question_df.loc[len(question_df)] = questrow
               
     
@@ -196,6 +198,13 @@ class Question():
         self.teacher = None
         self.date = None
         self.id = myid
+        self.Points = None
+
+    def setPoints(self,pts):
+        self.Points = pts
+        return
+    def getPoints(self):
+        return self.Points
 
     def getID(self):
         return self.id
@@ -340,6 +349,8 @@ class VisualManager():
         self.NewQTNameTtl = widgets.HTML("")  
         self.NewQTNameTtl.value = f'<span style="color:{color};"><b>{mytext}</b></span>'
 
+        self.Points = widgets.Dropdown(options = [2.5,5,7.5,10],description = 'Points: ')
+
         
         self.NewQName= widgets.Text(value='')
        
@@ -358,6 +369,7 @@ class VisualManager():
         self.CourseLbl.value = f'<span style="color:{color};"><b>{mytext}</b></span>'
 
         self.Teacher_lbl= widgets.Label(value="Teacher: ")
+        self.Points_lbl= widgets.Label(value="Points: ")
 
       
    
@@ -470,6 +482,7 @@ class VisualManager():
             qstbank.getQuestionInPrep().setTeacher(self.getExamManager().getCurrentTeacher())
             qstbank.getQuestionInPrep().setDate(datetime.now().date())
             qstbank.getQuestionInPrep().setExplanation(self.getNewQExp().value)
+            qstbank.getQuestionInPrep().setPoints(self.Points.value)
 
             qstid = qstbank.getQuestionInPrep().getTitle()+"_"+str(len(qstbank.getQuestions()))+"_"+str((datetime.now().date()))
 
@@ -556,7 +569,9 @@ class VisualManager():
         
         self.newquestionbox = VBox(children=[HBox(children=[self.NewQTopics,self.NewQType,vseparator,self.NewQDate]),
                                              
-                                             separator,HBox(children=[self.NewQTNameTtl,self.NewQName]),separator,self.NewQTxtTtl,self.NewQTxt,
+                                             separator,HBox(children=[self.NewQTNameTtl,self.NewQName,self.Points]),separator,
+                                             self.NewQTxtTtl,
+                                             self.NewQTxt,
                                              HBox(children=[choicebox,expbox])])
                                     
                                  
@@ -810,6 +825,7 @@ class VisualManager():
             QText = currentQuiz.getCurrentQuestion().getText()
             QInfo= "" if currentQuiz.getCurrentQuestion().getTeacher() == None else "Teacher: "+str(currentQuiz.getCurrentQuestion().getTeacher())+""
             QInfo+= "" if currentQuiz.getCurrentQuestion().getMainTopic() == None else " | Topic: "+str(currentQuiz.getCurrentQuestion().getMainTopic())+""
+            QInfo+= "" if currentQuiz.getCurrentQuestion().getDate() == None else " | Points: "+str(currentQuiz.getCurrentQuestion().getPoints())+""
             QInfo+= "" if currentQuiz.getCurrentQuestion().getDate() == None else " | Date: "+str(currentQuiz.getCurrentQuestion().getDate())+""
             with self.description_out:
                 clear_output()

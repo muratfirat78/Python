@@ -1,25 +1,25 @@
-ID,Title,Text,Main_Topic,Explanation,Teacher,Choices,Correctness,Date
-Opdracht 4.a [2.5]_0_2026-10-05,Opdracht 4.a [2.5],"Welke van de volgende uitspraken is waar?
+ID,Title,Text,Main_Topic,Points,Explanation,Teacher,Choices,Correctness,Date
+Opdracht 4.a [2.5]_0_2026-10-07,Opdracht 4.a [2.5],"Welke van de volgende uitspraken is waar?
 Geef van elk antwoord aan of het waar of onwaar is. (2.5 pts)
 
-Class is een essentieel data type in Python.",Data Typen,nan-exp,Murat Firat,Waar~~Onwaar~~Gedeeltelijk waar~~xxxxxx,False~~True~~False~~False,2026-10-05
-Opdracht 4.b [2.5]_1_2026-10-05,Opdracht 4.b [2.5],"Welke van de volgende uitspraken is waar?
+Class is een essentieel data type in Python.",Data Typen,2.5,nan-exp,Murat Firat,Waar~~Onwaar~~Gedeeltelijk waar~~xxxxxx,False~~True~~False~~False,2026-10-07
+Opdracht 4.b [2.5]_1_2026-10-07,Opdracht 4.b [2.5],"Welke van de volgende uitspraken is waar?
 Geef van elk antwoord aan of het waar of onwaar is. (2.5 pts)
 
-float('56'+'78') zal een ValueError opleveren.",Data Typen,---,Murat Firat,Waar~~Onwaar~~Gedeeltelijk waar~~xxxxxx,False~~True~~False~~False,2026-10-05
-Opdracht 5  [5]_2_2026-10-05,Opdracht 5  [5],"Gegeven is de volgende list:
+float('56'+'78') zal een ValueError opleveren.",Data Typen,2.5,---,Murat Firat,Waar~~Onwaar~~Gedeeltelijk waar~~xxxxxx,False~~True~~False~~False,2026-10-07
+Opdracht 5  [5]_2_2026-10-07,Opdracht 5  [5],"Gegeven is de volgende list:
 nums = [15, 30, 55, 60, 85, 95, 105, 120]
 
-Wat is de waarde van sum(nums[1::-1])?",Data Typen,,Murat Firat,85~~45~~225~~110,False~~True~~False~~False,2026-10-05
-Opdracht 4.c [2.5]_3_2026-10-05,Opdracht 4.c [2.5],"Welke van de volgende uitspraken is waar?
+Wat is de waarde van sum(nums[1::-1])?",Data Typen,5.0,,Murat Firat,85~~45~~225~~110,False~~True~~False~~False,2026-10-07
+Opdracht 4.c [2.5]_3_2026-10-07,Opdracht 4.c [2.5],"Welke van de volgende uitspraken is waar?
 Geef van elk antwoord aan of het waar of onwaar is.
 
-Als id(x) == id(y) is True voor variablen x en y, dan zijn ze zelfde..",Data Typen,,Murat Firat,Waar~~Onwaar~~Gedeeltelijk waar~~xxxxxx,True~~False~~False~~False,2026-10-05
-Opdracht 4.d [2.5]_4_2026-10-05,Opdracht 4.d [2.5],"elke van de volgende uitspraken is waar?
+Als id(x) == id(y) is True voor variablen x en y, dan zijn ze zelfde..",Data Typen,2.5,,Murat Firat,Waar~~Onwaar~~Gedeeltelijk waar~~xxxxxx,True~~False~~False~~False,2026-10-07
+Opdracht 4.d [2.5]_4_2026-10-07,Opdracht 4.d [2.5],"elke van de volgende uitspraken is waar?
 Geef van elk antwoord aan of het waar of onwaar is.
 
-float('56+78') zal een ValueError opleveren.",Data Typen,,Murat Firat,True~~False~~225~~110,True~~False~~False~~False,2026-10-05
-Opdracht 6 [5]_5_2026-10-05,Opdracht 6 [5],"Het uitgangspunt is de volgende code:
+float('56+78') zal een ValueError opleveren.",Data Typen,2.5,,Murat Firat,True~~False~~225~~110,True~~False~~False~~False,2026-10-07
+Opdracht 6 [5]_65_2026-10-07,Opdracht 6 [5],"Het uitgangspunt is de volgende code:
 
 import copy
 
@@ -33,15 +33,15 @@ shallowcopysports = copy.copy(sports)
 deepcopysports = copy.deepcopy(sports)
 
 
-Welke van de onderstaande beweringen is True?",Data Typen,,Murat Firat,id(shallowcopysports[0]) is id(sports[0])~~deepcopysports[0] is sports[0]~~id(deepcopysports[0]) == id(sports[0])~~deepcopysports[0] == sports[0],False~~False~~False~~True,2026-10-05
-Opdracht 7 [5]_6_2026-10-05,Opdracht 7 [5],"We hebben de volgende twee tuples:
+Welke van de onderstaande beweringen is True?",Data Typen,5.0,nan,Murat Firat,id(shallowcopysports[0]) is id(sports[0])~~deepcopysports[0] is sports[0]~~id(deepcopysports[0]) == id(sports[0])~~deepcopysports[0] == sports[0],False~~False~~False~~True,2026-10-07
+Opdracht 7 [5]_6_2026-10-07,Opdracht 7 [5],"We hebben de volgende twee tuples:
 
 cursus = ('[IB2002]','[IB3502]','[IM0203]')
 
 cursus_studenten = ('[IB2002]',['st11100','st11101','st11102','st11103'])
 
 Welke optie van de volgende is waar?
-",Data Typen,,Murat Firat, Alleen de tuple cursus_studenten is hashable~~ Alle tuples zijn niet hashable~~Alleen de tuple cursus is hashable~~ Beide tuples zijn hashable,False~~False~~True~~False,2026-10-05
+",Data Typen,5.0,,Murat Firat, Alleen de tuple cursus_studenten is hashable~~ Alle tuples zijn niet hashable~~Alleen de tuple cursus is hashable~~ Beide tuples zijn hashable,False~~False~~True~~False,2026-10-07
 Opdracht 8.a [2.5]_65_2026-10-07,Opdracht 8.a [2.5],"Gegeven is de volgende list:
 
 mylist = [1,2,3]
@@ -50,7 +50,7 @@ mylist = [1,2,3]
 
 Geef aan of volgende invoeging juist of onjuist zijn.
 
-mylist.append(4)",De basis,nan,Murat Firat,Juist~~Onjuist,True~~False,2026-10-07
+mylist.append(4)",De basis,2.5,nan,Murat Firat,Juist~~Onjuist~~id(deepcopysports[0]) == id(sports[0])~~deepcopysports[0] == sports[0],True~~False~~False~~True,2026-10-07
 Opdracht 8.b [2.5]_65_2026-10-07,Opdracht 8.b [2.5],"Gegeven is de volgende list:
 
 mylist = [1,2,3]
@@ -59,7 +59,7 @@ mylist = [1,2,3]
 
 Geef aan of volgende invoeging juist of onjuist zijn.
 
-mylist.insert(len(mylist),4)",Data Typen,nan,Murat Firat,Juist~~Onjuist,True~~False,2026-10-07
+mylist.insert(len(mylist),4)",Data Typen,2.5,nan,Murat Firat,Juist~~Onjuist~~id(deepcopysports[0]) == id(sports[0])~~deepcopysports[0] == sports[0],True~~False~~False~~True,2026-10-07
 Opdracht 8.c [2.5]_65_2026-10-07,Opdracht 8.c [2.5],"Gegeven is de volgende list:
 
 mylist = [1,2,3]
@@ -68,7 +68,7 @@ mylist = [1,2,3]
 
 Geef aan of volgende invoeging juist of onjuist zijn.
 
-mylist.extend(4)",Data Typen,nan,Murat Firat,Juist~~Onjuist,False~~True,2026-10-07
+mylist.extend(4)",Data Typen,2.5,nan,Murat Firat,Juist~~Onjuist~~id(deepcopysports[0]) == id(sports[0])~~deepcopysports[0] == sports[0],False~~True~~False~~True,2026-10-07
 Opdracht 8.d [2.5]_65_2026-10-07,Opdracht 8.d [2.5],"Gegeven is de volgende list:
 
 mylist = [1,2,3]
@@ -77,7 +77,7 @@ mylist = [1,2,3]
 
 Geef aan of volgende invoeging juist of onjuist zijn.
 
-mylist.extend([4])",Data Typen,nan,Murat Firat,Juist~~Onjuist,True~~False,2026-10-07
+mylist.extend([4])",Data Typen,2.5,nan,Murat Firat,Juist~~Onjuist~~id(deepcopysports[0]) == id(sports[0])~~deepcopysports[0] == sports[0],True~~False~~False~~True,2026-10-07
 Opdracht 9 [5]_65_2026-10-07,Opdracht 9 [5],"def IsWhat(number):
     if number <= 1:
         return False
@@ -90,7 +90,7 @@ Opdracht 9 [5]_65_2026-10-07,Opdracht 9 [5],"def IsWhat(number):
 ________________________________________________________________________________
 
 De functie IsWhat retourneert ""False"" en ""True"" voor argumenten 14 en 23.
-Welk van de onderstaande argumenten zal resulteren in een ""True"" retourwaarde?",Functies en modules,nan,Murat Firat,19~~57~~25~~24,True~~False~~False~~False,2026-10-07
+Welk van de onderstaande argumenten zal resulteren in een ""True"" retourwaarde?",Functies en modules,5.0,nan,Murat Firat,19~~57~~25~~24,True~~False~~False~~False,2026-10-07
 Opdracht 11 [5]_65_2026-10-07,Opdracht 11 [5],"Gegeven is de volgende code:
 
 ___________________________________________________________
@@ -106,7 +106,7 @@ print(MathFunction(24))
 ___________________________________________________
 
 Wat is de output van bovenstaande code?
-",Functies en modules,nan,Murat Firat,59~~60~~36~~24,True~~False~~False~~False,2026-10-07
+",Functies en modules,5.0,nan,Murat Firat,59~~60~~36~~24,True~~False~~False~~False,2026-10-07
 Opdracht 12 [5]_65_2026-10-07,Opdracht 12 [5],"Gegeven is de volgende code:
 
 _____________________________________________
@@ -117,22 +117,46 @@ for x in mylist:
         print('*')
 _____________________________________________
 
-Hoe vaak wordt er een * geprint?      ",Functies en modules,nan,Murat Firat,32~~24~~40~~Er wordt een Error gegeneerd,False~~True~~False~~False,2026-10-07
-Question 16_14_nan,Question 16,"Wat staat er in de console na het uitvoeren van de volgende code?
+Hoe vaak wordt er een * geprint?      ",Control Flow,5.0,nan,Murat Firat,32~~24~~40~~Er wordt een Error gegeneerd,False~~True~~False~~False,2026-10-07
+Opdracht 13 [5]_65_2026-10-07,Opdracht 13 [5],"_______________________________________________
+def StrCheck(str1,str2):
+    if set(str1) == set(str2):
+        print('gelijk')
+    else: 
+        print('niet gelijk')
+    
 
+string = ""mississippi""   
 
-list1 = [1,2,3,4,5,6] 
-list2 = list1 
-list3 = list1[:] 
+StrCheck(string[::2],string)
+_______________________________________________
 
-list2.append(7) 
-list3.append(8) 
+Wat is de output van bovenstaande code?
 
-print(list1) 
-",,,Murat Firat,"[8]~~[1, 2, 3, 4, 5, 6]~~[1, 2, 3, 4, 5, 6, 7]~~[1, 2, 3, 4, 5, 6, 7, 8]~~[7]~~[]",False~~False~~True~~False~~False~~False,
-Question 17_15_nan,Question 17,"Is de volgende uitspraak waar of onwaar?
+",Control Flow,5.0,nan,Murat Firat,gelijk~~NameError~~niet gelijk~~Er wordt een Error gegeneerd,True~~False~~False~~False,2026-10-07
+Opdracht 15 [5]_65_2026-10-07,Opdracht 15 [5],"Gegeven is de volgende code:
 
-Als een waarde immutable is, is die waarde ook hashable.",,,Murat Firat,Waar~~Onwaar,False~~True,
+_____________________________________________
+def myfunction(text,number):
+    if number > 3:
+        print(""Text1"")
+    else:
+        if text != ""mysecret"":
+            number+=1
+            passwd = str(input(""Please enter your password: ""))
+            myfunction(passwd,number)
+        else: 
+            print(""Text2"")
+    return
+_____________________________________________
+
+Je roept eerste keer die functie op de volgende manier aan:
+
+_____________________________________________
+myfunction("""",0)
+_____________________________________________
+
+De gebruiker heeft het wachtwoords ""secret, ""Secret"", en ""MySecret"" drie keer ingevoerd. Wat gebeurt er?     ",Functies en modules,5.0,nan,Murat Firat, Text2 is afgedrukt~~Enn error~~Wachtword input wordt opnieuw gevraagd~~Text1 is afgedrukt,False~~False~~True~~False,2026-10-07
 Question 18_16_nan,Question 18,"We hebben een lijst met elementen die ook weer een lijst zijn, met integers, en met verschillende lengte.
 
 Schrijf een code om de lijst te sorteren op basis van de som van de elementen van de lijsten, oplopend.
@@ -144,10 +168,10 @@ Bij de onderstaande invoerlijst:
 Is het resultaat dan:
 
 >> [[0, 0, 0], [1, 1], [1, 2], [10]] 
-",,,Murat Firat,,,
+",,,,Murat Firat,,,
 Question 19_17_nan,Question 19,"Wat wordt er in de console geprint?
 
-print('{a}, {0}, {abc}'.format('Dit tentamen ', a='is ', abc='gemakkelijk '))",,,Murat Firat,"Dit tentamen , is , gemakkelijk&nbsp;~~Dit tentamen , gemakkelijk , is~~is , Dit tentamen , gemakkelijk~~is , gemakkelijk , Dit tentamen&nbsp;~~gemakkelijk , Dit tentamen , is~~gemakkelijk , is , Dit tentamen ",False~~False~~True~~False~~False~~False,
+print('{a}, {0}, {abc}'.format('Dit tentamen ', a='is ', abc='gemakkelijk '))",,,,Murat Firat,"Dit tentamen , is , gemakkelijk&nbsp;~~Dit tentamen , gemakkelijk , is~~is , Dit tentamen , gemakkelijk~~is , gemakkelijk , Dit tentamen&nbsp;~~gemakkelijk , Dit tentamen , is~~gemakkelijk , is , Dit tentamen ",False~~False~~True~~False~~False~~False,
 Question 20_18_nan,Question 20,"Gegeven is de volgende code.
 
 number = 5
@@ -156,25 +180,25 @@ while index < 10:
     print(index, ' maal ', number, ' is: ', number * index)
     index += 1
 
-Wat wordt geprint?",,,Murat Firat,"De tafel van 5, beginnend bij 1 en eindigend bij 10.~~De tafel van 5, beginnend bij 1 en eindigend bij 9.~~De tafel van 5, beginnend bij 0 en eindigend bij 10.~~De tafel van 5, beginnend bij 0 en eindigend bij 9.",False~~True~~False~~False,
+Wat wordt geprint?",,,,Murat Firat,"De tafel van 5, beginnend bij 1 en eindigend bij 10.~~De tafel van 5, beginnend bij 1 en eindigend bij 9.~~De tafel van 5, beginnend bij 0 en eindigend bij 10.~~De tafel van 5, beginnend bij 0 en eindigend bij 9.",False~~True~~False~~False,
 Question 21_19_nan,Question 21,"Gegeven is de volgende code.
 
 sentence = ""Dit Python tentamen is gemakkelijk""
 for w in sentence:
     print(w)
 
-Wat wordt geprint?",,,Murat Firat,"De individuele letters, inclusief de spaties, onder elkaar.~~De vijf woorden onder elkaar.~~Dit Python tentamen is gemakkelijk~~DitPythontentamenisgemakkelijk~~D i t P y t h o n t e n t a m e n i s g e m a k k e l i j k",True~~False~~False~~False~~False,
+Wat wordt geprint?",,,,Murat Firat,"De individuele letters, inclusief de spaties, onder elkaar.~~De vijf woorden onder elkaar.~~Dit Python tentamen is gemakkelijk~~DitPythontentamenisgemakkelijk~~D i t P y t h o n t e n t a m e n i s g e m a k k e l i j k",True~~False~~False~~False~~False,
 Question 23_20_nan,Question 23,"Wat wordt geprint bij het draaien van de volgende code?
 
 for number, value in enumerate(['een', 'twee', 'drie']):
     if number:
-        print(value)",,,Murat Firat,,,
+        print(value)",,,,Murat Firat,,,
 Question 24_21_nan,Question 24,"Wat wordt er geprint wanneer je de volgende code runt?
 
 try:
     print(1)
 finally:
-    print(2)",,,Murat Firat,1~~2~~1 en 2 in twee volgende lijnen~~Een foutmelding,False~~False~~True~~False,
+    print(2)",,,,Murat Firat,1~~2~~1 en 2 in twee volgende lijnen~~Een foutmelding,False~~False~~True~~False,
 Question 25_22_nan,Question 25,"De code is:
 
 def test(a, b=5):
@@ -182,7 +206,7 @@ def test(a, b=5):
 
 test(3, 1)
 
-Er wordt False geprint.",,,Murat Firat,Waar~~Onwaar,False~~True,
+Er wordt False geprint.",,,,Murat Firat,Waar~~Onwaar,False~~True,
 Question 26_23_nan,Question 26,"Wat wordt er geprint bij het runnen van de volgende code:
 
 def add_to_my_list(el, lst=[]):
@@ -192,7 +216,7 @@ def add_to_my_list(el, lst=[]):
 my_first_lst = add_to_my_list(3)
 my_second_lst = add_to_my_list(2)
 my_third_lst = add_to_my_list(1)
-print(my_third_lst)",,,Murat Firat,,,
+print(my_third_lst)",,,,Murat Firat,,,
 Question 27_24_nan,Question 27,"De documentatie van een functie get_min_value is als volgt:
 
 """"""
@@ -218,12 +242,12 @@ Question 27_24_nan,Question 27,"De documentatie van een functie get_min_value is
        raises: TypeError: Argument must be an iterable with numbers
     """"""
 
-Implementeer de functie. Daarbin kun je er van uitgaan dat Python de Errors bij Pre Broken Path 3 opgooit. Dat geldt niet voor Pre Broken Path 1 en 2.",,,Murat Firat,,,
+Implementeer de functie. Daarbin kun je er van uitgaan dat Python de Errors bij Pre Broken Path 3 opgooit. Dat geldt niet voor Pre Broken Path 1 en 2.",,,,Murat Firat,,,
 Question 28_25_nan,Question 28,"Gegeven is:
 
 numbers = [-1, 5, 2, -30, 2.5, 100]
 
-Schrijf een print-opdracht waarmee alle getallen groter dan 10 van numbers worden afgedrukt. Maak daarbij gebruik van filter en een lambda expressie.",,,Murat Firat,,,
+Schrijf een print-opdracht waarmee alle getallen groter dan 10 van numbers worden afgedrukt. Maak daarbij gebruik van filter en een lambda expressie.",,,,Murat Firat,,,
 Question 29_26_nan,Question 29,"Gegeven is de volgende functie:
 
 def hello(name):
@@ -234,7 +258,7 @@ def hello(name):
 - Laat zien hoe je die decorator toe kunt passen op de functie hello.
 
 
-",,,Murat Firat,,,
+",,,,Murat Firat,,,
 Question 30_27_nan,Question 30,"Gegeven is de volgende functie:
 
 def hello(name):
@@ -250,11 +274,11 @@ Een beschrijving van het Happy path, met pre- en postconditie
 Een beschrijving van één Pre broken path met pre- en postconditie, namelijk dat de drie getallen geen zijden van een driehoek vormen.
 
 Een driehoek voldoet aan de voorwaarde dat voor elk paar van de zijden geldt dat ze opgetelt grter zijn of gelijk aan de derde zijde.
-",,,Murat Firat,,,
+",,,,Murat Firat,,,
 Question 32_28_nan,Question 32,"Geef een beschrijving van wat de volgende functie doet. Contracten beschrijven is niet nodig.
 
 def right_angled(a, b, c):
-    return a*a + b*b == c*c or a*a + c*c == b*b or b*b + c*c == a*a",,,Murat Firat,,,
+    return a*a + b*b == c*c or a*a + c*c == b*b or b*b + c*c == a*a",,,,Murat Firat,,,
 Question 33_29_nan,Question 33,"Gegeven is de volgende klasse:
 
 class Triangle:
@@ -263,7 +287,7 @@ class Triangle:
         self.side_2 = b
         self.side_3 = c
 
-Welk van de volgende uitspraken over een methode right_angle om te bepalen of het meegegeven aantal graden een rechte hoek vormt, is waar?",,,Murat Firat,"Je kunt hier het beste een static methode van maken, omdat je geen gebruik maakt van de attributen van Triangle.~~Je kunt hier het beste een klassemethode van maken, omdat je geen gebruik maakt van de attributen van Triangle.~~Je kunt hier het beste een losse functie van maken, omdat je geen gebruik maakt van de attributen van Triangle.~~Je kunt hier het beste een methode van Triangle van maken, omdat de functie logisch gezien hoort bij Triangle.",False~~False~~True~~False,
+Welk van de volgende uitspraken over een methode right_angle om te bepalen of het meegegeven aantal graden een rechte hoek vormt, is waar?",,,,Murat Firat,"Je kunt hier het beste een static methode van maken, omdat je geen gebruik maakt van de attributen van Triangle.~~Je kunt hier het beste een klassemethode van maken, omdat je geen gebruik maakt van de attributen van Triangle.~~Je kunt hier het beste een losse functie van maken, omdat je geen gebruik maakt van de attributen van Triangle.~~Je kunt hier het beste een methode van Triangle van maken, omdat de functie logisch gezien hoort bij Triangle.",False~~False~~True~~False,
 Question 34_30_nan,Question 34,"Gegeven is een klasse Circle:
 
 class Circle:
@@ -271,7 +295,7 @@ class Circle:
         self.radius = radius
 
 
-Schrijf code om van radius een property te maken, zodat er een ValueError wordt opgegooid wanneer je probeert om een negatieve radius (straal) meee te geven.",,,Murat Firat,,,
+Schrijf code om van radius een property te maken, zodat er een ValueError wordt opgegooid wanneer je probeert om een negatieve radius (straal) meee te geven.",,,,Murat Firat,,,
 Question 35_31_nan,Question 35,"Gegeven is een klasse Triangle:
 
 class Triangle:
@@ -281,7 +305,7 @@ class Triangle:
         self.side_3 = c
 
 - Verander de klasse zo dat er een ValueError wordt gegeven wanneer de klasse niet voldoet aan de regel voor driehoeken (de som van geen paar zijden is kleiner dan de derde zijde)
-- Schrijf een subklasse EquilateralTriangle voor een gelijkzijdige driehoek (alledrie de zijden gelijk). Denk aan een eventuele ValueError.",,,Murat Firat,,,
+- Schrijf een subklasse EquilateralTriangle voor een gelijkzijdige driehoek (alledrie de zijden gelijk). Denk aan een eventuele ValueError.",,,,Murat Firat,,,
 Question 36_32_nan,Question 36,"Gegeven is de volgende code:
 
 class Triangle:
@@ -305,15 +329,15 @@ Een programmeur maakt van de eerste zijde een property, als volgt:
             self.__side_1 = side
 
 Welke uitspraak is juist?
-",,,Murat Firat,Dit lukt niet omdat je ook properties moet maken van de andere zijden.~~Dit lukt niet omdat de andere zijden nog geen waarden hoeven te hebben.~~Dit lukt niet omdat je in een property alleen mag refereren aan het attribuut waar de property betrekking op heeft.~~Dit is de juiste manier om een property te maken van side_1.,False~~True~~False~~False,
-Question (OOP)_33_nan,Question (OOP),Welke van de volgende uitspraken is waar?,,,Murat Firat,In Python is een object een instantie van een klasse. Een klasse is geen object.~~In Python is een object een klasse.~~In Python zijn de begrippen type en klasse synoniem.~~In Python zijn de begrippen instantie en subklasse synoniem.,False~~True~~False~~False,
+",,,,Murat Firat,Dit lukt niet omdat je ook properties moet maken van de andere zijden.~~Dit lukt niet omdat de andere zijden nog geen waarden hoeven te hebben.~~Dit lukt niet omdat je in een property alleen mag refereren aan het attribuut waar de property betrekking op heeft.~~Dit is de juiste manier om een property te maken van side_1.,False~~True~~False~~False,
+Question (OOP)_33_nan,Question (OOP),Welke van de volgende uitspraken is waar?,,,,Murat Firat,In Python is een object een instantie van een klasse. Een klasse is geen object.~~In Python is een object een klasse.~~In Python zijn de begrippen type en klasse synoniem.~~In Python zijn de begrippen instantie en subklasse synoniem.,False~~True~~False~~False,
 Question (Regular Expressions)_34_nan,Question (Regular Expressions),"Wat wordt er in de console geprint wanneer je deze code draait?
 
 import re 
 
 result = re.sub(r'[^abc]','$', 'a9.B/2hb01Av.c') 
 
-print (result) ",,,Murat Firat,$9.B/2h$01Av.$~~$9.$/2h$01$v.$~~a$$$$$$b$$$$$c~~a$$B$$$b$$A$$c,False~~False~~True~~False,
+print (result) ",,,,Murat Firat,$9.B/2h$01Av.$~~$9.$/2h$01$v.$~~a$$$$$$b$$$$$c~~a$$B$$$b$$A$$c,False~~False~~True~~False,
 Question2 (Regular Expressions)_35_nan,Question2 (Regular Expressions),"Schrijf met behulp van reguliere expressies code om een lijst van alle getallen met 2 of 3 cijfers uit een invoerstring te identificeren en af te drukken.
 
 Bij invoer
@@ -324,10 +348,10 @@ geeft de code als uitvoer:
 
  ['12', '678', '450', '17', '567', '67'] 
 
-",,,Murat Firat,,,
+",,,,Murat Firat,,,
 Question3 (Regular Expressions)_36_nan,Question3 (Regular Expressions),"Schrijf, met behulp van list comprehension en reguliere expressies, code om namen (d.w.z. alfabetische woorden met een lengte van 2 of meer letters) in een lijst te anonimiseren door ze te vervangen door 'XXX'.
 
-Bij de volgende input:",,,Murat Firat,,,
+Bij de volgende input:",,,,Murat Firat,,,
 Question (Functional Programming)_37_nan,Question (Functional Programming),"What will be the output of the following Python code?
 
 i = 1
@@ -338,28 +362,28 @@ while True:
  
     i += 1
 
-",,,Murat Firat,1 2 3~~SyntaxError~~1 2~~none of the mentioned,False~~False~~True~~False,
+",,,,Murat Firat,1 2 3~~SyntaxError~~1 2~~none of the mentioned,False~~False~~True~~False,
 Question (Boolean)_38_nan,Question (Boolean),"What will be the output of the following Python code?
 
 l=[1, 0, 2, 0, 'hello', '', []]
 print(list(filter(bool, l)))
 
-",,,Murat Firat,"[1, 0, 2, 'hello','', []]~~Error~~[1, 2, 'hello']~~[1, 0, 2, 0, 'hello','', []]",False~~False~~True~~False,
-Question (Built-in Functions)_39_nan,Question (Built-in Functions),Which of the following is the use of id() function in python?,,,Murat Firat,Every object doesn’t have a unique id~~Id returns the identity of the object~~All of the mentioned~~None of the mentioned,False~~True~~False~~False,
-Question (Data Types)_40_2026-10-01,Question (Data Types),Which of the following is not a core data type in Python programming?,De basis,,Murat Firat,Tuples~~Lists~~Class~~Dictionary,False~~False~~True~~False,2026-10-01
+",,,,Murat Firat,"[1, 0, 2, 'hello','', []]~~Error~~[1, 2, 'hello']~~[1, 0, 2, 0, 'hello','', []]",False~~False~~True~~False,
+Question (Built-in Functions)_39_nan,Question (Built-in Functions),Which of the following is the use of id() function in python?,,,,Murat Firat,Every object doesn’t have a unique id~~Id returns the identity of the object~~All of the mentioned~~None of the mentioned,False~~True~~False~~False,
+Question (Data Types)_40_2026-10-01,Question (Data Types),Which of the following is not a core data type in Python programming?,De basis,,,Murat Firat,Tuples~~Lists~~Class~~Dictionary,False~~False~~True~~False,2026-10-01
 Question2 (Data Types)_41_nan,Question2 (Data Types),"What will be the output of the following Python program? 
 z=set('abc')
 z.add('san')
 z.update(set(['p', 'q']))
-print(z)",,,Murat Firat,"{'a', 'c', 'c', 'p', 'q', 's', 'a', 'n'}~~{'abc', 'p', 'q', 'san'}~~{'a', 'b', 'c', 'p', 'q', 'san'}~~{'a', 'b', 'c', ['p', 'q'], 'san'}",False~~False~~True~~False,
-Question3 (Data Types)_42_nan,Question3 (Data Types),To add a new element to a list we use which Python command?,,,Murat Firat,list1.addEnd(5)~~list1.addLast(5)~~list1.append(5)~~list1.add(5),False~~False~~True~~False,
+print(z)",,,,Murat Firat,"{'a', 'c', 'c', 'p', 'q', 's', 'a', 'n'}~~{'abc', 'p', 'q', 'san'}~~{'a', 'b', 'c', 'p', 'q', 'san'}~~{'a', 'b', 'c', ['p', 'q'], 'san'}",False~~False~~True~~False,
+Question3 (Data Types)_42_nan,Question3 (Data Types),To add a new element to a list we use which Python command?,,,,Murat Firat,list1.addEnd(5)~~list1.addLast(5)~~list1.append(5)~~list1.add(5),False~~False~~True~~False,
 Question (Formatting)_43_nan,Question (Formatting),"What will be the output of the following Python code? 
-print(""Hello {0[0]} and {0[1]}"".format(('foo', 'bin')))",,,Murat Firat,"Hello ('foo', 'bin') and ('foo', 'bin')~~Error~~Hello foo and bin~~None of the mentioned",False~~False~~True~~False,
-Question2 (Numerical precision)_44_nan,Question2 (Numerical precision),What is the output of print 0.1 + 0.2 == 0.3?,,,Murat Firat,True~~False~~Machine dependent~~Error,False~~True~~False~~False,
+print(""Hello {0[0]} and {0[1]}"".format(('foo', 'bin')))",,,,Murat Firat,"Hello ('foo', 'bin') and ('foo', 'bin')~~Error~~Hello foo and bin~~None of the mentioned",False~~False~~True~~False,
+Question2 (Numerical precision)_44_nan,Question2 (Numerical precision),What is the output of print 0.1 + 0.2 == 0.3?,,,,Murat Firat,True~~False~~Machine dependent~~Error,False~~True~~False~~False,
 Question2 (Formatting)_45_nan,Question2 (Formatting),"What will be the output of the following Python code snippet? 
 X = ""san-foundry""
 print(""%56s"" % X)
-",,"Explanation: The formatting option %56s aligns the string to the right within a field of width 56. If the string ""san-foundry"" is 11 characters long, it will be preceded by (56 – 11 = 45) blank spaces.",Murat Firat,45 blank spaces before san-foundry~~56 blank spaces before san and foundry~~56 blank spaces after san-foundry~~no change,True~~False~~False~~False,
+",,,"Explanation: The formatting option %56s aligns the string to the right within a field of width 56. If the string ""san-foundry"" is 11 characters long, it will be preceded by (56 – 11 = 45) blank spaces.",Murat Firat,45 blank spaces before san-foundry~~56 blank spaces before san and foundry~~56 blank spaces after san-foundry~~no change,True~~False~~False~~False,
 Question (Modules)_46_nan,Question (Modules),"What will be the output of the following Python code?
 
 #mod1
@@ -375,7 +399,7 @@ from mod2 import change
 #main
 s=[1,2,3]
 change(s)
-",,"Explanation: In the given code, both mod1 and mod2 define a function named change(). When from mod1 import change is followed by from mod2 import change, the second import overrides the first due to the same function name. This causes a name clash, as only one version of change() will be available in the current namespace, leading to confusion or unintended behavior.",Murat Firat,"[2,4,6]~~[1,4,9]~~'[2,4,6]\n[1,4,9]'~~There is a name clash",False~~False~~False~~True,
+",,,"Explanation: In the given code, both mod1 and mod2 define a function named change(). When from mod1 import change is followed by from mod2 import change, the second import overrides the first due to the same function name. This causes a name clash, as only one version of change() will be available in the current namespace, leading to confusion or unintended behavior.",Murat Firat,"[2,4,6]~~[1,4,9]~~'[2,4,6]\n[1,4,9]'~~There is a name clash",False~~False~~False~~True,
 Question (Shallow/deep copy)_47_nan,Question (Shallow/deep copy),"What will be the output of the following Python code?
 
 l1=[10, 20, 30]
@@ -383,29 +407,29 @@ l2=l1
 print(id(l1)==id(l2))
  
 l2=l1.copy()
-print(id(l1)==id(l2))",,"Explanation: In the given code, l2 = l1 assigns l2 to reference the same list object as l1, so id(l1) == id(l2) returns True. However, when l2 = l1.copy() is used, it creates a new list with the same elements, resulting in a different object in memory. Therefore, id(l1) == id(l2) now returns False. This demonstrates the difference between assigning a reference and creating a shallow copy of a list.",Murat Firat,"False, False~~False, True~~True, True~~True, False",False~~False~~False~~True,
+print(id(l1)==id(l2))",,,"Explanation: In the given code, l2 = l1 assigns l2 to reference the same list object as l1, so id(l1) == id(l2) returns True. However, when l2 = l1.copy() is used, it creates a new list with the same elements, resulting in a different object in memory. Therefore, id(l1) == id(l2) now returns False. This demonstrates the difference between assigning a reference and creating a shallow copy of a list.",Murat Firat,"False, False~~False, True~~True, True~~True, False",False~~False~~False~~True,
 Question2 (Shallow/deep copy)_48_nan,Question2 (Shallow/deep copy),"What will be the output of the following Python code?
 
 l1=[1, 2, 3, [4]]
 l2=list(l1)
-print(id(l1)==id(l2))",,"Explanation: In the code, l2 = list(l1) creates a shallow copy of the list l1. This means l2 is a new list object with the same elements as l1, so id(l1) == id(l2) evaluates to False. Although the outer lists are different objects, they still share the same inner list [4] due to shallow copying.",Murat Firat,True~~False~~Error~~Address of l1,False~~True~~False~~False,
+print(id(l1)==id(l2))",,,"Explanation: In the code, l2 = list(l1) creates a shallow copy of the list l1. This means l2 is a new list object with the same elements as l1, so id(l1) == id(l2) evaluates to False. Although the outer lists are different objects, they still share the same inner list [4] due to shallow copying.",Murat Firat,True~~False~~Error~~Address of l1,False~~True~~False~~False,
 Question (Recursion)_49_2026-10-01,Question (Recursion),"What will be the output of the following Python code?
 
 def check(n):
     if n < 2:
         return n % 2 == 0
     return check(n - 2)
-print(check(11))",De basis,"Explanation: The function check(n) recursively subtracts 2 until n < 2. Then it returns n % 2 == 0. For n = 11, the recursion reaches n = 1, and 1 % 2 == 0 is False. So, the output is False.",Murat Firat,False~~True~~1~~An exception is thrown,True~~False~~False~~False,2026-10-01
+print(check(11))",De basis,,"Explanation: The function check(n) recursively subtracts 2 until n < 2. Then it returns n % 2 == 0. For n = 11, the recursion reaches n = 1, and 1 % 2 == 0 is False. So, the output is False.",Murat Firat,False~~True~~1~~An exception is thrown,True~~False~~False~~False,2026-10-01
 Question (Lambda Recursion)_50_2026-10-01,Question (Lambda Recursion),"What will be the output of the following Python code?
 
 a = [1, 2, 3, 4, 5]
 b = lambda x: (b (x[1:]) + x[:1] if x else []) 
-print(b (a))",De basis,"Explanation: The lambda function b is recursively called on the sliced list x[1:] until the list is empty (x == []). It builds the reversed list by appending the first element (x[:1]) at the end during each return. This effectively reverses the list. So, for a = [1, 2, 3, 4, 5], it returns [5, 4, 3, 2, 1].",Murat Firat,"1 2 3 4 5~~[5, 4, 3, 2, 1]~~[]~~Error, lambda functions cannot be called recursively",False~~True~~False~~False,2026-10-01
+print(b (a))",De basis,,"Explanation: The lambda function b is recursively called on the sliced list x[1:] until the list is empty (x == []). It builds the reversed list by appending the first element (x[:1]) at the end during each return. This effectively reverses the list. So, for a = [1, 2, 3, 4, 5], it returns [5, 4, 3, 2, 1].",Murat Firat,"1 2 3 4 5~~[5, 4, 3, 2, 1]~~[]~~Error, lambda functions cannot be called recursively",False~~True~~False~~False,2026-10-01
 Question4 (Functional Programming)_51_2026-10-01,Question4 (Functional Programming),"What will be the output of the following Python code?
 
 l=[1, 2, 3, 4, 5]
 m=map(lambda x:2**x, l)
-print(list(m))",De basis,"Explanation: The map function applies lambda x: 2**x to each element in list l. So, it calculates powers of 2 for each element: 21, 22, 23, 24, 25, resulting in [2, 4, 8, 16, 32].",Murat Firat,"[1, 4, 9, 16, 25 ]~~[2, 4, 8, 16, 32 ]~~[1, 0, 1, 0, 1]~~Error",False~~True~~False~~False,2026-10-01
+print(list(m))",De basis,,"Explanation: The map function applies lambda x: 2**x to each element in list l. So, it calculates powers of 2 for each element: 21, 22, 23, 24, 25, resulting in [2, 4, 8, 16, 32].",Murat Firat,"[1, 4, 9, 16, 25 ]~~[2, 4, 8, 16, 32 ]~~[1, 0, 1, 0, 1]~~Error",False~~True~~False~~False,2026-10-01
 Question2 (Functional Programming)_52_2026-10-01,Question2 (Functional Programming),"What will be the output of the following Python code?
 
 odd=lambda x: bool(x%2)
@@ -416,40 +440,40 @@ for i in numbers:
     if odd(i):
         continue
     else:
-        break",De basis,"Explanation: The list numbers is created using range(10), which gives [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], and it is printed directly. The for loop that follows checks each number, and since the first number 0 is even, the else block triggers break, exiting the loop immediately without modifying or printing anything. Hence, the printed output is just the original list.",Murat Firat,"[0, 2, 4, 6, 8, 10]~~[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]~~[1, 3, 5, 7, 9]~~Error",False~~True~~False~~False,2026-10-01
+        break",De basis,,"Explanation: The list numbers is created using range(10), which gives [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], and it is printed directly. The for loop that follows checks each number, and since the first number 0 is even, the else block triggers break, exiting the loop immediately without modifying or printing anything. Hence, the printed output is just the original list.",Murat Firat,"[0, 2, 4, 6, 8, 10]~~[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]~~[1, 3, 5, 7, 9]~~Error",False~~True~~False~~False,2026-10-01
 Question3 (Functional Programming)_53_2026-10-01,Question3 (Functional Programming),"What will be the output of the following Python code?
 
 l=[-2, 4]
 m=map(lambda x:x*2, l)
-print(m)",De basis,"Explanation: The map() function returns a map object, which is an iterator. When printed directly without converting it to a list or iterating over it, it displays its memory address (e.g., <map object at 0x…>). To see the values, you’d need to do print(list(m)).",Murat Firat,"[-4, 16]~~Address of m~~Unknown Error~~-4 \n 16",False~~True~~False~~False,2026-10-01
+print(m)",De basis,,"Explanation: The map() function returns a map object, which is an iterator. When printed directly without converting it to a list or iterating over it, it displays its memory address (e.g., <map object at 0x…>). To see the values, you’d need to do print(list(m)).",Murat Firat,"[-4, 16]~~Address of m~~Unknown Error~~-4 \n 16",False~~True~~False~~False,2026-10-01
 Question4 (Functional Programming)_54_2026-10-01,Question4 (Functional Programming),"What will be the output of the following Python code?
 
 l=[1, 2, 3, 4, 5]
 m=map(lambda x:2**x, l)
-print(list(m))",De basis,"Explanation: The map function applies lambda x: 2**x to each element in list l. So, it calculates powers of 2 for each element: 21, 22, 23, 24, 25, resulting in [2, 4, 8, 16, 32].",Murat Firat,"[1, 4, 9, 16, 25 ]~~[2, 4, 8, 16, 32 ]~~[1, 0, 1, 0, 1]~~Error",False~~True~~False~~False,2026-10-01
+print(list(m))",De basis,,"Explanation: The map function applies lambda x: 2**x to each element in list l. So, it calculates powers of 2 for each element: 21, 22, 23, 24, 25, resulting in [2, 4, 8, 16, 32].",Murat Firat,"[1, 4, 9, 16, 25 ]~~[2, 4, 8, 16, 32 ]~~[1, 0, 1, 0, 1]~~Error",False~~True~~False~~False,2026-10-01
 Question (Lambda Recursion)_55_2026-10-01,Question (Lambda Recursion),"What will be the output of the following Python code?
 
 a = [1, 2, 3, 4, 5]
 b = lambda x: (b (x[1:]) + x[:1] if x else []) 
-print(b (a))",De basis,"Explanation: The lambda function b is recursively called on the sliced list x[1:] until the list is empty (x == []). It builds the reversed list by appending the first element (x[:1]) at the end during each return. This effectively reverses the list. So, for a = [1, 2, 3, 4, 5], it returns [5, 4, 3, 2, 1].",Murat Firat,"1 2 3 4 5~~[5, 4, 3, 2, 1]~~[]~~Error, lambda functions cannot be called recursively",False~~True~~False~~False,2026-10-01
+print(b (a))",De basis,,"Explanation: The lambda function b is recursively called on the sliced list x[1:] until the list is empty (x == []). It builds the reversed list by appending the first element (x[:1]) at the end during each return. This effectively reverses the list. So, for a = [1, 2, 3, 4, 5], it returns [5, 4, 3, 2, 1].",Murat Firat,"1 2 3 4 5~~[5, 4, 3, 2, 1]~~[]~~Error, lambda functions cannot be called recursively",False~~True~~False~~False,2026-10-01
 Question (Recursion)_56_2026-10-01,Question (Recursion),"What will be the output of the following Python code?
 
 def check(n):
     if n < 2:
         return n % 2 == 0
     return check(n - 2)
-print(check(11))",De basis,"Explanation: The function check(n) recursively subtracts 2 until n < 2. Then it returns n % 2 == 0. For n = 11, the recursion reaches n = 1, and 1 % 2 == 0 is False. So, the output is False.",Murat Firat,False~~True~~1~~An exception is thrown,True~~False~~False~~False,2026-10-01
-Question (Data Types)_57_2026-10-01,Question (Data Types),Which of the following is not a core data type in Python programming?,De basis,,Murat Firat,Tuples~~Lists~~Class~~Dictionary,False~~False~~True~~False,2026-10-01
+print(check(11))",De basis,,"Explanation: The function check(n) recursively subtracts 2 until n < 2. Then it returns n % 2 == 0. For n = 11, the recursion reaches n = 1, and 1 % 2 == 0 is False. So, the output is False.",Murat Firat,False~~True~~1~~An exception is thrown,True~~False~~False~~False,2026-10-01
+Question (Data Types)_57_2026-10-01,Question (Data Types),Which of the following is not a core data type in Python programming?,De basis,,,Murat Firat,Tuples~~Lists~~Class~~Dictionary,False~~False~~True~~False,2026-10-01
 Opdracht 4 (July2026)_58_2026-10-05,Opdracht 4 (July2026),"Welke van de volgende uitspraken is waar?
 Geef van elk antwoord aan of het waar of onwaar is. (2.5 pts)
 
-Class is een essentieel data type in Python.",Data Typen,,Murat Firat,Waar~~Onwaar~~Gedeeltelijk waar,False~~True~~False,2026-10-05
-dghf_59_2026-10-05,dghf,dfghdf,De basis,gdhfgdgfd,Murat Firat,gfdfg~~dgfhdfhg,False~~True,2026-10-05
-QTEST ( edited)_60_2026-10-05,QTEST ( edited),control,Control Flow,test exp,Murat Firat,waar~~onwaar,False~~True,2026-10-05
+Class is een essentieel data type in Python.",Data Typen,,,Murat Firat,Waar~~Onwaar~~Gedeeltelijk waar,False~~True~~False,2026-10-05
+dghf_59_2026-10-05,dghf,dfghdf,De basis,,gdhfgdgfd,Murat Firat,gfdfg~~dgfhdfhg,False~~True,2026-10-05
+QTEST ( edited)_60_2026-10-05,QTEST ( edited),control,Control Flow,,test exp,Murat Firat,waar~~onwaar,False~~True,2026-10-05
 Opdracht 4 (July2026-edt)_61_2026-10-05,Opdracht 4 (July2026-edt),"Welke van de volgende uitspraken is waar?
 Geef van elk antwoord aan of het waar of onwaar is. (2.5 pts)
 
-Class is een essentieel data type in Python.",Data Typen,nan-exp,Murat Firat,Waar~~Onwaar~~Gedeeltelijk waar,False~~True~~False,2026-10-05
+Class is een essentieel data type in Python.",Data Typen,,nan-exp,Murat Firat,Waar~~Onwaar~~Gedeeltelijk waar,False~~True~~False,2026-10-05
 Question 22 (edt)_62_2026-10-05,Question 22 (edt),"Gegeven is de volgende code.
 
 digits = [1, 5, 2, 10]
@@ -461,7 +485,7 @@ for x, y in enumerate(digits):
 
 print(new_lst)
 
-Wat wordt geprint?",De basis,,Murat Firat,"[1]~~[1,2]~~[2]~~[]",False~~False~~True~~False,2026-10-05
+Wat wordt geprint?",De basis,,,Murat Firat,"[1]~~[1,2]~~[2]~~[]",False~~False~~True~~False,2026-10-05
 Question 31 (edt)_63_2026-10-05,Question 31 (edt),"Deze vraag gaat over deelfde functiie als de vorige vraag:
 
 Een functie equilateral die teruggeeft of de drie meegegeven getallen zijden vormen van een gelijkzijdige driehoek (dat wil zeggen dat alle zijden gelijk zijn).
@@ -471,5 +495,5 @@ Geef doctests voor:
 Drie Happy path cases
 één Pre broken path case, namelijk dat de drie getallen geen zijden van een driehoek vormen.
 
-Een driehoek voldoet aan de voorwaarde dat voor elk paar van de zijden geldt dat ze opgetelt grter zijn of gelijk aan de derde zijde.",De basis,,Murat Firat,"[1]~~[1,2]~~[2]~~[]",False~~False~~True~~False,2026-10-05
-jhgj_64_2026-10-05,jhgj,ghjkgjkhg,De basis,fghfjghhjfhjg,Murat Firat,jgkjg~~jhkgjhkgjk~~yyyyyy~~xxxxxx,True~~False~~False~~False,2026-10-05
+Een driehoek voldoet aan de voorwaarde dat voor elk paar van de zijden geldt dat ze opgetelt grter zijn of gelijk aan de derde zijde.",De basis,,,Murat Firat,"[1]~~[1,2]~~[2]~~[]",False~~False~~True~~False,2026-10-05
+jhgj_64_2026-10-05,jhgj,ghjkgjkhg,De basis,,fghfjghhjfhjg,Murat Firat,jgkjg~~jhkgjhkgjk~~yyyyyy~~xxxxxx,True~~False~~False~~False,2026-10-05
