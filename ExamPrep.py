@@ -470,6 +470,7 @@ class VisualManager():
         
         self.Etopics= widgets.Label(value="Exam Topics")
         self.Examtopics= widgets.Select(description="")
+        self.Examtopics.observe(self.findETopicQuestions)
 
         self.NewExam= widgets.Button(description="New Exam")
         self.QNewExam= widgets.Button(description="Quit")
@@ -564,9 +565,18 @@ class VisualManager():
                     if not question in self.getExamManager().getCurrentExam().getQuestions():
                         self.getExamManager().getCurrentExam().getQuestions().append(question)
                     break
-                    
-    
-            self.ExQqsts.options = [q.getTitle() for q in self.getExamManager().getCurrentExam().getQuestions()]
+
+            ex_topics = []
+            for q in self.getExamManager().getCurrentExam().getQuestions():
+                if not q.getMainTopic() in ex_topics:
+                    ex_topics.append(q.getMainTopic())
+
+            self.Examtopics.options = ex_topics
+
+            
+            if len(ex_topics) > 0:
+                self.Examtopics.value = ex_topics[0]
+                self.ExQqsts.options = [q.getTitle() for q in self.getExamManager().getCurrentExam().getQuestions() if q.getMainTopic() == self.Examtopics.value]
 
 
         except Exception as e:             
@@ -1107,6 +1117,27 @@ class VisualManager():
         
 
         self.getQsts().options = [x.getTitle() for x in currentQuiz.getQuestions()]  
+
+        return
+
+        
+    def findETopicQuestions(self,b):
+
+        global currentQuiz,BOLD,RESET,QuestionTopics
+
+        selected_topic = self.Examtopics.value
+
+        questtitles = []
+
+        for myquest in self.getExamManager().getCurrentExam().getQuestions():
+            if myquest.getMainTopic() == selected_topic:
+                questtitles.append(myquest.getTitle())
+                
+        
+
+        self.ExQqsts.options = [x for x in questtitles]  
+
+        return
 
         
 

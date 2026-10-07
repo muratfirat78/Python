@@ -15,10 +15,10 @@ Opdracht 4.c [2.5]_3_2026-10-07,Opdracht 4.c [2.5],"Welke van de volgende uitspr
 Geef van elk antwoord aan of het waar of onwaar is.
 
 Als id(x) == id(y) is True voor variablen x en y, dan zijn ze zelfde..",Data Typen,2.5,,Murat Firat,Waar~~Onwaar~~Gedeeltelijk waar~~xxxxxx,True~~False~~False~~False,2026-10-07
-Opdracht 4.d [2.5]_4_2026-10-07,Opdracht 4.d [2.5],"elke van de volgende uitspraken is waar?
+Opdracht 4.d [2.5]_64_2026-10-07,Opdracht 4.d [2.5],"elke van de volgende uitspraken is waar?
 Geef van elk antwoord aan of het waar of onwaar is.
 
-float('56+78') zal een ValueError opleveren.",Data Typen,2.5,,Murat Firat,True~~False~~225~~110,True~~False~~False~~False,2026-10-07
+float('56+78') zal een ValueError opleveren.",Data Typen,2.5,nan,Murat Firat,True~~False~~225~~110,True~~False~~False~~False,2026-10-07
 Opdracht 6 [5]_5_2026-10-07,Opdracht 6 [5],"Het uitgangspunt is de volgende code:
 
 import copy
@@ -425,11 +425,11 @@ Question (Lambda Recursion)_50_2026-10-01,Question (Lambda Recursion),"What will
 a = [1, 2, 3, 4, 5]
 b = lambda x: (b (x[1:]) + x[:1] if x else []) 
 print(b (a))",De basis,,"Explanation: The lambda function b is recursively called on the sliced list x[1:] until the list is empty (x == []). It builds the reversed list by appending the first element (x[:1]) at the end during each return. This effectively reverses the list. So, for a = [1, 2, 3, 4, 5], it returns [5, 4, 3, 2, 1].",Murat Firat,"1 2 3 4 5~~[5, 4, 3, 2, 1]~~[]~~Error, lambda functions cannot be called recursively",False~~True~~False~~False,2026-10-01
-Question4 (Functional Programming)_63_2026-10-07,Question4 (Functional Programming),"What will be the output of the following Python code?
+Question4 (Functional Programming)_51_2026-10-07,Question4 (Functional Programming),"What will be the output of the following Python code?
 
 l=[1, 2, 3, 4, 5]
 m=map(lambda x:2**x, l)
-print(list(m))",Functies en modules,5,"Explanation: The map function applies lambda x: 2**x to each element in list l. So, it calculates powers of 2 for each element: 21, 22, 23, 24, 25, resulting in [2, 4, 8, 16, 32].",Murat Firat,"[1, 4, 9, 16, 25 ]~~[2, 4, 8, 16, 32 ]~~[1, 0, 1, 0, 1]~~Error",False~~True~~False~~False,2026-10-07
+print(list(m))",Functies en modules,5.0,"Explanation: The map function applies lambda x: 2**x to each element in list l. So, it calculates powers of 2 for each element: 21, 22, 23, 24, 25, resulting in [2, 4, 8, 16, 32].",Murat Firat,"[1, 4, 9, 16, 25 ]~~[2, 4, 8, 16, 32 ]~~[1, 0, 1, 0, 1]~~Error",False~~True~~False~~False,2026-10-07
 Question2 (Functional Programming)_52_2026-10-01,Question2 (Functional Programming),"What will be the output of the following Python code?
 
 odd=lambda x: bool(x%2)
@@ -495,4 +495,4 @@ Drie Happy path cases
 één Pre broken path case, namelijk dat de drie getallen geen zijden van een driehoek vormen.
 
 Een driehoek voldoet aan de voorwaarde dat voor elk paar van de zijden geldt dat ze opgetelt grter zijn of gelijk aan de derde zijde.",De basis,,,Murat Firat,"[1]~~[1,2]~~[2]~~[]",False~~False~~True~~False,2026-10-05
-Q-OOP_63_2026-10-07,Q-OOP,text,Objectgeorienteerd Programmeren ,5,lhgj,Murat Firat,yy~~xx,False~~True,2026-10-07
+Q-OOP_63_2026-10-07,Q-OOP,text,Objectgeorienteerd Programmeren ,5.0,lhgj,Murat Firat,yy~~xx,False~~True,2026-10-07
