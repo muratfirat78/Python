@@ -30,7 +30,14 @@ class ExamManager():
         self.CourseCode = coursecode
         self.CurrentTeacher = None
         self.Exams = []
+        self.CurrentExam = None
 
+    def setCurrentExam(self,xm):
+        self.CurrentExam = xm
+        return 
+    def getCurrentExam(self):
+        return self.CurrentExam
+   
     def getExams(self):
         return self.Exams
 
@@ -459,6 +466,7 @@ class VisualManager():
 
         self.Ename= widgets.Label(value="Exams")
         self.Examlist= widgets.Select(description="")
+        self.Examlist.observe(self.showExam)
         
         self.Etopics= widgets.Label(value="Exam Topics")
         self.Examtopics= widgets.Select(description="")
@@ -494,6 +502,25 @@ class VisualManager():
         return 
 
 
+    def showExam(self,b):
+
+        global ExamMngr 
+
+        selectedexam = self.Examlist.value
+
+        for exam in ExamMngr.getExams():
+            if exam.getName() == selectedexam:
+                ExamMngr.setCurrentExam(exam)
+                break
+
+        if ExamMngr.getCurrentExam()!= None:
+            self.exam_date.value = str(ExamMngr.getCurrentExam().getDate())
+            
+                
+
+        return 
+
+
     def newExam(self,b):
 
         global ExamMngr 
@@ -512,26 +539,32 @@ class VisualManager():
 
         else:
 
-            newExam = Exam()
-            newExam.setName(self.ExamName.value)
-            newExam.setDate(self.ExamDate.value)
-            newExam.setTotalPoints(self.ExamPoints.value)
-
-            ExamMngr.getExams().append(newExam)
-
-            self.Examlist.options = [ e.getName() for e in ExamMngr.getExams()]
-        
+            try: 
+                newExam = Exam()
+                newExam.setName(self.ExamName.value)
+                newExam.setDate(self.ExamDate.value)
+                newExam.setTotalPoints(self.ExamPoints.value)
+    
+                ExamMngr.getExams().append(newExam)
+    
+                self.Examlist.options = [e.getName() for e in ExamMngr.getExams()]
             
-            self.NewExam.description = "New Exam"
+                
+                self.NewExam.description = "New Exam"
+    
+                self.NewExamBox.layout.visibility = 'hidden' 
+                self.NewExamBox.layout.display = 'none'
+    
+                self.ExamInfobox.layout.display = 'block'
+                self.ExamInfobox.layout.visibility = 'visible' 
+                
+                self.ExamInfobox2.layout.display = 'block'
+                self.ExamInfobox2.layout.visibility = 'visible' 
 
-            self.NewExamBox.layout.visibility = 'hidden' 
-            self.NewExamBox.layout.display = 'none'
-
-            self.ExamInfobox.layout.display = 'block'
-            self.ExamInfobox.layout.visibility = 'visible' 
-            
-            self.ExamInfobox2.layout.display = 'block'
-            self.ExamInfobox2.layout.visibility = 'visible' 
+                
+            except Exception as e:             
+                self.Progress.value +='ERROR: In saving exam .. '+str(e)+"\n"
+                
 
         return
 
