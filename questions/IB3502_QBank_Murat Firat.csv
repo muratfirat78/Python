@@ -1,25 +1,25 @@
 ID,Title,Text,Main_Topic,Points,Explanation,Teacher,Choices,Correctness,Date
-Opdracht 4.a [2.5]_0_2026-10-07,Opdracht 4.a [2.5],"Welke van de volgende uitspraken is waar?
+Opgave 4.a_64_2026-10-12,Opgave 4.a,"Welke van de volgende uitspraken is waar?
 Geef van elk antwoord aan of het waar of onwaar is. (2.5 pts)
 
-Class is een essentieel data type in Python.",Data Typen,2.5,nan-exp,Murat Firat,Waar~~Onwaar~~Gedeeltelijk waar~~xxxxxx,False~~True~~False~~False,2026-10-07
-Opdracht 4.b [2.5]_1_2026-10-07,Opdracht 4.b [2.5],"Welke van de volgende uitspraken is waar?
+Class is een essentieel data type in Python.",Data Typen,2.5,nan-exp,Murat Firat,Waar~~Onwaar,False~~True,2026-10-12
+Opgave 4.b _64_2026-10-12,Opgave 4.b ,"Welke van de volgende uitspraken is waar?
 Geef van elk antwoord aan of het waar of onwaar is. (2.5 pts)
 
-float('56'+'78') zal een ValueError opleveren.",Data Typen,2.5,---,Murat Firat,Waar~~Onwaar~~Gedeeltelijk waar~~xxxxxx,False~~True~~False~~False,2026-10-07
-Opdracht 5  [5]_2_2026-10-07,Opdracht 5  [5],"Gegeven is de volgende list:
+float('56'+'78') zal een ValueError opleveren.",Data Typen,2.5,---,Murat Firat,Waar~~Onwaar,False~~True,2026-10-12
+Opgave 5 _64_2026-10-12,Opgave 5 ,"Gegeven is de volgende list:
 nums = [15, 30, 55, 60, 85, 95, 105, 120]
 
-Wat is de waarde van sum(nums[1::-1])?",Data Typen,5.0,,Murat Firat,85~~45~~225~~110,False~~True~~False~~False,2026-10-07
-Opdracht 4.c [2.5]_3_2026-10-07,Opdracht 4.c [2.5],"Welke van de volgende uitspraken is waar?
+Wat is de waarde van sum(nums[1::-1])?",Data Typen,5.0,nan,Murat Firat,85~~45~~225~~110,False~~True~~False~~False,2026-10-12
+Opgave 4.c _64_2026-10-12,Opgave 4.c ,"Welke van de volgende uitspraken is waar?
 Geef van elk antwoord aan of het waar of onwaar is.
 
-Als id(x) == id(y) is True voor variablen x en y, dan zijn ze zelfde..",Data Typen,2.5,,Murat Firat,Waar~~Onwaar~~Gedeeltelijk waar~~xxxxxx,True~~False~~False~~False,2026-10-07
-Opdracht 4.d [2.5]_64_2026-10-07,Opdracht 4.d [2.5],"elke van de volgende uitspraken is waar?
+Als id(x) == id(y) is True voor variablen x en y, dan zijn ze zelfde..",Data Typen,2.5,nan,Murat Firat,Waar~~Onwaar,True~~False,2026-10-12
+Opgave 4.d_64_2026-10-12,Opgave 4.d,"Welke van de volgende uitspraken is waar?
 Geef van elk antwoord aan of het waar of onwaar is.
 
-float('56+78') zal een ValueError opleveren.",Data Typen,2.5,nan,Murat Firat,True~~False~~225~~110,True~~False~~False~~False,2026-10-07
-Opdracht 6 [5]_5_2026-10-07,Opdracht 6 [5],"Het uitgangspunt is de volgende code:
+float('56+78') zal een ValueError opleveren.",Data Typen,2.5,nan,Murat Firat,True~~False~~225~~110,True~~False~~False~~False,2026-10-12
+Opgave 6_64_2026-10-12,Opgave 6,"Het uitgangspunt is de volgende code:
 
 import copy
 
@@ -33,16 +33,16 @@ shallowcopysports = copy.copy(sports)
 deepcopysports = copy.deepcopy(sports)
 
 
-Welke van de onderstaande beweringen is True?",Data Typen,5.0,,Murat Firat,id(shallowcopysports[0]) is id(sports[0])~~deepcopysports[0] is sports[0]~~id(deepcopysports[0]) == id(sports[0])~~deepcopysports[0] == sports[0],False~~False~~False~~True,2026-10-07
-Opdracht 7 [5]_6_2026-10-07,Opdracht 7 [5],"We hebben de volgende twee tuples:
+Welke van de onderstaande beweringen is True?",Data Typen,5.0,nan,Murat Firat,id(shallowcopysports[0]) is id(sports[0])~~deepcopysports[0] is sports[0]~~id(deepcopysports[0]) == id(sports[0])~~deepcopysports[0] == sports[0],False~~False~~False~~True,2026-10-12
+Opgave 7 _64_2026-10-12,Opgave 7 ,"We hebben de volgende twee tuples:
 
 cursus = ('[IB2002]','[IB3502]','[IM0203]')
 
 cursus_studenten = ('[IB2002]',['st11100','st11101','st11102','st11103'])
 
 Welke optie van de volgende is waar?
-",Data Typen,5.0,,Murat Firat, Alleen de tuple cursus_studenten is hashable~~ Alle tuples zijn niet hashable~~Alleen de tuple cursus is hashable~~ Beide tuples zijn hashable,False~~False~~True~~False,2026-10-07
-Opdracht 8.a [2.5]_7_2026-10-07,Opdracht 8.a [2.5],"Gegeven is de volgende list:
+",Data Typen,5.0,nan,Murat Firat, Alleen de tuple cursus_studenten is hashable~~ Alle tuples zijn niet hashable~~Alleen de tuple cursus is hashable~~ Beide tuples zijn hashable,False~~False~~True~~False,2026-10-12
+Opgave 8.a _64_2026-10-12,Opgave 8.a ,"Gegeven is de volgende list:
 
 mylist = [1,2,3]
 # item insertion
@@ -50,8 +50,8 @@ mylist = [1,2,3]
 
 Geef aan of volgende invoeging juist of onjuist zijn.
 
-mylist.append(4)",De basis,2.5,,Murat Firat,Juist~~Onjuist~~id(deepcopysports[0]) == id(sports[0])~~deepcopysports[0] == sports[0],True~~False~~False~~True,2026-10-07
-Opdracht 8.b [2.5]_8_2026-10-07,Opdracht 8.b [2.5],"Gegeven is de volgende list:
+mylist.append(4)",Data Typen,2.5,nan,Murat Firat,Juist~~Onjuist~~225~~110,True~~False~~False~~False,2026-10-12
+Opgave 8.b _64_2026-10-12,Opgave 8.b ,"Gegeven is de volgende list:
 
 mylist = [1,2,3]
 # item insertion
@@ -59,8 +59,8 @@ mylist = [1,2,3]
 
 Geef aan of volgende invoeging juist of onjuist zijn.
 
-mylist.insert(len(mylist),4)",Data Typen,2.5,,Murat Firat,Juist~~Onjuist~~id(deepcopysports[0]) == id(sports[0])~~deepcopysports[0] == sports[0],True~~False~~False~~True,2026-10-07
-Opdracht 8.c [2.5]_9_2026-10-07,Opdracht 8.c [2.5],"Gegeven is de volgende list:
+mylist.insert(len(mylist),4)",Data Typen,2.5,nan,Murat Firat,Juist~~Onjuist,True~~False,2026-10-12
+Opgave 8.c _64_2026-10-12,Opgave 8.c ,"Gegeven is de volgende list:
 
 mylist = [1,2,3]
 # item insertion
@@ -68,8 +68,8 @@ mylist = [1,2,3]
 
 Geef aan of volgende invoeging juist of onjuist zijn.
 
-mylist.extend(4)",Data Typen,2.5,,Murat Firat,Juist~~Onjuist~~id(deepcopysports[0]) == id(sports[0])~~deepcopysports[0] == sports[0],False~~True~~False~~True,2026-10-07
-Opdracht 8.d [2.5]_10_2026-10-07,Opdracht 8.d [2.5],"Gegeven is de volgende list:
+mylist.extend(4)",Data Typen,2.5,nan,Murat Firat,Juist~~Onjuist,False~~True,2026-10-12
+Opgave 8.d _64_2026-10-12,Opgave 8.d ,"Gegeven is de volgende list:
 
 mylist = [1,2,3]
 # item insertion
@@ -77,8 +77,8 @@ mylist = [1,2,3]
 
 Geef aan of volgende invoeging juist of onjuist zijn.
 
-mylist.extend([4])",Data Typen,2.5,,Murat Firat,Juist~~Onjuist~~id(deepcopysports[0]) == id(sports[0])~~deepcopysports[0] == sports[0],True~~False~~False~~True,2026-10-07
-Opdracht 9 [5]_11_2026-10-07,Opdracht 9 [5],"def IsWhat(number):
+mylist.extend([4])",Data Typen,2.5,nan,Murat Firat,Juist~~Onjuist,True~~False,2026-10-12
+Opgave 9_64_2026-10-12,Opgave 9,"def IsWhat(number):
     if number <= 1:
         return False
     else:
@@ -90,8 +90,8 @@ Opdracht 9 [5]_11_2026-10-07,Opdracht 9 [5],"def IsWhat(number):
 ________________________________________________________________________________
 
 De functie IsWhat retourneert ""False"" en ""True"" voor argumenten 14 en 23.
-Welk van de onderstaande argumenten zal resulteren in een ""True"" retourwaarde?",Functies en modules,5.0,,Murat Firat,19~~57~~25~~24,True~~False~~False~~False,2026-10-07
-Opdracht 11 [5]_12_2026-10-07,Opdracht 11 [5],"Gegeven is de volgende code:
+Welk van de onderstaande argumenten zal resulteren in een ""True"" retourwaarde?",Functies en modules,5.0,nan,Murat Firat,19~~57~~25~~24,True~~False~~False~~False,2026-10-12
+Opgave 11 _64_2026-10-12,Opgave 11 ,"Gegeven is de volgende code:
 
 ___________________________________________________________
 def MathFunction(number):
@@ -106,8 +106,8 @@ print(MathFunction(24))
 ___________________________________________________
 
 Wat is de output van bovenstaande code?
-",Functies en modules,5.0,,Murat Firat,59~~60~~36~~24,True~~False~~False~~False,2026-10-07
-Opdracht 12 [5]_13_2026-10-07,Opdracht 12 [5],"Gegeven is de volgende code:
+",Functies en modules,5.0,nan,Murat Firat,59~~60~~36~~24,True~~False~~False~~False,2026-10-12
+Opgave 12 _64_2026-10-12,Opgave 12 ,"Gegeven is de volgende code:
 
 _____________________________________________
 mylist = [a for a in range(5,15,3)]
@@ -117,8 +117,8 @@ for x in mylist:
         print('*')
 _____________________________________________
 
-Hoe vaak wordt er een * geprint?      ",Control Flow,5.0,,Murat Firat,32~~24~~40~~Er wordt een Error gegeneerd,False~~True~~False~~False,2026-10-07
-Opdracht 13 [5]_14_2026-10-07,Opdracht 13 [5],"_______________________________________________
+Hoe vaak wordt er een * geprint?      ",Control Flow,5.0,nan,Murat Firat,32~~24~~40~~Er wordt een Error gegeneerd,False~~True~~False~~False,2026-10-12
+Opgave 13 _64_2026-10-12,Opgave 13 ,"_______________________________________________
 def StrCheck(str1,str2):
     if set(str1) == set(str2):
         print('gelijk')
@@ -133,8 +133,8 @@ _______________________________________________
 
 Wat is de output van bovenstaande code?
 
-",Control Flow,5.0,,Murat Firat,gelijk~~NameError~~niet gelijk~~Er wordt een Error gegeneerd,True~~False~~False~~False,2026-10-07
-Opdracht 15 [5]_15_2026-10-07,Opdracht 15 [5],"Gegeven is de volgende code:
+",Control Flow,5.0,nan,Murat Firat,gelijk~~NameError~~niet gelijk~~Er wordt een Error gegeneerd,True~~False~~False~~False,2026-10-12
+Opgave 15_64_2026-10-12,Opgave 15,"Gegeven is de volgende code:
 
 _____________________________________________
 def myfunction(text,number):
@@ -156,31 +156,47 @@ _____________________________________________
 myfunction("""",0)
 _____________________________________________
 
-De gebruiker heeft het wachtwoords ""secret, ""Secret"", en ""MySecret"" drie keer ingevoerd. Wat gebeurt er?     ",Functies en modules,5.0,,Murat Firat, Text2 is afgedrukt~~Enn error~~Wachtword input wordt opnieuw gevraagd~~Text1 is afgedrukt,False~~False~~True~~False,2026-10-07
-Question 18_16_nan,Question 18,"We hebben een lijst met elementen die ook weer een lijst zijn, met integers, en met verschillende lengte.
+De gebruiker heeft het wachtwoords ""secret, ""Secret"", en ""MySecret"" drie keer ingevoerd. Wat gebeurt er?     ",Functies en modules,5.0,nan,Murat Firat, Text2 is afgedrukt~~Enn error~~Wachtword input wordt opnieuw gevraagd~~Text1 is afgedrukt,False~~False~~True~~False,2026-10-12
+Opgave 16_64_2026-10-12,Opgave 16,"Gegeven is de functie ""myfunc"" die een argument van een lijst heeft.
 
-Schrijf een code om de lijst te sorteren op basis van de som van de elementen van de lijsten, oplopend.
 
-Bij de onderstaande invoerlijst:
+def myfunc(mylist):
+    return [i for i in mylist if i%2]
 
->> [[1,2],[10],[0,0,0],[1,1]]  
+Welke van de volgende is correct voor de bovenstaande functie.
 
-Is het resultaat dan:
+",Functies en modules,5.0,nan,Murat Firat,Het vindt de subset van oneven getallen die in de gegeven lijst staan~~Het vindt de som van oneven getallen in de gegeven lijst~~Het vindt de som van even getallen in de gegeven lijst~~Het vindt hoeveel oneven getallen er in de gegeven lijst staan,True~~False~~False~~False,2026-10-12
+Opgave 18_64_2026-10-12,Opgave 18,"De functie reduce is een hogere-orde functie. Met reduce kunnen we een lijst getallen reduceren tot één getal. In de code hieronder wordt er 1 geprint (we maken gebruik van de library functools):
 
->> [[0, 0, 0], [1, 1], [1, 2], [10]] 
-",De basis,,,Murat Firat,,,
-Question 19_17_nan,Question 19,"Wat wordt er in de console geprint?
 
-print('{a}, {0}, {abc}'.format('Dit tentamen ', a='is ', abc='gemakkelijk '))",De basis,,,Murat Firat,"Dit tentamen , is , gemakkelijk&nbsp;~~Dit tentamen , gemakkelijk , is~~is , Dit tentamen , gemakkelijk~~is , gemakkelijk , Dit tentamen&nbsp;~~gemakkelijk , Dit tentamen , is~~gemakkelijk , is , Dit tentamen ",False~~False~~True~~False~~False~~False,
-Question 20_18_nan,Question 20,"Gegeven is de volgende code.
+def cumsum(n):
+    if n>1:
+        return n+cumsum(n-1)
+    else:
+        return 1
 
-number = 5
-index = 1
-while index < 10:
-    print(index, ' maal ', number, ' is: ', number * index)
-    index += 1
 
-Wat wordt geprint?",De basis,,,Murat Firat,"De tafel van 5, beginnend bij 1 en eindigend bij 10.~~De tafel van 5, beginnend bij 1 en eindigend bij 9.~~De tafel van 5, beginnend bij 0 en eindigend bij 10.~~De tafel van 5, beginnend bij 0 en eindigend bij 9.",False~~True~~False~~False,
+Kies van de volgende een alternatieve schrijfwijze voor de aanroep van functools.reduce, waarbij je in plaats van de functie factorial een lambda expressie gebruikt.",Functies en modules,5.0,nan,Murat Firat,"result = functools.reduce(lambda x, y: x+y,range(x))~~result = functools.reduce(lambda x, y: x*y,range(x))~~result = functools.reduce(lambda x, y: x+y,range(1,x))~~ result = functools.reduce(lambda x, y: x+y,range(1,x+1))",False~~False~~False~~True,2026-10-12
+Opgave 19_64_2026-10-12,Opgave 19,"Gegeven is de volgende code.
+
+We hebben een (simpele) functie:
+
+def divide(x, y):
+    return x/(y-2)
+
+We willen die functie van een decorator voorzien, die er voor zorgt dat er een ValueError wordt opgegooid wanneer er door 0 wordt gedeeld.
+
+Die decorator noemen we save_divide.
+
+We kunnen divide dan op de volgende manier gebruiken:
+
+
+@save_divide                                                  
+def divide(x, y):
+    return x/(y-2)
+
+
+Welke is de juiste implementatie van de decorator:",Functies en modules,5.0,nan,Murat Firat,"def save_divide(func):      def checker(a,b):          if not (b-2):              raise ValueError('Delen door nul kan niet')          return func(a,b)      return checker~~De tafel van 5, beginnend bij 1 en eindigend bij 9.~~De tafel van 5, beginnend bij 0 en eindigend bij 10.~~De tafel van 5, beginnend bij 0 en eindigend bij 9.",False~~True~~False~~False,2026-10-12
 Question 21_19_nan,Question 21,"Gegeven is de volgende code.
 
 sentence = ""Dit Python tentamen is gemakkelijk""
@@ -370,12 +386,22 @@ print(list(filter(bool, l)))
 
 ",De basis,,,Murat Firat,"[1, 0, 2, 'hello','', []]~~Error~~[1, 2, 'hello']~~[1, 0, 2, 0, 'hello','', []]",False~~False~~True~~False,
 Question (Built-in Functions)_39_nan,Question (Built-in Functions),Which of the following is the use of id() function in python?,De basis,,,Murat Firat,Every object doesn’t have a unique id~~Id returns the identity of the object~~All of the mentioned~~None of the mentioned,False~~True~~False~~False,
-Question (Data Types)_40_2026-10-07,Question (Data Types),Which of the following is not a core data type in Python programming?,Data Typen,2.5,,Murat Firat,Tuples~~Lists~~Class~~Dictionary,False~~False~~True~~False,2026-10-07
-Question2 (Data Types)_41_nan,Question2 (Data Types),"What will be the output of the following Python program? 
-z=set('abc')
-z.add('san')
-z.update(set(['p', 'q']))
-print(z)",De basis,,,Murat Firat,"{'a', 'c', 'c', 'p', 'q', 's', 'a', 'n'}~~{'abc', 'p', 'q', 'san'}~~{'a', 'b', 'c', 'p', 'q', 'san'}~~{'a', 'b', 'c', ['p', 'q'], 'san'}",False~~False~~True~~False,
+Opgave 11.c (Nov 2026)_64_2026-10-12,Opgave 11.c (Nov 2026),"Gegeven is de volgende lijsten:
+
+mylist = [1,2,3,4,5,6,7,8]
+mylist2 = [2,4,6,8,10,12,14]
+
+
+Geef aan of alle invoegingen juist of onjuist zijn.
+
+mylist.extend(4) is gelijk aan mylist+[4]
+
+",Data Typen,2.5,nan,Murat Firat,Juist~~Onjuist,False~~True,2026-10-12
+Opgave 9_64_2026-10-12,Opgave 9,"Gegeven is de volgende list:
+nums = [15, 30, 55, 60, 85, 95, 105, 120]
+
+
+Welke van de onderstaande opties is gelijk aan sum(nums[0::-1]+nums[::-1])?",De basis,5,nan,Murat Firat,sum(nums[0:1]+nums[::])~~sum(nums[0]+nums[::-1])~~2*nums[0]+sum(nums[1::-1])~~nums[0]+sum(nums[1:]),True~~False~~False~~False,2026-10-12
 Question3 (Data Types)_42_nan,Question3 (Data Types),To add a new element to a list we use which Python command?,De basis,,,Murat Firat,list1.addEnd(5)~~list1.addLast(5)~~list1.append(5)~~list1.add(5),False~~False~~True~~False,
 Question (Formatting)_43_nan,Question (Formatting),"What will be the output of the following Python code? 
 print(""Hello {0[0]} and {0[1]}"".format(('foo', 'bin')))",De basis,,,Murat Firat,"Hello ('foo', 'bin') and ('foo', 'bin')~~Error~~Hello foo and bin~~None of the mentioned",False~~False~~True~~False,
@@ -413,13 +439,13 @@ Question2 (Shallow/deep copy)_48_nan,Question2 (Shallow/deep copy),"What will be
 l1=[1, 2, 3, [4]]
 l2=list(l1)
 print(id(l1)==id(l2))",De basis,,"Explanation: In the code, l2 = list(l1) creates a shallow copy of the list l1. This means l2 is a new list object with the same elements as l1, so id(l1) == id(l2) evaluates to False. Although the outer lists are different objects, they still share the same inner list [4] due to shallow copying.",Murat Firat,True~~False~~Error~~Address of l1,False~~True~~False~~False,
-Question (Recursion)_49_2026-10-01,Question (Recursion),"What will be the output of the following Python code?
+Opgave 12 (Nov 2026)_64_2026-10-12,Opgave 12 (Nov 2026),"Gegeven is de volgende code:
 
-def check(n):
-    if n < 2:
-        return n % 2 == 0
-    return check(n - 2)
-print(check(11))",De basis,,"Explanation: The function check(n) recursively subtracts 2 until n < 2. Then it returns n % 2 == 0. For n = 11, the recursion reaches n = 1, and 1 % 2 == 0 is False. So, the output is False.",Murat Firat,False~~True~~1~~An exception is thrown,True~~False~~False~~False,2026-10-01
+f = {x: 2**x for x in range(1, 10)}
+
+Wat is de resultaat van de volgende code: 
+
+print([x for x,y in f.items() if y < 24])",Data Typen,5,,Murat Firat,"[2,4,6,8]~~[2,4,8,16]~~[2,3,4,5]~~[1,2,3,4]",False~~False~~False~~True,2026-10-12
 Question (Lambda Recursion)_50_2026-10-01,Question (Lambda Recursion),"What will be the output of the following Python code?
 
 a = [1, 2, 3, 4, 5]
@@ -463,36 +489,58 @@ def check(n):
         return n % 2 == 0
     return check(n - 2)
 print(check(11))",De basis,,"Explanation: The function check(n) recursively subtracts 2 until n < 2. Then it returns n % 2 == 0. For n = 11, the recursion reaches n = 1, and 1 % 2 == 0 is False. So, the output is False.",Murat Firat,False~~True~~1~~An exception is thrown,True~~False~~False~~False,2026-10-01
-Question (Data Types)_57_2026-10-07,Question (Data Types),Which of the following is not a core data type in Python programming?,Data Typen,2.5,,Murat Firat,Tuples~~Lists~~Class~~Dictionary,False~~False~~True~~False,2026-10-07
-Opdracht 4 (July2026)_58_2026-10-05,Opdracht 4 (July2026),"Welke van de volgende uitspraken is waar?
-Geef van elk antwoord aan of het waar of onwaar is. (2.5 pts)
+Opgave 11.c (Nov 2026)_64_2026-10-12,Opgave 11.c (Nov 2026),Which of the following is not a core data type in Python programming?,Data Typen,5,nan,Murat Firat,Tuples~~Lists~~Class~~Dictionary,False~~False~~True~~False,2026-10-12
+Opgave 11.d (Nov 2026)_64_2026-10-12,Opgave 11.d (Nov 2026),"Gegeven is de volgende lijsten:
 
-Class is een essentieel data type in Python.",Data Typen,,,Murat Firat,Waar~~Onwaar~~Gedeeltelijk waar,False~~True~~False,2026-10-05
-QTEST ( edited)_59_2026-10-05,QTEST ( edited),control,Control Flow,,test exp,Murat Firat,waar~~onwaar,False~~True,2026-10-05
-Opdracht 4 (July2026-edt)_60_2026-10-05,Opdracht 4 (July2026-edt),"Welke van de volgende uitspraken is waar?
-Geef van elk antwoord aan of het waar of onwaar is. (2.5 pts)
+mylist = [1,2,3,4,5,6,7,8]
+mylist2 = [2,4,6,8,10,12,14]
 
-Class is een essentieel data type in Python.",Data Typen,,nan-exp,Murat Firat,Waar~~Onwaar~~Gedeeltelijk waar,False~~True~~False,2026-10-05
-Question 22 (edt)_61_2026-10-05,Question 22 (edt),"Gegeven is de volgende code.
 
-digits = [1, 5, 2, 10]
-new_lst = []
+Geef aan of alle invoegingen juist of onjuist zijn.
 
-for x, y in enumerate(digits):
-    if x + 1 > y:
-        new_lst.append(y)
+b =  [mylist[i] for i in range(len(mylist)) if mylist[i] in mylist[i+1:]]
+b bevat unieke elementen in de lijst mylist
 
-print(new_lst)
+",Data Typen,2.5,nan,Murat Firat,Juist~~Onjuist,True~~False,2026-10-12
+Opgave 11.b (Nov 2026)_64_2026-10-12,Opgave 11.b (Nov 2026),"Gegeven is de volgende lijsten:
 
-Wat wordt geprint?",De basis,,,Murat Firat,"[1]~~[1,2]~~[2]~~[]",False~~False~~True~~False,2026-10-05
-Question 31 (edt)_62_2026-10-05,Question 31 (edt),"Deze vraag gaat over deelfde functiie als de vorige vraag:
+mylist = [1,2,3,4,5,6,7,8]
+mylist2 = [2,4,6,8,10,12,14]
 
-Een functie equilateral die teruggeeft of de drie meegegeven getallen zijden vormen van een gelijkzijdige driehoek (dat wil zeggen dat alle zijden gelijk zijn).
 
-Geef doctests voor:
+Geef aan of alle invoegingen juist of onjuist zijn.
 
-Drie Happy path cases
-één Pre broken path case, namelijk dat de drie getallen geen zijden van een driehoek vormen.
+b = [ x for x in mylist if x in mylist2]
+﻿b is gelijk ﻿aan de lijst [2,4,6,8,10]",Data Typen,2.5,test exp,Murat Firat,Waar~~Onwaar,False~~True,2026-10-12
+Opgave 11.a (Nov 2026)_64_2026-10-12,Opgave 11.a (Nov 2026),"Gegeven is de volgende lijsten:
 
-Een driehoek voldoet aan de voorwaarde dat voor elk paar van de zijden geldt dat ze opgetelt grter zijn of gelijk aan de derde zijde.",De basis,,,Murat Firat,"[1]~~[1,2]~~[2]~~[]",False~~False~~True~~False,2026-10-05
+mylist = [1,2,3,4,5,6,7,8]
+mylist2 = [2,4,6,8,10,12,14]
+
+
+Geef aan of alle invoegingen juist of onjuist zijn.
+
+b=[sum(mylist[0:x+1]) for x in range(0,len(mylist))] 
+b is gelijk aan de cumulatieve som van de getallen in de lijst ",Data Typen,2.5,nan-exp,Murat Firat,Waar~~Onwaar,True~~False,2026-10-12
+Opgave 10 (Nov 2026)_64_2026-10-12,Opgave 10 (Nov 2026),"Het uitgangspunt is de volgende code:
+
+import copy
+
+wintersports = [[""ice skating""],[""skiing""],[""curling""]]
+summersports = [[""table tennis""],[""golf""], [""kayaking""]]
+
+sports = summersports+wintersports
+
+
+shallowcopysports = copy.copy(sports)
+deepcopysports = copy.deepcopy(sports)
+
+
+Welke van de onderstaande beweringen is True?
+",De basis,5,nan,Murat Firat,deepcopysports[0] is sports[0]~~deepcopysports == shallowcopysports~~id(shallowcopysports[0]) is id(sports[0])~~id(deepcopysports) == id(shallowcopysports),False~~True~~False~~False,2026-10-12
+Opgave 9 (Nov 2026)_64_2026-10-12,Opgave 9 (Nov 2026),"Gegeven is de volgende list:
+
+nums = [15, 30, 55, 60, 85, 95, 105, 120]
+
+Welke van de onderstaande opties is gelijk aan sum(nums[0::-1]+nums[::-1])?",Data Typen,5,nan,Murat Firat,sum(nums[0:1]+nums[::])~~(sum(nums[0]+nums[::-1])~~2*nums[0]+sum(nums[1::-1])~~2*nums[0]+sum(nums[::-1]),True~~False~~False~~False,2026-10-12
 Q-OOP_63_2026-10-07,Q-OOP,text,Objectgeorienteerd Programmeren ,5.0,lhgj,Murat Firat,yy~~xx,False~~True,2026-10-07
